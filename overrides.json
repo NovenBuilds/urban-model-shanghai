@@ -1,0 +1,22 @@
+{
+  "_note": "Canonical overrides live in scripts/overrides.json. This file only points there.",
+  "see": "scripts/overrides.json",
+  "jingan_temple": {
+    "note": "Schematic 庑殿重檐 copper roofs on OSM footprints. 大雄宝殿 height 26 m is from published sources below. 法堂 / 山门 / 钟楼 / 鼓楼 use typological eaves (no cited hall height used as a hard number). Not a scan, not LiDAR.",
+    "mahavira_way": 1246090668,
+    "mahavira_height_m": 26.0,
+    "sources": [
+      "https://zh.wikipedia.org/wiki/%E9%9D%99%E5%AE%89%E5%AF%BA",
+      "https://m.thepaper.cn/newsDetail_forward_3252617",
+      "https://www.fjdh.cn/bnznews/2009/01/10360234000.html"
+    ],
+    "tiles": [
+      "5_-33",
+      "5_-32",
+      "6_-33",
+      "6_-32"
+    ],
+    "fatang_way": 1246090687,
+    "fatang_height": "typological (~28 m), not the 32 m figure from a weaker Sohu article"
+  }
+}

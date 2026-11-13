@@ -1,0 +1,4159 @@
+{
+  "W": 10240,
+  "D": 8192,
+  "H": 690,
+  "base": -9,
+  "tiles": {
+    "N": 128,
+    "levels": [
+      {
+        "s": 1,
+        "nx": 96,
+        "ny": 120,
+        "tx0": -16,
+        "ty0": -56
+      },
+      {
+        "s": 8,
+        "nx": 12,
+        "ny": 15,
+        "tx0": -2,
+        "ty0": -7
+      }
+    ],
+    "bytes": 48087068
+  },
+  "center": [
+    356752.65046119224,
+    3457489.6599994777
+  ],
+  "theta_deg": 101.22,
+  "crs": "EPSG:32651",
+  "global_i0": 48435,
+  "global_j0": 48569,
+  "global_i_pearl": 50000,
+  "global_j_pearl": 50000,
+  "trams": [],
+  "jets": [],
+  "palette": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      200,
+      192,
+      184,
+      0
+    ],
+    [
+      180,
+      180,
+      176,
+      0
+    ],
+    [
+      96,
+      100,
+      108,
+      0
+    ],
+    [
+      112,
+      112,
+      120,
+      0
+    ],
+    [
+      144,
+      136,
+      128,
+      0
+    ],
+    [
+      164,
+      160,
+      152,
+      0
+    ],
+    [
+      188,
+      184,
+      176,
+      0
+    ],
+    [
+      136,
+      88,
+      80,
+      0
+    ],
+    [
+      216,
+      204,
+      180,
+      0
+    ],
+    [
+      136,
+      180,
+      88,
+      8
+    ],
+    [
+      120,
+      168,
+      80,
+      8
+    ],
+    [
+      116,
+      164,
+      80,
+      8
+    ],
+    [
+      164,
+      136,
+      104,
+      0
+    ],
+    [
+      88,
+      112,
+      120,
+      4
+    ],
+    [
+      80,
+      96,
+      112,
+      4
+    ],
+    [
+      240,
+      240,
+      232,
+      9
+    ],
+    [
+      168,
+      152,
+      124,
+      10
+    ],
+    [
+      120,
+      92,
+      68,
+      10
+    ],
+    [
+      108,
+      80,
+      56,
+      0
+    ],
+    [
+      255,
+      224,
+      168,
+      5
+    ],
+    [
+      56,
+      64,
+      64,
+      6
+    ],
+    [
+      208,
+      200,
+      184,
+      0
+    ],
+    [
+      168,
+      164,
+      156,
+      13
+    ],
+    [
+      84,
+      88,
+      92,
+      6
+    ],
+    [
+      88,
+      84,
+      76,
+      6
+    ],
+    [
+      152,
+      148,
+      140,
+      13
+    ],
+    [
+      208,
+      200,
+      188,
+      0
+    ],
+    [
+      136,
+      128,
+      120,
+      0
+    ],
+    [
+      184,
+      176,
+      168,
+      0
+    ],
+    [
+      216,
+      200,
+      160,
+      0
+    ],
+    [
+      164,
+      200,
+      92,
+      3
+    ],
+    [
+      140,
+      180,
+      80,
+      3
+    ],
+    [
+      120,
+      160,
+      72,
+      3
+    ],
+    [
+      96,
+      144,
+      68,
+      3
+    ],
+    [
+      80,
+      124,
+      60,
+      3
+    ],
+    [
+      148,
+      188,
+      104,
+      3
+    ],
+    [
+      124,
+      168,
+      96,
+      3
+    ],
+    [
+      208,
+      200,
+      188,
+      1
+    ],
+    [
+      184,
+      180,
+      168,
+      12
+    ],
+    [
+      220,
+      200,
+      172,
+      1
+    ],
+    [
+      196,
+      180,
+      152,
+      12
+    ],
+    [
+      200,
+      192,
+      176,
+      1
+    ],
+    [
+      180,
+      172,
+      160,
+      12
+    ],
+    [
+      148,
+      168,
+      180,
+      2
+    ],
+    [
+      132,
+      148,
+      160,
+      2
+    ],
+    [
+      168,
+      184,
+      196,
+      2
+    ],
+    [
+      148,
+      168,
+      176,
+      2
+    ],
+    [
+      216,
+      208,
+      192,
+      1
+    ],
+    [
+      196,
+      188,
+      172,
+      12
+    ],
+    [
+      192,
+      180,
+      160,
+      1
+    ],
+    [
+      172,
+      160,
+      144,
+      12
+    ],
+    [
+      204,
+      204,
+      196,
+      1
+    ],
+    [
+      184,
+      180,
+      176,
+      12
+    ],
+    [
+      204,
+      196,
+      172,
+      1
+    ],
+    [
+      184,
+      176,
+      156,
+      12
+    ],
+    [
+      224,
+      216,
+      192,
+      1
+    ],
+    [
+      200,
+      192,
+      172,
+      12
+    ],
+    [
+      212,
+      200,
+      180,
+      1
+    ],
+    [
+      188,
+      176,
+      160,
+      12
+    ],
+    [
+      136,
+      160,
+      168,
+      2
+    ],
+    [
+      124,
+      144,
+      152,
+      2
+    ],
+    [
+      228,
+      220,
+      204,
+      1
+    ],
+    [
+      204,
+      196,
+      184,
+      12
+    ],
+    [
+      184,
+      200,
+      204,
+      2
+    ],
+    [
+      164,
+      176,
+      184,
+      2
+    ],
+    [
+      164,
+      160,
+      160,
+      1
+    ],
+    [
+      164,
+      160,
+      160,
+      12
+    ],
+    [
+      172,
+      160,
+      144,
+      2
+    ],
+    [
+      204,
+      196,
+      184,
+      2
+    ],
+    [
+      236,
+      236,
+      228,
+      1
+    ],
+    [
+      172,
+      116,
+      60,
+      1
+    ],
+    [
+      172,
+      116,
+      60,
+      12
+    ],
+    [
+      208,
+      184,
+      76,
+      2
+    ],
+    [
+      188,
+      168,
+      68,
+      2
+    ],
+    [
+      200,
+      200,
+      200,
+      1
+    ],
+    [
+      200,
+      200,
+      200,
+      12
+    ],
+    [
+      208,
+      68,
+      96,
+      2
+    ],
+    [
+      236,
+      236,
+      228,
+      12
+    ],
+    [
+      212,
+      208,
+      204,
+      12
+    ],
+    [
+      176,
+      180,
+      180,
+      12
+    ],
+    [
+      208,
+      208,
+      204,
+      12
+    ],
+    [
+      220,
+      192,
+      160,
+      1
+    ],
+    [
+      220,
+      192,
+      160,
+      12
+    ],
+    [
+      156,
+      56,
+      56,
+      12
+    ],
+    [
+      132,
+      112,
+      88,
+      12
+    ],
+    [
+      80,
+      76,
+      80,
+      2
+    ],
+    [
+      72,
+      72,
+      72,
+      2
+    ],
+    [
+      144,
+      144,
+      144,
+      12
+    ],
+    [
+      164,
+      160,
+      160,
+      2
+    ],
+    [
+      184,
+      180,
+      176,
+      2
+    ],
+    [
+      184,
+      180,
+      168,
+      2
+    ],
+    [
+      196,
+      180,
+      152,
+      2
+    ],
+    [
+      200,
+      148,
+      80,
+      15
+    ],
+    [
+      176,
+      124,
+      68,
+      12
+    ],
+    [
+      184,
+      160,
+      104,
+      6
+    ],
+    [
+      204,
+      208,
+      216,
+      6
+    ],
+    [
+      200,
+      176,
+      184,
+      2
+    ],
+    [
+      220,
+      216,
+      208,
+      13
+    ],
+    [
+      184,
+      76,
+      76,
+      1
+    ],
+    [
+      200,
+      200,
+      200,
+      6
+    ],
+    [
+      48,
+      48,
+      124,
+      12
+    ],
+    [
+      136,
+      104,
+      84,
+      1
+    ],
+    [
+      124,
+      96,
+      76,
+      12
+    ],
+    [
+      136,
+      104,
+      84,
+      12
+    ],
+    [
+      188,
+      96,
+      80,
+      12
+    ],
+    [
+      232,
+      224,
+      196,
+      12
+    ],
+    [
+      80,
+      76,
+      80,
+      12
+    ],
+    [
+      152,
+      156,
+      156,
+      12
+    ],
+    [
+      208,
+      176,
+      164,
+      12
+    ],
+    [
+      184,
+      176,
+      156,
+      2
+    ],
+    [
+      92,
+      98,
+      58,
+      12
+    ],
+    [
+      70,
+      72,
+      48,
+      12
+    ],
+    [
+      118,
+      78,
+      48,
+      1
+    ],
+    [
+      62,
+      110,
+      78,
+      12
+    ],
+    [
+      80,
+      70,
+      52,
+      12
+    ],
+    [
+      176,
+      64,
+      48,
+      1
+    ],
+    [
+      216,
+      204,
+      184,
+      1
+    ],
+    [
+      224,
+      160,
+      136,
+      1
+    ],
+    [
+      200,
+      144,
+      120,
+      12
+    ],
+    [
+      136,
+      140,
+      136,
+      12
+    ],
+    [
+      196,
+      200,
+      204,
+      12
+    ],
+    [
+      208,
+      176,
+      164,
+      1
+    ],
+    [
+      184,
+      156,
+      148,
+      12
+    ],
+    [
+      196,
+      200,
+      204,
+      1
+    ],
+    [
+      216,
+      204,
+      184,
+      12
+    ],
+    [
+      216,
+      196,
+      188,
+      1
+    ],
+    [
+      152,
+      156,
+      156,
+      2
+    ],
+    [
+      136,
+      140,
+      140,
+      2
+    ],
+    [
+      188,
+      180,
+      176,
+      12
+    ],
+    [
+      208,
+      188,
+      160,
+      12
+    ],
+    [
+      216,
+      196,
+      188,
+      12
+    ],
+    [
+      244,
+      240,
+      216,
+      1
+    ],
+    [
+      192,
+      168,
+      140,
+      1
+    ],
+    [
+      136,
+      140,
+      136,
+      2
+    ],
+    [
+      124,
+      128,
+      120,
+      2
+    ],
+    [
+      196,
+      200,
+      204,
+      2
+    ],
+    [
+      184,
+      208,
+      228,
+      12
+    ],
+    [
+      144,
+      184,
+      220,
+      1
+    ],
+    [
+      192,
+      180,
+      168,
+      12
+    ],
+    [
+      152,
+      156,
+      156,
+      1
+    ],
+    [
+      136,
+      140,
+      140,
+      12
+    ],
+    [
+      192,
+      164,
+      152,
+      12
+    ],
+    [
+      236,
+      236,
+      228,
+      2
+    ],
+    [
+      220,
+      216,
+      192,
+      12
+    ],
+    [
+      188,
+      180,
+      176,
+      1
+    ],
+    [
+      204,
+      176,
+      152,
+      12
+    ],
+    [
+      192,
+      164,
+      152,
+      1
+    ],
+    [
+      188,
+      176,
+      160,
+      2
+    ],
+    [
+      172,
+      136,
+      120,
+      12
+    ],
+    [
+      172,
+      136,
+      120,
+      1
+    ],
+    [
+      192,
+      176,
+      168,
+      12
+    ],
+    [
+      212,
+      208,
+      204,
+      2
+    ],
+    [
+      200,
+      192,
+      172,
+      2
+    ],
+    [
+      244,
+      240,
+      216,
+      2
+    ],
+    [
+      220,
+      216,
+      192,
+      2
+    ],
+    [
+      152,
+      124,
+      108,
+      12
+    ],
+    [
+      224,
+      160,
+      136,
+      12
+    ],
+    [
+      144,
+      184,
+      220,
+      2
+    ],
+    [
+      132,
+      164,
+      196,
+      12
+    ],
+    [
+      216,
+      196,
+      188,
+      2
+    ],
+    [
+      184,
+      208,
+      228,
+      2
+    ],
+    [
+      168,
+      184,
+      200,
+      2
+    ],
+    [
+      180,
+      172,
+      160,
+      2
+    ],
+    [
+      196,
+      188,
+      172,
+      2
+    ],
+    [
+      172,
+      152,
+      128,
+      12
+    ],
+    [
+      216,
+      196,
+      184,
+      12
+    ],
+    [
+      176,
+      180,
+      180,
+      2
+    ],
+    [
+      172,
+      136,
+      120,
+      2
+    ],
+    [
+      152,
+      124,
+      108,
+      2
+    ],
+    [
+      216,
+      112,
+      96,
+      12
+    ],
+    [
+      204,
+      216,
+      176,
+      1
+    ],
+    [
+      192,
+      184,
+      208,
+      12
+    ],
+    [
+      220,
+      212,
+      120,
+      1
+    ],
+    [
+      220,
+      212,
+      120,
+      12
+    ],
+    [
+      172,
+      148,
+      136,
+      12
+    ],
+    [
+      216,
+      112,
+      96,
+      1
+    ],
+    [
+      236,
+      232,
+      196,
+      12
+    ],
+    [
+      196,
+      188,
+      108,
+      12
+    ],
+    [
+      144,
+      184,
+      220,
+      12
+    ],
+    [
+      148,
+      172,
+      100,
+      12
+    ],
+    [
+      132,
+      164,
+      196,
+      2
+    ],
+    [
+      176,
+      196,
+      132,
+      12
+    ],
+    [
+      216,
+      196,
+      184,
+      1
+    ],
+    [
+      192,
+      168,
+      140,
+      12
+    ],
+    [
+      192,
+      168,
+      140,
+      2
+    ],
+    [
+      184,
+      208,
+      228,
+      1
+    ],
+    [
+      208,
+      188,
+      160,
+      1
+    ],
+    [
+      168,
+      160,
+      156,
+      12
+    ],
+    [
+      184,
+      168,
+      144,
+      12
+    ],
+    [
+      192,
+      100,
+      88,
+      12
+    ],
+    [
+      216,
+      204,
+      184,
+      2
+    ],
+    [
+      208,
+      164,
+      144,
+      1
+    ],
+    [
+      204,
+      184,
+      184,
+      1
+    ],
+    [
+      216,
+      148,
+      96,
+      1
+    ],
+    [
+      124,
+      148,
+      176,
+      12
+    ]
+  ],
+  "lamps": [],
+  "floods": [],
+  "labels": [
+    {
+      "name": "上海中心大厦",
+      "en": "Shanghai Tower",
+      "kind": "tower",
+      "site": "http://www.shanghaitower.com",
+      "x": 670,
+      "y": 1777,
+      "z": 411,
+      "g": 11,
+      "alt": "Shanghai Tower 上海中心大厦 Shanghai Tower",
+      "far": 9000
+    },
+    {
+      "name": "东方明珠",
+      "en": "Oriental Pearl Tower",
+      "kind": "tower",
+      "site": "https://www.orientalpearltower.com/",
+      "x": 1473,
+      "y": 1351,
+      "z": 33,
+      "g": 21,
+      "alt": "東方明珠廣播電視塔 Oriental Pearl Tower 東方明珠廣播電視塔 Oriental Pearl Tower",
+      "far": 9000
+    },
+    {
+      "name": "外滩",
+      "en": "The Bund",
+      "kind": "street",
+      "x": 1890,
+      "y": 602,
+      "z": 23,
+      "g": 11,
+      "alt": "The Bund 外滩 The Bund",
+      "far": 9000
+    },
+    {
+      "name": "黄浦江",
+      "en": "Huangpu River",
+      "kind": "river",
+      "far": 9000,
+      "x": 1817,
+      "y": 974,
+      "z": 15,
+      "g": 9
+    },
+    {
+      "name": "上海环球金融中心",
+      "en": "Shanghai World Financial Center",
+      "kind": "tower",
+      "site": "http://swfc-shanghai.com/",
+      "x": 742,
+      "y": 1966,
+      "z": 415,
+      "g": 15,
+      "alt": "Shanghai World Financial Center 上海环球金融中心 Shanghai World Financial Center",
+      "far": 5000
+    },
+    {
+      "name": "人民广场",
+      "en": "People's Square",
+      "kind": "square",
+      "far": 5000,
+      "x": 772,
+      "y": -1215,
+      "z": 19,
+      "g": 11,
+      "alt": "People's Square"
+    },
+    {
+      "name": "南京东路",
+      "en": "East Nanjing Road",
+      "kind": "street",
+      "x": 1490,
+      "y": -194,
+      "z": 24,
+      "g": 12,
+      "alt": "East Nanjing Road 南京东路 East Nanjing Road",
+      "far": 5000
+    },
+    {
+      "name": "金茂大厦",
+      "en": "Jin Mao Tower",
+      "kind": "tower",
+      "x": 854,
+      "y": 1831,
+      "z": 416,
+      "g": 16,
+      "alt": "Jin Mao Tower 金茂大厦 Jin Mao Tower",
+      "far": 5000
+    },
+    {
+      "name": "陆家嘴",
+      "en": "Lujiazui",
+      "kind": "neighborhood",
+      "x": 1176,
+      "y": 1634,
+      "z": 28,
+      "g": 16,
+      "alt": "陆家嘴金融贸易区 Lujiazui 陆家嘴金融贸易区 Lujiazui",
+      "far": 5000
+    },
+    {
+      "name": "静安寺",
+      "en": "Jing'an Temple",
+      "kind": "temple",
+      "far": 5000,
+      "x": 769,
+      "y": -4094,
+      "z": 45,
+      "g": 15,
+      "alt": "Jing'an Temple"
+    },
+    {
+      "name": "上海博物馆",
+      "en": "Shanghai Museum",
+      "kind": "museum",
+      "far": 3500,
+      "x": 692,
+      "y": -1174,
+      "z": 41,
+      "g": 13,
+      "alt": "Shanghai Museum"
+    },
+    {
+      "name": "上海海关",
+      "en": "Customs House",
+      "kind": "building",
+      "x": 1312,
+      "y": 373,
+      "z": 50,
+      "g": 28,
+      "alt": "江海关 Customs House 江海关 Customs House",
+      "far": 3500
+    },
+    {
+      "name": "中国银行大楼",
+      "en": "Bank of China Building",
+      "kind": "building",
+      "x": 1628,
+      "y": 424,
+      "z": 74,
+      "g": 23,
+      "alt": "中国银行大楼 Bank of China Building",
+      "far": 3500
+    },
+    {
+      "name": "北外滩",
+      "en": "North Bund",
+      "kind": "neighborhood",
+      "x": 2500,
+      "y": 1600,
+      "z": 24,
+      "g": 12,
+      "alt": "北外滩 North Bund",
+      "far": 3500
+    },
+    {
+      "name": "和平饭店",
+      "en": "Peace Hotel",
+      "kind": "hotel",
+      "site": "http://www.fairmont.com/peacehotel",
+      "x": 1574,
+      "y": 393,
+      "z": 43,
+      "g": 31,
+      "alt": "Peace Hotel 和平饭店 Peace Hotel",
+      "far": 3500
+    },
+    {
+      "name": "外白渡桥",
+      "en": "Waibaidu Bridge",
+      "kind": "bridge",
+      "x": 2032,
+      "y": 556,
+      "z": 21,
+      "g": 9,
+      "alt": "Waibaidu Bridge 外白渡桥 Waibaidu Bridge",
+      "far": 3500
+    },
+    {
+      "name": "汇丰银行大楼",
+      "en": "HSBC Building",
+      "kind": "building",
+      "x": 1249,
+      "y": 371,
+      "z": 29,
+      "g": 17,
+      "alt": "滙豐銀行大樓 HSBC Building 滙豐銀行大樓 HSBC Building",
+      "far": 3500
+    },
+    {
+      "name": "沙逊大厦",
+      "en": "Sassoon House",
+      "kind": "building",
+      "x": 1586,
+      "y": 423,
+      "z": 37,
+      "g": 25,
+      "alt": "Sassoon House 沙逊大厦 Sassoon House",
+      "far": 3500
+    },
+    {
+      "name": "老城厢",
+      "en": "Old City",
+      "kind": "neighborhood",
+      "x": -310,
+      "y": 157,
+      "z": 26,
+      "g": 14,
+      "alt": "老城厢 Old City",
+      "far": 3500
+    },
+    {
+      "name": "豫园",
+      "en": "Yu Garden",
+      "kind": "park",
+      "site": "https://www.yugarden.com.cn",
+      "x": 235,
+      "y": 365,
+      "z": 21,
+      "g": 9,
+      "alt": "豫园 Yu Garden",
+      "far": 3500
+    },
+    {
+      "name": "上海商城",
+      "en": "Shanghai Centre",
+      "kind": "tower",
+      "far": 2500,
+      "x": 998,
+      "y": -3412,
+      "z": 173,
+      "g": 13,
+      "alt": "Shanghai Centre"
+    },
+    {
+      "name": "上海国际会议中心",
+      "en": "Shanghai International Convention Center",
+      "kind": "building",
+      "x": 1482,
+      "y": 1087,
+      "z": 40,
+      "g": 21,
+      "alt": "上海国际会议中心 Shanghai International Convention Center",
+      "far": 2500
+    },
+    {
+      "name": "上海国际金融中心",
+      "en": "Shanghai IFC",
+      "kind": "tower",
+      "x": 1054,
+      "y": 1513,
+      "z": 24,
+      "g": 12,
+      "alt": "上海国际金融中心 Shanghai IFC",
+      "far": 2500
+    },
+    {
+      "name": "上海城市规划展示馆",
+      "en": "Shanghai Urban Planning Exhibition Hall",
+      "kind": "museum",
+      "far": 2500,
+      "x": 1031,
+      "y": -1104,
+      "z": 48,
+      "g": 16,
+      "alt": "Shanghai Urban Planning Exhibition Hall"
+    },
+    {
+      "name": "上海城隍廟",
+      "en": "City God Temple of Shanghai",
+      "kind": "temple",
+      "site": "http://www.shchm.org/",
+      "x": 97,
+      "y": 377,
+      "z": 28,
+      "g": 16,
+      "alt": "上海城隍廟 City God Temple of Shanghai 城隍庙 上海城隍庙",
+      "far": 2500
+    },
+    {
+      "name": "上海文庙",
+      "en": "Shanghai Confucian Temple",
+      "kind": "temple",
+      "x": -655,
+      "y": -245,
+      "z": 32,
+      "g": 16,
+      "alt": "上海文庙 Shanghai Confucian Temple",
+      "far": 2500
+    },
+    {
+      "name": "上海音乐厅",
+      "en": "Shanghai Concert Hall",
+      "kind": "building",
+      "x": 497,
+      "y": -975,
+      "z": 31,
+      "g": 19,
+      "alt": "Shanghai Concert Hall 上海音乐厅 Shanghai Concert Hall",
+      "far": 2500
+    },
+    {
+      "name": "中共一大会址",
+      "en": "Site of the First CPC National Congress",
+      "kind": "historic",
+      "x": -190,
+      "y": -1383,
+      "z": 26,
+      "g": 16,
+      "alt": "中共一大会址 Site of the First CPC National Congress",
+      "far": 2500
+    },
+    {
+      "name": "人民公园",
+      "en": "People's Park",
+      "kind": "park",
+      "far": 2500,
+      "x": 1169,
+      "y": -1256,
+      "z": 17,
+      "g": 11,
+      "alt": "People's Park"
+    },
+    {
+      "name": "北外滩来福士",
+      "en": "Raffles City The Bund",
+      "kind": "building",
+      "x": 2710,
+      "y": 2358,
+      "z": 90,
+      "g": 10,
+      "alt": "北外滩来福士 Raffles City The Bund",
+      "far": 2500
+    },
+    {
+      "name": "南京西路",
+      "en": "West Nanjing Road",
+      "kind": "street",
+      "far": 2500,
+      "x": 1136,
+      "y": -1904,
+      "z": 18,
+      "g": 12,
+      "alt": "West Nanjing Road"
+    },
+    {
+      "name": "南京路步行街",
+      "en": "Nanjing Road Pedestrian Street",
+      "kind": "street",
+      "far": 2500,
+      "x": 1411,
+      "y": -589,
+      "z": 18,
+      "g": 12,
+      "alt": "Nanjing Road Pedestrian Street"
+    },
+    {
+      "name": "国际客运中心",
+      "en": "International Cruise Terminal",
+      "kind": "building",
+      "x": 2279,
+      "y": 1556,
+      "z": 55,
+      "g": 15,
+      "alt": "国际客运中心 上海港国际客运中心 International Cruise Terminal",
+      "far": 2500
+    },
+    {
+      "name": "国际饭店",
+      "en": "Park Hotel",
+      "kind": "hotel",
+      "far": 2500,
+      "x": 1350,
+      "y": -1414,
+      "z": 105,
+      "g": 25,
+      "alt": "Park Hotel"
+    },
+    {
+      "name": "大世界",
+      "en": "The Great World",
+      "kind": "building",
+      "far": 2500,
+      "x": 575,
+      "y": -819,
+      "z": 43,
+      "g": 15,
+      "alt": "The Great World"
+    },
+    {
+      "name": "新天地",
+      "en": "Xintiandi",
+      "kind": "neighborhood",
+      "x": -207,
+      "y": -1410,
+      "z": 26,
+      "g": 16,
+      "alt": "新天地 Xintiandi",
+      "far": 2500
+    },
+    {
+      "name": "百老汇大厦",
+      "en": "Broadway Mansions",
+      "kind": "hotel",
+      "x": 2143,
+      "y": 565,
+      "z": 80,
+      "g": 20,
+      "alt": "百老汇大厦 Broadway Mansions 上海大厦",
+      "far": 2500
+    },
+    {
+      "name": "苏州河北岸",
+      "en": "North bank of Suzhou Creek",
+      "kind": "waterfront",
+      "x": 2160,
+      "y": 520,
+      "z": 25,
+      "g": 17,
+      "alt": "苏州河北岸 North bank of Suzhou Creek",
+      "far": 2500
+    },
+    {
+      "name": "陆家嘴中心绿地",
+      "en": "Lujiazui Green",
+      "kind": "park",
+      "x": 1157,
+      "y": 1899,
+      "z": 27,
+      "g": 15,
+      "alt": "陆家嘴中心绿地",
+      "far": 2500
+    },
+    {
+      "name": "陈毅雕像",
+      "en": "Statue of Chen Yi",
+      "kind": "monument",
+      "far": 2500,
+      "x": 1563,
+      "y": 477,
+      "z": 21
+    },
+    {
+      "name": "静安公园",
+      "en": "Jing'an Park",
+      "kind": "park",
+      "far": 2500,
+      "x": 584,
+      "y": -3989,
+      "z": 21,
+      "g": 13,
+      "alt": "Jing'an Park"
+    },
+    {
+      "name": "静安嘉里中心",
+      "en": "Jing An Kerry Centre",
+      "kind": "building",
+      "far": 2500,
+      "x": 738,
+      "y": -3726,
+      "z": 91,
+      "g": 11,
+      "alt": "Jing An Kerry Centre"
+    },
+    {
+      "name": "上海海洋水族馆",
+      "en": "Shanghai Ocean Aquarium",
+      "kind": "aquarium",
+      "site": "http://www.sh-soa.com",
+      "x": 1515,
+      "y": 1570,
+      "z": 22,
+      "g": 12,
+      "alt": "上海海洋水族馆 Shanghai Ocean Aquarium",
+      "far": 1500
+    },
+    {
+      "name": "上海自然博物馆",
+      "en": "Shanghai Natural History Museum",
+      "kind": "museum",
+      "site": "http://www.snhm.org.cn/",
+      "x": 1706,
+      "y": -2220,
+      "z": 22,
+      "g": 10,
+      "alt": "上海自然博物馆 Shanghai Natural History Museum",
+      "far": 1500
+    },
+    {
+      "name": "大境阁",
+      "en": "Dajing Pavilion",
+      "kind": "temple",
+      "x": 141,
+      "y": -516,
+      "z": 35,
+      "g": 15,
+      "alt": "大境阁 Dajing Pavilion",
+      "far": 1500
+    },
+    {
+      "name": "上海北外滩中心",
+      "en": "Shanghai North Bund Center",
+      "kind": "building",
+      "x": 918,
+      "y": 60,
+      "z": 211,
+      "g": 13,
+      "alt": "上海北外滩中心 Shanghai North Bund Center",
+      "far": 1000
+    },
+    {
+      "name": "上海外滩观光隧道",
+      "en": "Bund Sightseeing Tunnel",
+      "kind": "building",
+      "x": 1455,
+      "y": 803,
+      "z": 21,
+      "g": 9,
+      "alt": "上海外滩观光隧道 Bund Sightseeing Tunnel",
+      "far": 1000
+    },
+    {
+      "name": "上海总会大楼",
+      "en": "Shanghai Club Building",
+      "kind": "building",
+      "site": "http://www.waldorfastoriashanghai.com",
+      "x": 984,
+      "y": 404,
+      "z": 44,
+      "g": 22,
+      "alt": "上海总会大楼 Shanghai Club Building",
+      "far": 1000
+    },
+    {
+      "name": "上海白玉蘭廣場",
+      "en": "Sinar Mas Center",
+      "kind": "tower",
+      "x": 2523,
+      "y": 1429,
+      "z": 330,
+      "g": 10,
+      "alt": "上海白玉蘭廣場 Sinar Mas Center",
+      "far": 1000
+    },
+    {
+      "name": "乍浦路桥",
+      "en": "Zhapu Bridge",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 2171,
+      "y": 346,
+      "z": 25
+    },
+    {
+      "name": "九曲桥",
+      "en": "Nine-Zigzag Bridge",
+      "kind": "bridge",
+      "x": 200,
+      "y": 328,
+      "z": 21,
+      "g": 9,
+      "alt": "Nine-Zigzag Bridge Nine-Zigzag Bridge Nine-Zigzag Bridge",
+      "far": 1000
+    },
+    {
+      "name": "共和新路",
+      "en": "Gonghexin Road",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 3215,
+      "y": -1796,
+      "z": 25
+    },
+    {
+      "name": "内环高架路",
+      "en": "Inner Ring Elevated Road",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 3747,
+      "y": -4867,
+      "z": 29
+    },
+    {
+      "name": "圣三一堂",
+      "en": "Holy Trinity Church",
+      "kind": "church",
+      "x": 1366,
+      "y": 36,
+      "z": 38,
+      "g": 16,
+      "alt": "圣三一堂 (上海) Holy Trinity Church 圣三一堂 (上海) Holy Trinity Church",
+      "far": 1000
+    },
+    {
+      "name": "山西路桥",
+      "kind": "bridge",
+      "x": 1880,
+      "y": -386,
+      "z": 22,
+      "g": 10,
+      "alt": "山西路桥",
+      "far": 1000
+    },
+    {
+      "name": "恒丰路",
+      "en": "Hengfeng Road",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 3739,
+      "y": -2860,
+      "z": 29
+    },
+    {
+      "name": "恒丰路桥行人道",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 3864,
+      "y": -2829,
+      "z": 27
+    },
+    {
+      "name": "摩西会堂",
+      "en": "Shanghai Jewish Refugees Museum",
+      "kind": "museum",
+      "site": "http://www.shhkjrm.com",
+      "x": 2812,
+      "y": 2616,
+      "z": 27,
+      "g": 15,
+      "alt": "摩西会堂 Shanghai Jewish Refugees Museum",
+      "far": 1000
+    },
+    {
+      "name": "新闸路出口",
+      "en": "Xinzha Road Exit",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 2783,
+      "y": -2018,
+      "z": 31
+    },
+    {
+      "name": "梅园路出口",
+      "en": "Meiyuan Road Exit",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 2939,
+      "y": -2230,
+      "z": 27
+    },
+    {
+      "name": "横浜桥",
+      "kind": "bridge",
+      "x": 3859,
+      "y": 248,
+      "z": 26,
+      "g": 14,
+      "alt": "横浜桥",
+      "far": 1000
+    },
+    {
+      "name": "正大广场",
+      "en": "Super Brand Mall",
+      "kind": "building",
+      "site": "http://www.superbrandmall.com/",
+      "x": 1135,
+      "y": 1238,
+      "z": 40,
+      "g": 28,
+      "alt": "正大广场 Super Brand Mall",
+      "far": 1000
+    },
+    {
+      "name": "永兴路出口",
+      "en": "Yongxing Road Exit",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 2916,
+      "y": -1899,
+      "z": 34
+    },
+    {
+      "name": "江宁路桥",
+      "en": "Jiangning Road Bridge",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 3633,
+      "y": -4180,
+      "z": 25
+    },
+    {
+      "name": "汤臣一品",
+      "en": "Tomson Riviera",
+      "kind": "building",
+      "x": 694,
+      "y": 1369,
+      "z": 32,
+      "g": 20,
+      "alt": "汤臣一品 Tomson Riviera",
+      "far": 1000
+    },
+    {
+      "name": "浦江饭店",
+      "en": "Astor House Hotel",
+      "kind": "hotel",
+      "site": "http://www.astorhousehotel.com/",
+      "x": 2112,
+      "y": 628,
+      "z": 40,
+      "g": 18,
+      "alt": "浦江饭店 Astor House Hotel",
+      "far": 1000
+    },
+    {
+      "name": "石门二路",
+      "en": "Shimen No. 2 Road",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 2119,
+      "y": -2493,
+      "z": 25
+    },
+    {
+      "name": "福建中路",
+      "en": "Middle Fujian Road",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 1883,
+      "y": -581,
+      "z": 26
+    },
+    {
+      "name": "福建北路",
+      "en": "North Fujian Road",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 2002,
+      "y": -555,
+      "z": 27
+    },
+    {
+      "name": "福建路桥",
+      "en": "Fujian Road Bridge",
+      "kind": "bridge",
+      "x": 1929,
+      "y": -575,
+      "z": 21,
+      "g": 9,
+      "alt": "福建路桥",
+      "far": 1000
+    },
+    {
+      "name": "茂名南路",
+      "en": "South Maoming Road",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 551,
+      "y": -2935,
+      "z": 30
+    },
+    {
+      "name": "西藏北路",
+      "en": "Xizang Road Bridge",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 2046,
+      "y": -1190,
+      "z": 25
+    },
+    {
+      "name": "镇坪路",
+      "en": "Zhenping Road",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 3340,
+      "y": -4790,
+      "z": 27
+    },
+    {
+      "name": "长寿路",
+      "en": "Changshou Road",
+      "kind": "bridge",
+      "far": 1000,
+      "x": 3020,
+      "y": -3338,
+      "z": 25
+    },
+    {
+      "name": "上海船厂滨江绿地",
+      "kind": "park",
+      "far": 900,
+      "x": 1800,
+      "y": 2111,
+      "z": 20
+    },
+    {
+      "name": "东方明珠公园",
+      "kind": "park",
+      "far": 900,
+      "x": 1616,
+      "y": 1417,
+      "z": 18
+    },
+    {
+      "name": "东昌滨江绿地",
+      "kind": "park",
+      "far": 900,
+      "x": 119,
+      "y": 1603,
+      "z": 19
+    },
+    {
+      "name": "古城公园",
+      "en": "Gucheng Park",
+      "kind": "park",
+      "x": 352,
+      "y": 559,
+      "z": 26,
+      "g": 14,
+      "alt": "古城公园 Gucheng Park",
+      "far": 900
+    },
+    {
+      "name": "四川北路公园",
+      "en": "North Sichuan Road Park",
+      "kind": "park",
+      "x": 3411,
+      "y": 344,
+      "z": 23,
+      "g": 11,
+      "alt": "四川北路公园 North Sichuan Road Park",
+      "far": 900
+    },
+    {
+      "name": "柳园公园",
+      "kind": "park",
+      "far": 900,
+      "x": 901,
+      "y": 1999,
+      "z": 23
+    },
+    {
+      "name": "滨江公园",
+      "en": "Binjiang Park",
+      "kind": "park",
+      "far": 900,
+      "x": 906,
+      "y": 1138,
+      "z": 21
+    },
+    {
+      "name": "爱思儿童公园",
+      "en": "Aisi Children's Park",
+      "kind": "park",
+      "far": 900,
+      "x": 3648,
+      "y": 548,
+      "z": 23
+    },
+    {
+      "name": "BFC外滩金融中心",
+      "en": "The Bund Finance Center",
+      "kind": "building",
+      "site": "http://www.fosunfoundation.com/en/index.php/venue/fosun_foundation_center",
+      "x": 47,
+      "y": 881,
+      "z": 23,
+      "g": 11,
+      "alt": "BFC外滩金融中心 The Bund Finance Center",
+      "far": 700
+    },
+    {
+      "name": "上海杜莎夫人蜡像馆",
+      "en": "Madame Tussauds Shanghai",
+      "kind": "museum",
+      "x": 1413,
+      "y": -1207,
+      "z": 42,
+      "g": 30,
+      "alt": "上海杜莎夫人蜡像馆 Madame Tussauds Shanghai",
+      "far": 700
+    },
+    {
+      "name": "震旦国际大楼",
+      "en": "Aurora Plaza",
+      "kind": "tower",
+      "x": 888,
+      "y": 1243,
+      "z": 201,
+      "g": 16,
+      "alt": "震旦国际大楼 Aurora Plaza",
+      "far": 700
+    },
+    {
+      "name": "中山公园",
+      "en": "Zhongshan Park",
+      "kind": "park",
+      "x": 1095,
+      "y": -6596,
+      "z": 22,
+      "g": 14,
+      "alt": "中山公园 Zhongshan Park",
+      "far": 3500
+    },
+    {
+      "name": "中山公园站",
+      "en": "Zhongshan Park Station",
+      "kind": "building",
+      "x": 767,
+      "y": -6939,
+      "z": 23,
+      "g": 11,
+      "alt": "中山公园站 Zhongshan Park Station",
+      "far": 900
+    },
+    {
+      "name": "龙之梦购物中心",
+      "en": "Cloud Nine Shopping Mall",
+      "kind": "building",
+      "x": 860,
+      "y": -6889,
+      "z": 55,
+      "g": 18,
+      "alt": "龙之梦购物中心 Cloud Nine Shopping Mall",
+      "far": 1500
+    },
+    {
+      "name": "龙之梦万丽酒店",
+      "en": "Renaissance Shanghai Zhongshan Park Hotel",
+      "kind": "hotel",
+      "x": 800,
+      "y": -6838,
+      "z": 100,
+      "g": 13,
+      "alt": "龙之梦万丽酒店 Renaissance Shanghai Zhongshan Park Hotel",
+      "far": 900
+    },
+    {
+      "name": "龙之梦大酒店",
+      "en": "The Longemont Hotel",
+      "kind": "hotel",
+      "x": -291,
+      "y": -5775,
+      "z": 200,
+      "g": 21,
+      "alt": "龙之梦大酒店 The Longemont Hotel",
+      "far": 1500
+    },
+    {
+      "name": "江苏路站",
+      "en": "Jiangsu Road Station",
+      "kind": "building",
+      "x": 635,
+      "y": -5536,
+      "z": 23,
+      "g": 11,
+      "alt": "江苏路站 Jiangsu Road Station",
+      "far": 900
+    },
+    {
+      "name": "兆丰别墅",
+      "en": "Zhaofeng Villas",
+      "kind": "historic",
+      "x": 963,
+      "y": -6260,
+      "z": 28,
+      "g": 16,
+      "alt": "兆丰别墅 Zhaofeng Villas",
+      "far": 900
+    },
+    {
+      "name": "宋庆龄故居",
+      "en": "Former Residence of Soong Ching-ling",
+      "kind": "historic",
+      "x": -1218,
+      "y": -5152,
+      "z": 28,
+      "g": 18,
+      "alt": "宋庆龄故居 Former Residence of Soong Ching-ling",
+      "far": 1500
+    },
+    {
+      "name": "鲁迅公园",
+      "en": "Lu Xun Park",
+      "kind": "park",
+      "x": 5300,
+      "y": 450,
+      "z": 22,
+      "g": 15,
+      "alt": "鲁迅公园 Lu Xun Park",
+      "far": 3500
+    },
+    {
+      "name": "虹口足球场",
+      "en": "Hongkou Football Stadium",
+      "kind": "building",
+      "x": 5258,
+      "y": 318,
+      "z": 40,
+      "g": 24,
+      "alt": "虹口足球场 Hongkou Football Stadium",
+      "far": 2500
+    },
+    {
+      "name": "鲁迅纪念馆",
+      "en": "Lu Xun Memorial Hall",
+      "kind": "museum",
+      "x": 5018,
+      "y": 566,
+      "z": 28,
+      "g": 19,
+      "alt": "鲁迅纪念馆 Lu Xun Memorial Hall",
+      "far": 1500
+    },
+    {
+      "name": "和平公园",
+      "en": "Peace Park",
+      "kind": "park",
+      "x": 4763,
+      "y": 2390,
+      "z": 22,
+      "g": 11,
+      "alt": "和平公园 Peace Park",
+      "far": 2500
+    },
+    {
+      "name": "多伦路",
+      "en": "Duolun Road",
+      "kind": "street",
+      "x": 4300,
+      "y": 280,
+      "z": 22,
+      "g": 16,
+      "alt": "多伦路 Duolun Road",
+      "far": 900
+    },
+    {
+      "name": "甜爱路",
+      "en": "Tian'ai Road",
+      "kind": "street",
+      "x": 4687,
+      "y": 487,
+      "z": 22,
+      "g": 15,
+      "alt": "甜爱路 Tian'ai Road",
+      "far": 900
+    },
+    {
+      "name": "上海西站",
+      "en": "Shanghai West Railway Station",
+      "kind": "station",
+      "x": 5775,
+      "y": -7096,
+      "far": 2500,
+      "g": 12,
+      "z": 20,
+      "alt": "上海西站 Shanghai West Railway Station"
+    },
+    {
+      "name": "真如站",
+      "en": "Zhenru Station",
+      "kind": "station",
+      "x": 4483,
+      "y": -7014,
+      "far": 1500,
+      "g": 12,
+      "z": 20,
+      "alt": "真如站 Zhenru Station"
+    },
+    {
+      "name": "万里公园",
+      "en": "Wanli Park",
+      "kind": "park",
+      "x": 6018,
+      "y": -6629,
+      "far": 1500,
+      "g": 15,
+      "z": 23,
+      "alt": "万里公园 Wanli Park"
+    },
+    {
+      "name": "管弄公园",
+      "en": "Guanlong Park",
+      "kind": "park",
+      "x": 4834,
+      "y": -4993,
+      "far": 1200,
+      "g": 14,
+      "z": 22,
+      "alt": "管弄公园 Guanlong Park"
+    },
+    {
+      "name": "上海马戏城",
+      "en": "Shanghai Circus World",
+      "kind": "building",
+      "x": 6563,
+      "y": -2258,
+      "far": 2500,
+      "g": 16,
+      "z": 24,
+      "alt": "上海马戏城 Shanghai Circus World"
+    },
+    {
+      "name": "上海大学延长校区",
+      "en": "Shanghai University Yanchang Campus",
+      "kind": "university",
+      "x": 6551,
+      "y": -1670,
+      "far": 2500,
+      "g": 12,
+      "z": 20,
+      "alt": "上海大学延长校区 Shanghai University Yanchang Campus"
+    },
+    {
+      "name": "大柏树",
+      "en": "Dabaishu",
+      "kind": "neighborhood",
+      "x": 6615,
+      "y": 850,
+      "far": 2500,
+      "g": 15,
+      "z": 23,
+      "alt": "大柏树 Dabaishu"
+    },
+    {
+      "name": "复旦大学",
+      "en": "Fudan University",
+      "kind": "university",
+      "x": 7585,
+      "y": 2677,
+      "far": 3500,
+      "g": 16,
+      "z": 24,
+      "alt": "复旦大学 Fudan University"
+    },
+    {
+      "name": "正大体育馆",
+      "en": "Zhengda Gymnasium",
+      "kind": "building",
+      "x": 7119,
+      "y": 2950,
+      "far": 1500,
+      "g": 19,
+      "z": 27,
+      "alt": "正大体育馆 Zhengda Gymnasium"
+    },
+    {
+      "name": "复旦大学理科图书馆",
+      "en": "Fudan Science Library",
+      "kind": "building",
+      "x": 7634,
+      "y": 2973,
+      "far": 1500,
+      "g": 19,
+      "z": 27,
+      "alt": "复旦大学理科图书馆 Fudan Science Library"
+    },
+    {
+      "name": "大华行知公园",
+      "en": "Dahua Xingzhi Park",
+      "kind": "park",
+      "x": 7388,
+      "y": -6076,
+      "far": 1500,
+      "g": 14,
+      "z": 22,
+      "alt": "大华行知公园 Dahua Xingzhi Park"
+    },
+    {
+      "name": "光华楼",
+      "en": "Guanghua Towers",
+      "kind": "university",
+      "x": 7876,
+      "y": 3269,
+      "far": 3500,
+      "g": 12,
+      "z": 154,
+      "alt": "光华楼 Guanghua Towers"
+    },
+    {
+      "name": "五角场",
+      "en": "Wujiaochang",
+      "kind": "neighborhood",
+      "x": 7670,
+      "y": 4238,
+      "far": 3500,
+      "g": 17,
+      "z": 33,
+      "alt": "五角场 Wujiaochang"
+    },
+    {
+      "name": "五角场广场彩蛋",
+      "en": "Wujiaochang Egg",
+      "kind": "artwork",
+      "x": 7685,
+      "y": 4233,
+      "far": 1500,
+      "g": 21,
+      "z": 41,
+      "alt": "五角场广场彩蛋 Wujiaochang Egg"
+    },
+    {
+      "name": "万达广场",
+      "en": "Wujiaochang Wanda Plaza",
+      "kind": "building",
+      "x": 7813,
+      "y": 4122,
+      "far": 1500,
+      "g": 17,
+      "z": 57,
+      "alt": "万达广场 Wujiaochang Wanda Plaza"
+    },
+    {
+      "name": "同济大学",
+      "en": "Tongji University",
+      "kind": "university",
+      "x": 5873,
+      "y": 3106,
+      "far": 3500,
+      "g": 18,
+      "z": 42,
+      "alt": "同济大学 Tongji University"
+    },
+    {
+      "name": "同济大学彰武路校区",
+      "en": "Tongji University Zhangwu Campus",
+      "kind": "university",
+      "x": 5812,
+      "y": 3679,
+      "far": 1500,
+      "g": 9,
+      "z": 27,
+      "alt": "同济大学彰武路校区 Tongji University Zhangwu Campus"
+    },
+    {
+      "name": "上海五角场凯悦酒店",
+      "en": "Hyatt Regency Shanghai Wujiaochang",
+      "kind": "hotel",
+      "x": 7660,
+      "y": 4580,
+      "far": 1500,
+      "g": 11,
+      "z": 91,
+      "alt": "上海五角场凯悦酒店 Hyatt Regency Shanghai Wujiaochang"
+    },
+    {
+      "name": "杨浦大桥",
+      "en": "Yangpu Bridge",
+      "kind": "bridge",
+      "x": 2223,
+      "y": 6007,
+      "far": 3500,
+      "g": 5,
+      "z": 30,
+      "alt": "杨浦大桥 Yangpu Bridge"
+    },
+    {
+      "name": "杨浦大桥公园",
+      "en": "Yangpu Bridge Park",
+      "kind": "park",
+      "x": 2574,
+      "y": 5658,
+      "far": 1500,
+      "g": 5,
+      "z": 22,
+      "alt": "杨浦大桥公园 Yangpu Bridge Park"
+    },
+    {
+      "name": "世界技能博物馆",
+      "en": "World Skills Museum",
+      "kind": "museum",
+      "x": 2384,
+      "y": 5643,
+      "far": 1500,
+      "g": 5,
+      "z": 22,
+      "alt": "世界技能博物馆 World Skills Museum"
+    },
+    {
+      "name": "黄兴公园",
+      "en": "Huangxing Park",
+      "kind": "park",
+      "x": 6570,
+      "y": 5435,
+      "far": 2500,
+      "g": 6,
+      "z": 22,
+      "alt": "黄兴公园 Huangxing Park"
+    },
+    {
+      "name": "黄兴体育运动公园",
+      "en": "Huangxing Sports Park",
+      "kind": "park",
+      "x": 7060,
+      "y": 5272,
+      "far": 1500,
+      "g": 3,
+      "z": 20,
+      "alt": "黄兴体育运动公园 Huangxing Sports Park"
+    },
+    {
+      "name": "延春公园",
+      "en": "Yanchun Park",
+      "kind": "park",
+      "x": 5997,
+      "y": 5863,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "延春公园 Yanchun Park"
+    },
+    {
+      "name": "平凉公园",
+      "en": "Pingliang Park",
+      "kind": "park",
+      "x": 3542,
+      "y": 5987,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "平凉公园 Pingliang Park"
+    },
+    {
+      "name": "杨浦区体育场",
+      "en": "Yangpu Stadium",
+      "kind": "stadium",
+      "x": 5048,
+      "y": 6164,
+      "far": 2500,
+      "g": 6,
+      "z": 28,
+      "alt": "杨浦区体育场 Yangpu Stadium"
+    },
+    {
+      "name": "上海电力大学杨浦校区",
+      "en": "Shanghai University of Electric Power Yangpu Campus",
+      "kind": "university",
+      "x": 4376,
+      "y": 6565,
+      "far": 2500,
+      "g": 6,
+      "z": 30,
+      "alt": "上海电力大学杨浦校区 Shanghai University of Electric Power Yangpu Campus"
+    },
+    {
+      "name": "上海电力大学国顺东路校区",
+      "en": "Shanghai University of Electric Power Guoshun East Road Campus",
+      "kind": "university",
+      "x": 7446,
+      "y": 6745,
+      "far": 1500,
+      "g": 6,
+      "z": 28,
+      "alt": "上海电力大学国顺东路校区 Shanghai University of Electric Power Guoshun East Road Campus"
+    },
+    {
+      "name": "内江公园",
+      "en": "Neijiang Park",
+      "kind": "park",
+      "x": 5675,
+      "y": 6673,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "内江公园 Neijiang Park"
+    },
+    {
+      "name": "泾南公园",
+      "en": "Jingnan Park",
+      "kind": "park",
+      "x": -14,
+      "y": 6302,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "泾南公园 Jingnan Park"
+    },
+    {
+      "name": "泾东公园",
+      "en": "Jingdong Park",
+      "kind": "park",
+      "x": 1151,
+      "y": 6818,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "泾东公园 Jingdong Park"
+    },
+    {
+      "name": "波阳公园",
+      "en": "Boyang Park",
+      "kind": "park",
+      "x": 3979,
+      "y": 6961,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "波阳公园 Boyang Park"
+    },
+    {
+      "name": "上海财经大学",
+      "en": "Shanghai University of Finance and Economics",
+      "kind": "university",
+      "x": 8635,
+      "y": 2554,
+      "far": 3500,
+      "g": 6,
+      "z": 30,
+      "alt": "上海财经大学 Shanghai University of Finance and Economics"
+    },
+    {
+      "name": "江湾体育场",
+      "en": "Jiangwan Stadium",
+      "kind": "stadium",
+      "x": 8372,
+      "y": 4364,
+      "far": 3500,
+      "g": 6,
+      "z": 30,
+      "alt": "江湾体育场 Jiangwan Stadium"
+    },
+    {
+      "name": "海军军医大学",
+      "en": "Naval Medical University",
+      "kind": "university",
+      "x": 8065,
+      "y": 5167,
+      "far": 2500,
+      "g": 6,
+      "z": 30,
+      "alt": "海军军医大学 Naval Medical University"
+    },
+    {
+      "name": "长海医院影像楼（原上海博物馆）",
+      "en": "Changhai Hospital Imaging Building (former Shanghai Museum)",
+      "kind": "building",
+      "x": 8388,
+      "y": 5602,
+      "far": 1500,
+      "g": 6,
+      "z": 30,
+      "alt": "长海医院影像楼（原上海博物馆） Changhai Hospital Imaging Building (former Shanghai Museum)"
+    },
+    {
+      "name": "中国武术博物馆",
+      "en": "China Wushu Museum",
+      "kind": "museum",
+      "x": 8968,
+      "y": 5698,
+      "far": 1500,
+      "g": 6,
+      "z": 24,
+      "alt": "中国武术博物馆 China Wushu Museum"
+    },
+    {
+      "name": "叶家花园",
+      "en": "Ye Family Garden",
+      "kind": "park",
+      "x": 8413,
+      "y": 3084,
+      "far": 1500,
+      "g": 6,
+      "z": 20,
+      "alt": "叶家花园 Ye Family Garden"
+    },
+    {
+      "name": "创智天地",
+      "en": "KIC Knowledge & Innovation Community",
+      "kind": "neighborhood",
+      "x": 8429,
+      "y": 4166,
+      "far": 1500,
+      "g": 6,
+      "z": 40,
+      "alt": "创智天地 KIC Knowledge & Innovation Community"
+    },
+    {
+      "name": "江湾公园",
+      "en": "Jiangwan Park",
+      "kind": "park",
+      "x": 8978,
+      "y": 1228,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "江湾公园 Jiangwan Park"
+    },
+    {
+      "name": "彭浦公园",
+      "en": "Pengpu Park",
+      "kind": "park",
+      "x": 9521,
+      "y": -1987,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "彭浦公园 Pengpu Park"
+    },
+    {
+      "name": "民星公园",
+      "en": "Minxing Park",
+      "kind": "park",
+      "x": 8788,
+      "y": 6345,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "民星公园 Minxing Park"
+    },
+    {
+      "name": "静安青年体育公园",
+      "en": "Jing'an Youth Sports Park",
+      "kind": "park",
+      "x": 8386,
+      "y": -3558,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "静安青年体育公园 Jing'an Youth Sports Park"
+    },
+    {
+      "name": "中国乳业博物馆",
+      "en": "China Dairy Museum",
+      "kind": "museum",
+      "x": 8991,
+      "y": -4571,
+      "far": 1500,
+      "g": 5,
+      "z": 20,
+      "alt": "中国乳业博物馆 China Dairy Museum"
+    },
+    {
+      "name": "上海理工大学",
+      "en": "University of Shanghai for Science and Technology",
+      "kind": "university",
+      "x": 6090,
+      "y": 7656,
+      "far": 3500,
+      "g": 5,
+      "z": 30,
+      "alt": "上海理工大学 University of Shanghai for Science and Technology"
+    },
+    {
+      "name": "上海理工大学南校区",
+      "en": "USST South Campus",
+      "kind": "university",
+      "x": 5550,
+      "y": 7825,
+      "far": 1500,
+      "g": 5,
+      "z": 26,
+      "alt": "上海理工大学南校区 USST South Campus"
+    },
+    {
+      "name": "上海海洋大学军工路校区",
+      "en": "Shanghai Ocean University Jungong Road Campus",
+      "kind": "university",
+      "x": 5304,
+      "y": 7873,
+      "far": 1500,
+      "g": 5,
+      "z": 26,
+      "alt": "上海海洋大学军工路校区 Shanghai Ocean University Jungong Road Campus"
+    },
+    {
+      "name": "油酷艺术公园",
+      "en": "Youku Art Park",
+      "kind": "park",
+      "x": 3867,
+      "y": 7727,
+      "far": 1500,
+      "g": 5,
+      "z": 18,
+      "alt": "油酷艺术公园 Youku Art Park"
+    }
+  ],
+  "views": {
+    "overview": {
+      "label": "Overview",
+      "target": [
+        1473.0,
+        30,
+        1364.0
+      ],
+      "pos": [
+        2100.0,
+        520,
+        200.0
+      ]
+    },
+    "pearl": {
+      "label": "Oriental Pearl",
+      "target": [
+        1473.0,
+        80,
+        1364.0
+      ],
+      "pos": [
+        1893.0,
+        220,
+        1744.0
+      ]
+    },
+    "lujiazui": {
+      "label": "Lujiazui",
+      "target": [
+        1673.0,
+        40,
+        1564.0
+      ],
+      "pos": [
+        873.0,
+        280,
+        1164.0
+      ]
+    },
+    "bund": {
+      "label": "The Bund",
+      "target": [
+        1473.0,
+        60,
+        1364.0
+      ],
+      "pos": [
+        1650.0,
+        55,
+        480.0
+      ]
+    },
+    "skyline": {
+      "label": "Bund skyline",
+      "target": [
+        1100.0,
+        80,
+        1600.0
+      ],
+      "pos": [
+        1500.0,
+        45,
+        420.0
+      ]
+    },
+    "river": {
+      "label": "Huangpu River",
+      "target": [
+        1273.0,
+        10,
+        1364.0
+      ],
+      "pos": [
+        1373.0,
+        220,
+        464.0
+      ]
+    },
+    "shanghai_tower": {
+      "label": "Shanghai Tower",
+      "target": [
+        667.0,
+        120,
+        1778.0
+      ],
+      "pos": [
+        317.0,
+        280,
+        2228.0
+      ]
+    },
+    "waibaidu": {
+      "label": "Waibaidu Bridge",
+      "target": [
+        2032.0,
+        18.0,
+        556.0
+      ],
+      "pos": [
+        2045.0,
+        24.0,
+        455.0
+      ]
+    },
+    "nanjing": {
+      "label": "East Nanjing Road",
+      "target": [
+        1562.0,
+        20.0,
+        400.0
+      ],
+      "pos": [
+        1562.0,
+        24.0,
+        250.0
+      ]
+    },
+    "bund_street": {
+      "label": "Bund street",
+      "target": [
+        1494.0,
+        18.0,
+        473.0
+      ],
+      "pos": [
+        1294.0,
+        20.0,
+        483.0
+      ]
+    },
+    "swfc_aperture": {
+      "label": "SWFC aperture",
+      "target": [
+        742.0,
+        465.0,
+        1966.0
+      ],
+      "pos": [
+        402.0,
+        470.0,
+        1966.0
+      ]
+    },
+    "jinmao": {
+      "label": "Jin Mao Tower",
+      "target": [
+        854.0,
+        200.0,
+        1831.0
+      ],
+      "pos": [
+        674.0,
+        160.0,
+        1611.0
+      ]
+    },
+    "peoples_square": {
+      "label": "People's Square",
+      "target": [
+        772.0,
+        24.0,
+        -1215.0
+      ],
+      "pos": [
+        992.0,
+        70.0,
+        -835.0
+      ]
+    },
+    "west_from_bund": {
+      "label": "West from the Bund",
+      "target": [
+        772.0,
+        40.0,
+        -1215.0
+      ],
+      "pos": [
+        1520.0,
+        90.0,
+        420.0
+      ]
+    },
+    "nanjing_west": {
+      "label": "Nanjing Road west",
+      "target": [
+        1516.0,
+        18.0,
+        -80.0
+      ],
+      "pos": [
+        1540.0,
+        20.0,
+        90.0
+      ]
+    },
+    "nanjing_road_west": {
+      "label": "West Nanjing Road",
+      "target": [
+        1136.0,
+        18.0,
+        -1904.0
+      ],
+      "pos": [
+        1176.0,
+        28.0,
+        -1684.0
+      ]
+    },
+    "jingan_park": {
+      "label": "Jing'an Park",
+      "target": [
+        584.0,
+        16.0,
+        -3989.0
+      ],
+      "pos": [
+        664.0,
+        40.0,
+        -3789.0
+      ]
+    },
+    "jingan_temple": {
+      "label": "Jing'an Temple",
+      "target": [
+        769.0,
+        20.0,
+        -4104.0
+      ],
+      "pos": [
+        700.0,
+        36.0,
+        -4220.0
+      ]
+    },
+    "toward_jingan": {
+      "label": "Toward Jing'an",
+      "target": [
+        800.0,
+        35.0,
+        -3900.0
+      ],
+      "pos": [
+        1100.0,
+        45.0,
+        -2400.0
+      ]
+    },
+    "north_bund": {
+      "label": "North Bund",
+      "target": [
+        2279.0,
+        30.0,
+        1556.0
+      ],
+      "pos": [
+        1999.0,
+        70.0,
+        1136.0
+      ]
+    },
+    "waibaidu_to_north": {
+      "label": "Waibaidu to North Bund",
+      "target": [
+        2143.0,
+        28.0,
+        565.0
+      ],
+      "pos": [
+        1920.0,
+        42.0,
+        400.0
+      ]
+    },
+    "peoples_park_trees": {
+      "label": "People's Park trees",
+      "target": [
+        1169.0,
+        18.0,
+        -1256.0
+      ],
+      "pos": [
+        1240.0,
+        42.0,
+        -1120.0
+      ]
+    },
+    "jingan_park_trees": {
+      "label": "Jing'an Park trees",
+      "target": [
+        584.0,
+        16.0,
+        -3989.0
+      ],
+      "pos": [
+        634.0,
+        22.0,
+        -3909.0
+      ]
+    },
+    "yuyuan": {
+      "label": "Yu Garden",
+      "target": [
+        232.0,
+        14.0,
+        374.0
+      ],
+      "pos": [
+        280.0,
+        58.0,
+        500.0
+      ]
+    },
+    "chenghuang": {
+      "label": "City God Temple",
+      "target": [
+        86.0,
+        18.0,
+        385.0
+      ],
+      "pos": [
+        150.0,
+        48.0,
+        290.0
+      ]
+    },
+    "xintiandi": {
+      "label": "Xintiandi",
+      "target": [
+        -207.0,
+        16.0,
+        -1410.0
+      ],
+      "pos": [
+        -127.0,
+        28.0,
+        -1270.0
+      ]
+    },
+    "old_city": {
+      "label": "Old City",
+      "target": [
+        -310.0,
+        20.0,
+        157.0
+      ],
+      "pos": [
+        100.0,
+        80.0,
+        400.0
+      ]
+    },
+    "toward_yuyuan": {
+      "label": "Toward Yu Garden",
+      "target": [
+        235.0,
+        22.0,
+        365.0
+      ],
+      "pos": [
+        1200.0,
+        55.0,
+        550.0
+      ]
+    },
+    "toward_xintiandi": {
+      "label": "Toward Xintiandi",
+      "target": [
+        -207.0,
+        20.0,
+        -1410.0
+      ],
+      "pos": [
+        992.0,
+        70.0,
+        -835.0
+      ]
+    },
+    "wenmiao": {
+      "label": "Shanghai Confucian Temple",
+      "target": [
+        -655.0,
+        16.0,
+        -245.0
+      ],
+      "pos": [
+        -595.0,
+        32.0,
+        -145.0
+      ]
+    },
+    "zhongshan_park": {
+      "label": "Zhongshan Park",
+      "target": [
+        1095.0,
+        8.0,
+        -6596.0
+      ],
+      "pos": [
+        1100.0,
+        100.0,
+        -5900.0
+      ]
+    },
+    "toward_zhongshan": {
+      "label": "Toward Zhongshan Park",
+      "target": [
+        1100.0,
+        20.0,
+        -6500.0
+      ],
+      "pos": [
+        950.0,
+        130.0,
+        -5200.0
+      ]
+    },
+    "hole_filled": {
+      "label": "South of Jing'an (filled)",
+      "target": [
+        100.0,
+        25.0,
+        -3700.0
+      ],
+      "pos": [
+        -350.0,
+        140.0,
+        -2900.0
+      ]
+    },
+    "luxun_park": {
+      "label": "Lu Xun Park",
+      "target": [
+        5300.0,
+        12.0,
+        500.0
+      ],
+      "pos": [
+        5000.0,
+        60.0,
+        280.0
+      ]
+    },
+    "hongkou_stadium": {
+      "label": "Hongkou Football Stadium",
+      "target": [
+        5258.0,
+        28.0,
+        318.0
+      ],
+      "pos": [
+        5080.0,
+        70.0,
+        120.0
+      ]
+    },
+    "toward_hongkou": {
+      "label": "Toward Hongkou",
+      "target": [
+        5300.0,
+        18.0,
+        500.0
+      ],
+      "pos": [
+        3500.0,
+        90.0,
+        520.0
+      ]
+    },
+    "shanghai_west": {
+      "label": "Shanghai West Railway Station",
+      "target": [
+        5775.0,
+        16.0,
+        -7096.0
+      ],
+      "pos": [
+        5600.0,
+        70.0,
+        -6800.0
+      ]
+    },
+    "corner_filled": {
+      "label": "Filled +x corner",
+      "target": [
+        5120.0,
+        18.0,
+        -4608.0
+      ],
+      "pos": [
+        4800.0,
+        140.0,
+        -3600.0
+      ]
+    },
+    "circus_world": {
+      "label": "Shanghai Circus World",
+      "target": [
+        6563.0,
+        24.0,
+        -2258.0
+      ],
+      "pos": [
+        6400.0,
+        70.0,
+        -2500.0
+      ]
+    },
+    "shu_yanchang": {
+      "label": "Shanghai University Yanchang",
+      "target": [
+        6551.0,
+        18.0,
+        -1670.0
+      ],
+      "pos": [
+        6380.0,
+        55.0,
+        -1850.0
+      ]
+    },
+    "dabaishu": {
+      "label": "Dabaishu",
+      "target": [
+        6615.0,
+        16.0,
+        850.0
+      ],
+      "pos": [
+        6400.0,
+        80.0,
+        500.0
+      ]
+    },
+    "fudan": {
+      "label": "Fudan University",
+      "target": [
+        7585.0,
+        20.0,
+        2677.0
+      ],
+      "pos": [
+        7350.0,
+        70.0,
+        2400.0
+      ]
+    },
+    "zhengda_gym": {
+      "label": "Zhengda Gymnasium",
+      "target": [
+        7119.0,
+        22.0,
+        2950.0
+      ],
+      "pos": [
+        6950.0,
+        50.0,
+        2750.0
+      ]
+    },
+    "toward_yangpu": {
+      "label": "Toward Yangpu",
+      "target": [
+        7200.0,
+        20.0,
+        1800.0
+      ],
+      "pos": [
+        5400.0,
+        90.0,
+        600.0
+      ]
+    },
+    "guanghua": {
+      "label": "Fudan Guanghua Towers",
+      "target": [
+        7876.0,
+        82.0,
+        3269.0
+      ],
+      "pos": [
+        7650.0,
+        47.0,
+        3040.0
+      ]
+    },
+    "wujiaochang": {
+      "label": "Wujiaochang",
+      "target": [
+        7670.0,
+        20.0,
+        4238.0
+      ],
+      "pos": [
+        7480.0,
+        80.0,
+        3920.0
+      ]
+    },
+    "tongji": {
+      "label": "Tongji University",
+      "target": [
+        5873.0,
+        24.0,
+        3200.0
+      ],
+      "pos": [
+        6050.0,
+        55.0,
+        3000.0
+      ]
+    },
+    "toward_guanghua": {
+      "label": "Toward Guanghua Towers",
+      "target": [
+        7876.0,
+        72.0,
+        3269.0
+      ],
+      "pos": [
+        7400.0,
+        90.0,
+        2500.0
+      ]
+    },
+    "toward_wujiaochang": {
+      "label": "Toward Wujiaochang",
+      "target": [
+        7670.0,
+        24.0,
+        4238.0
+      ],
+      "pos": [
+        7600.0,
+        90.0,
+        3300.0
+      ]
+    },
+    "yangpu_bridge": {
+      "label": "Yangpu Bridge",
+      "target": [
+        2000.0,
+        35.0,
+        6200.0
+      ],
+      "pos": [
+        3200.0,
+        120.0,
+        5200.0
+      ]
+    },
+    "toward_yangpu_bridge": {
+      "label": "Toward Yangpu Bridge",
+      "target": [
+        2300.0,
+        40.0,
+        5920.0
+      ],
+      "pos": [
+        2600.0,
+        90.0,
+        4800.0
+      ]
+    },
+    "huangxing_park": {
+      "label": "Huangxing Park",
+      "target": [
+        6570.0,
+        16.0,
+        5435.0
+      ],
+      "pos": [
+        6380.0,
+        70.0,
+        5150.0
+      ]
+    },
+    "yangpu_bridge_park": {
+      "label": "Yangpu Bridge Park",
+      "target": [
+        2574.0,
+        18.0,
+        5658.0
+      ],
+      "pos": [
+        2800.0,
+        55.0,
+        5480.0
+      ]
+    },
+    "toward_yangpu_pudong": {
+      "label": "Toward Yangpu Bridge Pudong",
+      "target": [
+        1726.0,
+        30.0,
+        6360.0
+      ],
+      "pos": [
+        2500.0,
+        90.0,
+        5900.0
+      ]
+    },
+    "yangpu_stadium": {
+      "label": "Yangpu Stadium",
+      "target": [
+        5048.0,
+        18.0,
+        6164.0
+      ],
+      "pos": [
+        4880.0,
+        70.0,
+        5920.0
+      ]
+    },
+    "shangdian_yangpu": {
+      "label": "Shanghai University of Electric Power Yangpu Campus",
+      "target": [
+        4376.0,
+        18.0,
+        6565.0
+      ],
+      "pos": [
+        4220.0,
+        60.0,
+        6320.0
+      ]
+    },
+    "sufe": {
+      "label": "Shanghai University of Finance and Economics",
+      "target": [
+        8635.0,
+        20.0,
+        2554.0
+      ],
+      "pos": [
+        8250.0,
+        90.0,
+        2150.0
+      ]
+    },
+    "jiangwan_stadium": {
+      "label": "Jiangwan Stadium",
+      "target": [
+        8372.0,
+        18.0,
+        4364.0
+      ],
+      "pos": [
+        8150.0,
+        70.0,
+        4100.0
+      ]
+    },
+    "across_x8192": {
+      "label": "Wujiaochang across x=8192 to Jiangwan",
+      "target": [
+        8450.0,
+        20.0,
+        4350.0
+      ],
+      "pos": [
+        7350.0,
+        200.0,
+        3500.0
+      ]
+    },
+    "changhai": {
+      "label": "Changhai / Naval Medical University",
+      "target": [
+        8388.0,
+        22.0,
+        5602.0
+      ],
+      "pos": [
+        8150.0,
+        70.0,
+        5300.0
+      ]
+    },
+    "usst": {
+      "label": "University of Shanghai for Science and Technology",
+      "target": [
+        6090.0,
+        18.0,
+        7656.0
+      ],
+      "pos": [
+        6450.0,
+        90.0,
+        7250.0
+      ]
+    },
+    "toward_usst": {
+      "label": "Yangpu riverside toward USST",
+      "target": [
+        6000.0,
+        20.0,
+        7600.0
+      ],
+      "pos": [
+        5300.0,
+        150.0,
+        6500.0
+      ]
+    },
+    "seam_x8192_a": {
+      "label": "Seam x=8192 (a)",
+      "target": [
+        8230.0,
+        12.0,
+        2900.0
+      ],
+      "pos": [
+        8040.0,
+        40.0,
+        2650.0
+      ]
+    },
+    "seam_x8192_b": {
+      "label": "Seam x=8192 (b)",
+      "target": [
+        8192.0,
+        10.0,
+        2900.0
+      ],
+      "pos": [
+        8192.0,
+        70.0,
+        2300.0
+      ]
+    },
+    "seam_x8192_c": {
+      "label": "Seam x=8192 (c)",
+      "target": [
+        8260.0,
+        12.0,
+        5550.0
+      ],
+      "pos": [
+        7950.0,
+        60.0,
+        5250.0
+      ]
+    }
+  },
+  "sources": {
+    "osm": "OpenStreetMap, extract timestamp 2026-11-11T00:17:14Z; © OpenStreetMap contributors, ODbL. OSM.fr PBF cut covering the streamed window x=-2048..10240, y=-7168..8192. Not a LiDAR survey.",
+    "dem": "Copernicus GLO-30 (30 m DSM), resampled and building-masked to approximate bare earth. Not LiDAR, not a 0.5 m DTM.",
+    "waterfront": "Bund flood wall / promenade at 6.9 m Wusong (Shanghai Water Authority 2024; 1989–1993 Bund rebuild). Street ~3.2 m from the 1997 tide report. Not LiDAR.",
+    "waibaidu": "Schematic camelback truss from published span/width/height (zh/en Wikipedia); OSM centreline for placement.",
+    "note": "Shanghai 2025 government aerial / 0.1 m ortho / 0.5 m DSM is not publicly downloadable and was not used. Heights are OSM tags plus cited schematic overrides, not LiDAR.",
+    "labels": "Wikidata items in the AOI, ranked by zh+en Wikipedia page views (Nov 2025–Oct 2026). far distances follow scripts/labels.py.",
+    "west": {
+      "bbox_grid": [
+        0,
+        -2048,
+        4096,
+        0
+      ],
+      "tiles_1m": {
+        "tx": [
+          0,
+          31
+        ],
+        "ty": [
+          -16,
+          -1
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          0,
+          3
+        ],
+        "ty": [
+          -2,
+          -3
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed west block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "jingan": {
+      "bbox_grid": [
+        0,
+        -4096,
+        4096,
+        -2048
+      ],
+      "tiles_1m": {
+        "tx": [
+          0,
+          31
+        ],
+        "ty": [
+          -32,
+          -17
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          0,
+          3
+        ],
+        "ty": [
+          -4,
+          -3
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed jingan block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "jingan_west": {
+      "bbox_grid": [
+        0,
+        -5120,
+        4096,
+        -4096
+      ],
+      "tiles_1m": {
+        "tx": [
+          0,
+          31
+        ],
+        "ty": [
+          -40,
+          -33
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          0,
+          3
+        ],
+        "ty": [
+          -5,
+          -5
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed jingan_west block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "south": {
+      "bbox_grid": [
+        -2048,
+        -2048,
+        0,
+        1024
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          -1
+        ],
+        "ty": [
+          -16,
+          7
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          -1
+        ],
+        "ty": [
+          -2,
+          0
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed south block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "south_jingan": {
+      "bbox_grid": [
+        -2048,
+        -5120,
+        0,
+        -2048
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          -1
+        ],
+        "ty": [
+          -40,
+          -17
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          -1
+        ],
+        "ty": [
+          -5,
+          -3
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed south_jingan block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "south_river": {
+      "bbox_grid": [
+        -2048,
+        1024,
+        0,
+        3072
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          -1
+        ],
+        "ty": [
+          8,
+          23
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          -1
+        ],
+        "ty": [
+          1,
+          2
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed south_river block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "zhongshan": {
+      "bbox_grid": [
+        -2048,
+        -7168,
+        4096,
+        -5120
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          31
+        ],
+        "ty": [
+          -56,
+          -41
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          3
+        ],
+        "ty": [
+          -7,
+          -6
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed zhongshan block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "hongkou": {
+      "bbox_grid": [
+        4096,
+        -2048,
+        6144,
+        3072
+      ],
+      "tiles_1m": {
+        "tx": [
+          32,
+          47
+        ],
+        "ty": [
+          -16,
+          23
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          4,
+          5
+        ],
+        "ty": [
+          -2,
+          2
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed hongkou block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "hongkou_south": {
+      "bbox_grid": [
+        4096,
+        -7168,
+        6144,
+        -2048
+      ],
+      "tiles_1m": {
+        "tx": [
+          32,
+          47
+        ],
+        "ty": [
+          -56,
+          -17
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          4,
+          5
+        ],
+        "ty": [
+          -7,
+          -3
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed hongkou_south block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "yangpu": {
+      "bbox_grid": [
+        6144,
+        -2048,
+        8192,
+        3072
+      ],
+      "tiles_1m": {
+        "tx": [
+          48,
+          63
+        ],
+        "ty": [
+          -16,
+          23
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          6,
+          7
+        ],
+        "ty": [
+          -2,
+          2
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed yangpu block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "yangpu_south": {
+      "bbox_grid": [
+        6144,
+        -7168,
+        8192,
+        -2048
+      ],
+      "tiles_1m": {
+        "tx": [
+          48,
+          63
+        ],
+        "ty": [
+          -56,
+          -17
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          6,
+          7
+        ],
+        "ty": [
+          -7,
+          -3
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed yangpu_south block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "wujiaochang": {
+      "bbox_grid": [
+        -2048,
+        3072,
+        8192,
+        5120
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          63
+        ],
+        "ty": [
+          24,
+          39
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          7
+        ],
+        "ty": [
+          3,
+          4
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed wujiaochang block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "yangpu_bridge": {
+      "bbox_grid": [
+        -2048,
+        5120,
+        8192,
+        6144
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          63
+        ],
+        "ty": [
+          40,
+          47
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          7
+        ],
+        "ty": [
+          5,
+          5
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed yangpu_bridge block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "yangpu_bridge_pudong": {
+      "bbox_grid": [
+        -2048,
+        6144,
+        8192,
+        7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          63
+        ],
+        "ty": [
+          48,
+          55
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          7
+        ],
+        "ty": [
+          6,
+          6
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed yangpu_bridge_pudong block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "jiangwan": {
+      "bbox_grid": [
+        8192,
+        -7168,
+        10240,
+        7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          64,
+          79
+        ],
+        "ty": [
+          -56,
+          55
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          8,
+          9
+        ],
+        "ty": [
+          -7,
+          6
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed jiangwan block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "gongqing": {
+      "bbox_grid": [
+        -2048,
+        7168,
+        10240,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          79
+        ],
+        "ty": [
+          56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          9
+        ],
+        "ty": [
+          7,
+          7
+        ]
+      },
+      "dem": "Copernicus GLO-30",
+      "osm": "OpenStreetMap (ODbL)",
+      "note": "streamed gongqing block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    }
+  },
+  "x0": -2048,
+  "y0": -7168,
+  "raster_chunks": {
+    "s": 2048,
+    "nx": 6,
+    "ny": 8,
+    "x0": -2048,
+    "y0": -7168,
+    "RW": 12288,
+    "RH": 15360,
+    "note": "1 m rasters split into CS×CS chunks (≤8192) for WebGL; layer = cy*nx+cx"
+  }
+}

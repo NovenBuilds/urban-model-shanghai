@@ -1,0 +1,25 @@
+# dependencies / env
+.venv/
+__pycache__/
+*.pyc
+web/node_modules/
+web/dist/
+.env
+
+# raw OSM / DEM caches (~1.5 GB) and pipeline intermediates
+data/raw/
+data/*.npz
+data/*.npz.bak*
+data/debug/
+data/backup_seam_tx63/
+data/meta_round15_after_voxelize.json
+
+# in-progress band work and logs
+work/
+logs/
+*.log
+preview/*.log
+
+# backups / prototypes, not needed to run the viewer
+web/public/data/*.bak*
+web/public/data/tiles_test/

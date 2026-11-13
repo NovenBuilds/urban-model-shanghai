@@ -1,0 +1,284 @@
+{
+  "source": "Typological timing for common Shanghai / Jiangnan urban trees (French plane, ginkgo, camphor, willow, pine). Not a counted Shanghai phenology survey and not LiDAR crowns.",
+  "city": {
+    "leaf": 85,
+    "colour": 318,
+    "fall": 340
+  },
+  "leaf": [
+    0.42,
+    0.55,
+    0.22
+  ],
+  "grass": [
+    [
+      0.35,
+      0.38,
+      0.22
+    ],
+    [
+      0.38,
+      0.42,
+      0.24
+    ],
+    [
+      0.4,
+      0.5,
+      0.26
+    ],
+    [
+      0.36,
+      0.52,
+      0.24
+    ],
+    [
+      0.34,
+      0.5,
+      0.22
+    ],
+    [
+      0.32,
+      0.48,
+      0.2
+    ],
+    [
+      0.3,
+      0.46,
+      0.18
+    ],
+    [
+      0.32,
+      0.46,
+      0.18
+    ],
+    [
+      0.34,
+      0.44,
+      0.2
+    ],
+    [
+      0.36,
+      0.42,
+      0.2
+    ],
+    [
+      0.38,
+      0.4,
+      0.22
+    ],
+    [
+      0.36,
+      0.38,
+      0.22
+    ]
+  ],
+  "classes": {
+    "1": {
+      "species": "Platanus (street, typological)",
+      "leaf": {
+        "day": 85,
+        "sd": 10,
+        "n": 0
+      },
+      "colour": {
+        "day": 318,
+        "sd": 8,
+        "n": 0
+      },
+      "fall": {
+        "day": 340,
+        "sd": 10,
+        "n": 0
+      },
+      "autumn": "#c47a2a"
+    },
+    "2": {
+      "species": "Platanus (park, typological)",
+      "leaf": {
+        "day": 88,
+        "sd": 10,
+        "n": 0
+      },
+      "colour": {
+        "day": 320,
+        "sd": 8,
+        "n": 0
+      },
+      "fall": {
+        "day": 342,
+        "sd": 10,
+        "n": 0
+      },
+      "autumn": "#c98930"
+    },
+    "3": {
+      "species": "deciduous mixed (typological)",
+      "leaf": {
+        "day": 82,
+        "sd": 12,
+        "n": 0
+      },
+      "colour": {
+        "day": 315,
+        "sd": 9,
+        "n": 0
+      },
+      "fall": {
+        "day": 338,
+        "sd": 11,
+        "n": 0
+      },
+      "autumn": "#b86a24"
+    },
+    "4": {
+      "species": "deciduous late (typological)",
+      "leaf": {
+        "day": 92,
+        "sd": 10,
+        "n": 0
+      },
+      "colour": {
+        "day": 322,
+        "sd": 8,
+        "n": 0
+      },
+      "fall": {
+        "day": 345,
+        "sd": 9,
+        "n": 0
+      },
+      "autumn": "#d0923a"
+    },
+    "5": {
+      "species": "Ginkgo (typological)",
+      "leaf": {
+        "day": 90,
+        "sd": 8,
+        "n": 0
+      },
+      "colour": {
+        "day": 300,
+        "sd": 7,
+        "n": 0
+      },
+      "fall": {
+        "day": 322,
+        "sd": 8,
+        "n": 0
+      },
+      "autumn": "#e0b030"
+    },
+    "6": {
+      "species": "Ginkgo late (typological)",
+      "leaf": {
+        "day": 94,
+        "sd": 8,
+        "n": 0
+      },
+      "colour": {
+        "day": 305,
+        "sd": 7,
+        "n": 0
+      },
+      "fall": {
+        "day": 326,
+        "sd": 8,
+        "n": 0
+      },
+      "autumn": "#e8bc40"
+    },
+    "7": {
+      "species": "Cinnamomum camphora (evergreen, typological)",
+      "leaf": null,
+      "colour": null,
+      "fall": null
+    },
+    "8": {
+      "species": "broadleaf evergreen (typological)",
+      "leaf": null,
+      "colour": null,
+      "fall": null
+    },
+    "9": {
+      "species": "Salix (typological)",
+      "leaf": {
+        "day": 70,
+        "sd": 10,
+        "n": 0
+      },
+      "colour": {
+        "day": 310,
+        "sd": 10,
+        "n": 0
+      },
+      "fall": {
+        "day": 330,
+        "sd": 10,
+        "n": 0
+      },
+      "autumn": "#c8a040"
+    },
+    "10": {
+      "species": "riparian deciduous (typological)",
+      "leaf": {
+        "day": 74,
+        "sd": 10,
+        "n": 0
+      },
+      "colour": {
+        "day": 312,
+        "sd": 10,
+        "n": 0
+      },
+      "fall": {
+        "day": 332,
+        "sd": 10,
+        "n": 0
+      },
+      "autumn": "#c89838"
+    },
+    "11": {
+      "species": "pine / cedar (evergreen, typological)",
+      "leaf": null,
+      "colour": null,
+      "fall": null
+    },
+    "12": {
+      "species": "conifer (evergreen, typological)",
+      "leaf": null,
+      "colour": null,
+      "fall": null
+    },
+    "13": {
+      "species": "default deciduous (typological)",
+      "leaf": {
+        "day": 85,
+        "sd": 10,
+        "n": 0
+      },
+      "colour": {
+        "day": 318,
+        "sd": 8,
+        "n": 0
+      },
+      "fall": {
+        "day": 340,
+        "sd": 10,
+        "n": 0
+      },
+      "autumn": "#c47a2a"
+    },
+    "14": {
+      "species": "bamboo / shrub (evergreen, typological)",
+      "leaf": null,
+      "colour": null,
+      "fall": null
+    },
+    "15": {
+      "species": "evergreen mixed (typological)",
+      "leaf": null,
+      "colour": null,
+      "fall": null
+    }
+  }
+}

@@ -1,0 +1,18 @@
+The interactive viewer (web/) and the shared tile format / meshing pipeline
+(scripts/tiles.py, and the structure of several supporting scripts) are adapted
+from Piotr Migdał's "Warsaw in voxels" (https://github.com/stared/warsaw-vibe-voxel),
+commit 9104d330fd6c8724eb89ccf6ee6d32fa127b7433, MIT License, © 2026 Piotr Migdał.
+
+This Shanghai project does not redistribute Warsaw's generated city tiles or
+GUGiK LiDAR / orthophoto derivatives.
+
+Shanghai scene data under web/public/data is derived from:
+  - OpenStreetMap, © OpenStreetMap contributors, ODbL
+    https://opendatacommons.org/licenses/odbl/
+    Extract: https://download.openstreetmap.fr/extracts/asia/china/shanghai.osm.pbf
+  - Copernicus GLO-30 DEM (30 m), © European Union, Copernicus Programme
+    https://spacedata.copernicus.eu/collections/copernicus-digital-elevation-model
+
+The Oriental Pearl's stepped silhouette is a simplified voxel sculpture from
+published dimensions (official / Wikipedia height 468 m, sphere diameters 50 m
+and 45 m), not from LiDAR or measured surveys.

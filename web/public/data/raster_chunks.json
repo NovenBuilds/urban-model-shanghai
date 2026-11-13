@@ -1,0 +1,10 @@
+{
+  "s": 2048,
+  "nx": 6,
+  "ny": 8,
+  "x0": -2048,
+  "y0": -7168,
+  "RW": 12288,
+  "RH": 15360,
+  "note": "1 m rasters split into CS\u00d7CS chunks (\u22648192) for WebGL; layer = cy*nx+cx"
+}

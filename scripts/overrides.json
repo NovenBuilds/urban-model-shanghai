@@ -1,0 +1,180 @@
+{
+  "_comment": "Hand-curated landmark geometry keyed by OSM id. Every entry cites public sources. No LiDAR or non-public ortho was used.",
+  "376075961": {
+    "name": "金茂大厦",
+    "en": "Jin Mao Tower",
+    "kind": "tower",
+    "sculpt": "jinmao_pagoda",
+    "osm_way": 376075961,
+    "shaft_part": 188377486,
+    "roof_m": 385.5,
+    "tip_m": 420.5,
+    "floors": 88,
+    "hotel_from_floor": 53,
+    "segments_floors": [
+      16,
+      14,
+      12,
+      10,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jin_Mao_Tower",
+      "https://zh.wikipedia.org/wiki/%E9%87%91%E8%8C%82%E5%A4%A7%E5%8E%A6",
+      "https://www.skyscrapercenter.com/building/id/189",
+      "https://old.skyscraper.org/EXHIBITIONS/BIG_BUILDINGS/CONTENT/jumbos/j_27.htm"
+    ],
+    "notes": "OSM only maps two shaft volumes (348 m and 382 m) plus a 420 m needle, which is not the 13-tier pagoda. Terraces follow the published 88-floor / 16-segment rule: each office segment is 2 floors (1/8 of the 16-story base) shorter than the one below, down to the hotel which starts at floor 53 (Wikipedia); hotel segments then drop one floor at a time (1/8 of an 8-level segment; SOM description quoted by the Skyscraper Museum). Heights are scaled to the published roof 385.5 m and tip 420.5 m (CTBUH / Wikipedia). Plan of each terrace is the OSM shaft (way 188377486) scaled about its centroid. Podium parts already in OSM are kept."
+  },
+  "10691100": {
+    "name": "上海环球金融中心",
+    "en": "Shanghai World Financial Center",
+    "kind": "tower",
+    "sculpt": "osm_parts",
+    "sources": [
+      "https://www.openstreetmap.org/way/10691100",
+      "https://en.wikipedia.org/wiki/Shanghai_World_Financial_Center"
+    ],
+    "notes": "The trapezoidal aperture is already modelled in OSM building:parts: the core stops at 430 m, the shoulders continue to 470 m, and a cap sits at 470–492 m (way 279942892). No geometric override."
+  },
+  "165792123": {
+    "name": "上海中心大厦",
+    "en": "Shanghai Tower",
+    "kind": "tower",
+    "sculpt": "osm_parts",
+    "sources": [
+      "https://www.openstreetmap.org/way/165792123",
+      "https://en.wikipedia.org/wiki/Shanghai_Tower"
+    ],
+    "notes": "OSM already has a stack of building:parts with min_height stepping from 90 m to 630 m and shrinking floor plates. No geometric override."
+  },
+  "40778038": {
+    "name": "东方明珠电视塔",
+    "en": "Oriental Pearl Tower",
+    "kind": "tower",
+    "sculpt": "pearl_schematic",
+    "height_m": 468,
+    "lower_sphere_diameter_m": 50,
+    "lower_sphere_center_m": 93,
+    "upper_sphere_diameter_m": 45,
+    "upper_sphere_center_m": 252,
+    "sources": [
+      "https://en.wikipedia.org/wiki/Oriental_Pearl_Tower",
+      "https://zh.wikipedia.org/wiki/%E4%B8%9C%E6%96%B9%E6%98%8E%E7%8F%A0%E5%B9%BF%E6%92%AD%E7%94%B5%E8%A7%86%E5%A1%94"
+    ],
+    "notes": "OSM maps many stacked parts (legs, sphere slices, spire) but they read as terraces rather than the two spheres. The viewer keeps a schematic sculpture from the published 468 m height and 50 m / 45 m sphere diameters (Wikipedia). This is not a LiDAR scan."
+  },
+  "27498117": {
+    "name": "外白渡桥",
+    "en": "Waibaidu Bridge",
+    "kind": "bridge",
+    "sculpt": "waibaidu_camelback_truss",
+    "osm_way": 27498117,
+    "length_m": 104.24,
+    "span_m": 52.178,
+    "width_m": 18.4,
+    "carriageway_m": 11.2,
+    "truss_spacing_m": 12.192,
+    "truss_height_mid_m": 9.144,
+    "panel_m": 4.744,
+    "nodes_per_span": 11,
+    "spans": 2,
+    "deck_m_wusong": 7.0,
+    "sources": [
+      "https://zh.wikipedia.org/wiki/%E5%A4%96%E7%99%BD%E6%B8%A1%E6%A1%A5",
+      "https://en.wikipedia.org/wiki/Waibaidu_Bridge",
+      "https://www.whitr-ap.org/index.php?classid=1536&newsid=2291&t=show"
+    ],
+    "notes": "OSM maps only a deck (bridge=yes, bridge:structure=truss) plus a man_made=bridge outline. The camelback through-truss is a schematic from the published two 52.178 m spans, 18.4 m overall width, 12.192 m main-truss spacing, 11 panels of 4.744 m and a 9.144 m mid-span height (zh.wikipedia / en.wikipedia). Placement follows the OSM centreline. This is not a LiDAR scan."
+  },
+  "_waterfront": {
+    "name": "外滩防汛墙与滨江平台",
+    "en": "Bund flood wall and promenade",
+    "sculpt": "bund_waterfront",
+    "crest_m_wusong": 6.9,
+    "street_m_wusong": 3.2,
+    "promenade_width_m": 14,
+    "ramp_width_m": 12,
+    "sources": [
+      "https://swj.sh.gov.cn/swyw/20240812/5d55065d81ab4d2299cb718f0349dcd8.html",
+      "https://swj.sh.gov.cn/cmsres/f4/f4daef77b8004f079150b12fe87a2a05/8f594d415fc8d073997b928cc391034e.pdf",
+      "https://www.xinminweekly.com.cn/tegao/2017/11/08/9413.html",
+      "https://xmwb.xinmin.cn/history/xmwb/html/2007-11/19/content_71443.htm"
+    ],
+    "notes": "Copernicus GLO-30 smears the quay into a long staircase. The rebuild sets a vertical-ish wall and a 14 m promenade at the published 6.9 m Wusong crest (Shanghai Water Authority 2024 table, reach 苏州河～复兴东路; also the 1989–1993 Bund rebuild described by Xinmin Weekly) and a short ramp down to a typical Bund street height of ~3.2 m (Xinmin Evening News 19 Nov 2007: the 5.72 m 1997 tide stood 2.5 m above the street). Not LiDAR."
+  },
+  "jingan_temple": {
+    "note": "Schematic 庑殿重檐 copper roofs on OSM footprints. 大雄宝殿 height 26 m is from published sources below. 法堂 / 山门 / 钟楼 / 鼓楼 use typological eaves (no cited hall height used as a hard number). Not a scan, not LiDAR.",
+    "mahavira_way": 1246090668,
+    "mahavira_height_m": 26.0,
+    "sources": [
+      "https://zh.wikipedia.org/wiki/%E9%9D%99%E5%AE%89%E5%AF%BA",
+      "https://m.thepaper.cn/newsDetail_forward_3252617",
+      "https://www.fjdh.cn/bnznews/2009/01/10360234000.html"
+    ],
+    "tiles": [
+      "5_-33",
+      "5_-32",
+      "6_-33",
+      "6_-32"
+    ],
+    "fatang_way": 1246090687,
+    "fatang_height": "typological (~28 m), not the 32 m figure from a weaker Sohu article"
+  },
+  "chenghuang_dian": {
+    "note": "Schematic 歇山顶 green-glazed roof on the City God Temple main hall. Height 16 m and depth 21.1 m from published sources. Plan is the OSM footprint (way 1576988166, area close to the published 13.7 × 21.1 m). Not a scan, not LiDAR. Yu Garden named halls stay OSM massing (no similarly cited hall heights used).",
+    "way": 1576988166,
+    "height_m": 16.0,
+    "roof": "歇山顶",
+    "sources": [
+      "https://zh.wikipedia.org/wiki/%E4%B8%8A%E6%B5%B7%E5%9F%8E%E9%9A%8D%E5%BB%9F",
+      "http://blog.sina.com.cn/s/blog_5d1bdf480102wmhs.html"
+    ],
+    "tiles": [
+      "0_2",
+      "0_3"
+    ]
+  },
+  "guanghua_towers": {
+    "name": "复旦大学光华楼",
+    "en": "Fudan Guanghua Towers",
+    "note": "Schematic height on the two OSM tower footprints (ways 498705155 and 498705156, each tagged building:levels=31). Official topping-out copy gives a total height of 142 m and 30-storey east/west main towers; the Chinese Wikipedia lists a 142 m tip and 140.2 m roof. Not a scan, not LiDAR. The large named outline (way 301674304, OSM 5 levels) is left as OSM massing — the cited 15-storey connector is not mapped as its own footprint, so it is not invented here.",
+    "height_m": 142.0,
+    "floors": 30,
+    "sources": [
+      "https://edu.sh.gov.cn/xwzx_bsxw/20040530/0015-xw_14843.html",
+      "https://zh.wikipedia.org/wiki/%E5%85%89%E8%8F%AF%E6%A8%93"
+    ]
+  },
+  "498705155": {
+    "name": "复旦大学光华楼",
+    "en": "Fudan Guanghua Towers",
+    "note": "Schematic height on the two OSM tower footprints (ways 498705155 and 498705156, each tagged building:levels=31). Official topping-out copy gives a total height of 142 m and 30-storey east/west main towers; the Chinese Wikipedia lists a 142 m tip and 140.2 m roof. Not a scan, not LiDAR. The large named outline (way 301674304, OSM 5 levels) is left as OSM massing — the cited 15-storey connector is not mapped as its own footprint, so it is not invented here.",
+    "height_m": 142.0,
+    "floors": 30,
+    "sources": [
+      "https://edu.sh.gov.cn/xwzx_bsxw/20040530/0015-xw_14843.html",
+      "https://zh.wikipedia.org/wiki/%E5%85%89%E8%8F%AF%E6%A8%93"
+    ],
+    "way": 498705155
+  },
+  "498705156": {
+    "name": "复旦大学光华楼",
+    "en": "Fudan Guanghua Towers",
+    "note": "Schematic height on the two OSM tower footprints (ways 498705155 and 498705156, each tagged building:levels=31). Official topping-out copy gives a total height of 142 m and 30-storey east/west main towers; the Chinese Wikipedia lists a 142 m tip and 140.2 m roof. Not a scan, not LiDAR. The large named outline (way 301674304, OSM 5 levels) is left as OSM massing — the cited 15-storey connector is not mapped as its own footprint, so it is not invented here.",
+    "height_m": 142.0,
+    "floors": 30,
+    "sources": [
+      "https://edu.sh.gov.cn/xwzx_bsxw/20040530/0015-xw_14843.html",
+      "https://zh.wikipedia.org/wiki/%E5%85%89%E8%8F%AF%E6%A8%93"
+    ],
+    "way": 498705156
+  }
+}

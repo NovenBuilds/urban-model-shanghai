@@ -1,0 +1,15 @@
+{
+  "CX": 356752.65046119224,
+  "CY": 3457489.6599994777,
+  "THETA_DEG": 101.22,
+  "W": 4096,
+  "D": 3072,
+  "I0": 1565,
+  "J0": 1431,
+  "GLOBAL_I0": 50000,
+  "GLOBAL_J0": 50000,
+  "CRS": "EPSG:32651",
+  "global_i0": 48435,
+  "global_j0": 48569,
+  "note": "global_i0/j0 are the citywide indices of local cell (0,0)"
+}
