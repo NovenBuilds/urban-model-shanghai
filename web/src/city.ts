@@ -3,7 +3,7 @@ import type { Caption } from './caption';
 import type { TileStreamer } from './stream';
 import type { Meta, Zones } from './types';
 import { dataTexture, fetchGzip, fetchJson } from './util';
-import { bindRasterUniforms, loadZoneChunks } from './rasterChunks';
+import { bindRasterUniforms, loadZoneChunks, rasterIndexFromMeta } from './rasterChunks';
 import { makeBuildDepthMaterial, makeClayDepthMaterial, makeVoxelMaterial, type VoxelUniforms } from './voxelMaterial';
 
 const T = 128;
@@ -43,12 +43,14 @@ export async function installCity({ streamer: S, uniforms: U, meta, scene, focus
   const x0m = meta.x0 ?? 0, y0m = meta.y0 ?? 0, RW = W - x0m, RH = D - y0m;
   if (!Number.isFinite(budget())) {
     caption.show('Terrain', 0, 2 * total);
-    terrain = await loadTerrain(meta, scene);
+    terrain = await loadTerrain(meta, scene, { index });
   }
   const [zoneRas, zones] = await zonesIn;
   document.querySelector('#loading')?.classList.add('hidden');
   const bld = zoneRas.bld;
-  S.bldMap = { data: bld, W: zoneRas.RW, x0: x0m, y0: y0m };
+  const ras = zoneRas.index;
+  const rx0 = ras.x0, ry0 = ras.y0, rX1 = rx0 + ras.RW, rY1 = ry0 + ras.RH;
+  S.bldMap = { data: bld, W: zoneRas.RW, x0: rx0, y0: ry0 };
   bindRasterUniforms(U, zoneRas.index);
   U.uZBlk.value = zoneRas.blkTex;
   const nb = zones.buildings.length, shown = new Uint8Array(128 * Math.ceil((nb + 1) / 128));
@@ -93,7 +95,7 @@ export async function installCity({ streamer: S, uniforms: U, meta, scene, focus
   // Tiles outside the zones raster (should be rare once zones.bin covers x0/y0) still stream
   // when they are in view or within 2 km.
   const wantOutOfZone = (f: THREE.Vector3) => {
-    const zx0 = Math.floor(x0m / T), zy0 = Math.floor(y0m / T), zxn = Math.ceil(W / T), zyn = Math.ceil(D / T);
+    const zx0 = Math.floor(rx0 / T), zy0 = Math.floor(ry0 / T), zxn = Math.ceil(rX1 / T), zyn = Math.ceil(rY1 / T);
     for (let ty = ty0; ty < ty0 + d.ny; ty++) for (let tx = tx0; tx < tx0 + d.nx; tx++) {
       if (tx >= zx0 && ty >= zy0 && tx < zxn && ty < zyn) continue;
       const i = index(tx, ty);
@@ -103,8 +105,8 @@ export async function installCity({ streamer: S, uniforms: U, meta, scene, focus
 
   const bldAt = (x: number, y: number) => {
     const ix = Math.round(x), iy = Math.round(y);
-    if (iy < y0m || iy >= D || ix < x0m || ix >= W) return -1;
-    return bld[(iy - y0m) * RW + (ix - x0m)] - 1;
+    if (iy < ry0 || iy >= rY1 || ix < rx0 || ix >= rX1) return -1;
+    return bld[(iy - ry0) * ras.RW + (ix - rx0)] - 1;
   };
   const landmarks = [...new Set(meta.labels.map((l) => bldAt(l.x, l.y)).filter((b) => b >= 0))], isLandmark = new Set(landmarks);
   const lmPrio = new Map<number, number>();
@@ -136,7 +138,7 @@ export async function installCity({ streamer: S, uniforms: U, meta, scene, focus
       for (const n of S.nodes.values()) if (n.s === 8 && n.mesh) { n.mesh.material = clayMat; n.mesh.customDepthMaterial = clayDepth; }
       if (Number.isFinite(budget())) {
         for (const n of S.nodes.values()) if (n.s === 8 && n.mesh) n.mesh.visible = true;
-        terrain?.dropUnder(new Uint8Array(Math.ceil(RW / T) * Math.ceil(RH / T)).fill(1));
+        terrain?.dropAll();
         U.uZOn.value = 1;
       }
       clay = 'ready';
@@ -238,13 +240,16 @@ export async function installCity({ streamer: S, uniforms: U, meta, scene, focus
       for (const n of S.nodes.values()) {
         if (n.s !== 8 || !n.mesh) continue;
         const t0 = n.tx * 8, s0 = n.ty * 8;
-        const west = n.ty * (S.N * n.s) < 0 || n.tx * (S.N * n.s) < 0;
+        const L8 = S.N * n.s;
+        const west = n.ty * L8 < 0 || n.tx * L8 < 0;
+        const outsideRas = n.tx * L8 < ras.x0 || n.ty * L8 < ras.y0
+          || (n.tx + 1) * L8 > rX1 || (n.ty + 1) * L8 > rY1;
         let hole = false;
         for (let ty = s0; ty < s0 + 8 && !hole; ty++) for (let tx = t0; tx < t0 + 8; tx++) {
           if (tx < tx0 || ty < ty0 || tx >= tx0 + d.nx || ty >= ty0 + d.ny) continue;
           if (!inTile[index(tx, ty)]) hole = true;
         }
-        n.mesh.visible = hole && (west || U.uZOn.value > 0 || Number.isFinite(budget()));
+        n.mesh.visible = hole && (west || outsideRas || U.uZOn.value > 0 || Number.isFinite(budget()));
         if (n.mesh.visible) { n.mesh.material = clayMat; n.mesh.customDepthMaterial = clayDepth; }
       }
     }
@@ -278,8 +283,10 @@ export async function installCity({ streamer: S, uniforms: U, meta, scene, focus
 
 // one terrain piece per 128 m tile (heights every 4 m, ground colours every 2 m), each dropped once its tile is in:
 // under the real ground it would flicker through
-async function loadTerrain(meta: Meta, scene: THREE.Scene) {
-  const { W, D } = meta, x0 = meta.x0 ?? 0, y0 = meta.y0 ?? 0, RW = W - x0, RH = D - y0;
+async function loadTerrain(meta: Meta, scene: THREE.Scene, map: { index: (tx: number, ty: number) => number }) {
+  // terrain.bin still covers the style/raster window, not the full streamed tile AABB.
+  const ras = rasterIndexFromMeta(meta);
+  const { x0, y0, RW, RH } = ras;
   const buf = await fetchGzip('data/terrain.bin');
   const tw = Math.ceil(RW / 4), th = Math.ceil(RH / 4), hd = new Uint16Array(buf, 0, tw * th), C = T / 4;
   const cw = Math.floor(RW / 2), ch = Math.floor(RH / 2), rgb = new Uint8Array(buf, tw * th * 2, cw * ch * 3), rgba = new Uint8Array(cw * ch * 4);
@@ -308,14 +315,19 @@ async function loadTerrain(meta: Meta, scene: THREE.Scene) {
     const m = new THREE.Mesh(g, mat);
     m.receiveShadow = true;
     m.matrixAutoUpdate = false;
+    m.userData.tx = tx; m.userData.ty = ty;
     scene.add(m);
     pieces[(ty - ty0) * nx + (tx - tx0)] = m;
   }
   return {
     dropUnder(inTile: Uint8Array) {
-      // inTile is the 1 m streamer index (ty-ty0)*nx+(tx-tx0), same layout as pieces
-      pieces.forEach((m, i) => { if (m && inTile[i]) { scene.remove(m); m.geometry.dispose(); pieces[i] = null; } });
+      pieces.forEach((m, i) => {
+        if (!m) return;
+        const ii = map.index(m.userData.tx as number, m.userData.ty as number);
+        if (ii >= 0 && ii < inTile.length && inTile[ii]) { scene.remove(m); m.geometry.dispose(); pieces[i] = null; }
+      });
     },
+    dropAll() { pieces.forEach((m, i) => { if (m) { scene.remove(m); m.geometry.dispose(); pieces[i] = null; } }); },
     dispose() { if (tex.image.data) { tex.dispose(); tex.image.data = null as unknown as Uint8Array; } },
   };
 }

@@ -1,6 +1,6 @@
 {
-  "W": 10240,
-  "D": 8192,
+  "W": 30720,
+  "D": 28672,
   "H": 690,
   "base": -9,
   "tiles": {
@@ -8,20 +8,20 @@
     "levels": [
       {
         "s": 1,
-        "nx": 96,
-        "ny": 120,
-        "tx0": -16,
-        "ty0": -56
+        "nx": 512,
+        "ny": 376,
+        "tx0": -272,
+        "ty0": -152
       },
       {
         "s": 8,
-        "nx": 12,
-        "ny": 15,
-        "tx0": -2,
-        "ty0": -7
+        "nx": 64,
+        "ny": 47,
+        "tx0": -34,
+        "ty0": -19
       }
     ],
-    "bytes": 48087068
+    "bytes": 494666606
   },
   "center": [
     356752.65046119224,
@@ -2791,6 +2791,894 @@
       "g": 5,
       "z": 18,
       "alt": "油酷艺术公园 Youku Art Park"
+    },
+    {
+      "name": "共青森林公园",
+      "en": "Gongqing Forest Park",
+      "kind": "park",
+      "x": 8970,
+      "y": 8089,
+      "z": 18,
+      "R": 500,
+      "g": 8,
+      "far": 9000,
+      "alt": "Gongqing Forest Park 共青森林公园"
+    },
+    {
+      "name": "复兴岛",
+      "en": "Fuxing Island",
+      "kind": "neighborhood",
+      "x": 5272,
+      "y": 8196,
+      "z": 14,
+      "R": 500,
+      "g": 8,
+      "far": 9000,
+      "alt": "Fuxing Island 复兴岛"
+    },
+    {
+      "name": "复兴岛公园",
+      "en": "Fuxing Island Park",
+      "kind": "park",
+      "x": 5305,
+      "y": 8291,
+      "z": 12,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Fuxing Island Park 复兴岛公园"
+    },
+    {
+      "name": "外高桥港区",
+      "en": "Waigaoqiao Port Area",
+      "kind": "waterfront",
+      "x": 13624,
+      "y": 10932,
+      "z": 16,
+      "R": 900,
+      "g": 8,
+      "far": 9000,
+      "alt": "Waigaoqiao Port Area 外高桥港区"
+    },
+    {
+      "name": "外高桥第一发电厂",
+      "en": "Waigaoqiao Power Plant I",
+      "kind": "building",
+      "x": 11970,
+      "y": 13122,
+      "z": 30,
+      "R": 300,
+      "g": 8,
+      "far": 9000,
+      "alt": "Waigaoqiao Power Plant I 外高桥第一发电厂"
+    },
+    {
+      "name": "外高桥第二发电厂",
+      "en": "Waigaoqiao Power Plant II",
+      "kind": "building",
+      "x": 11800,
+      "y": 13725,
+      "z": 30,
+      "R": 350,
+      "g": 8,
+      "far": 9000,
+      "alt": "Waigaoqiao Power Plant II 外高桥第二发电厂"
+    },
+    {
+      "name": "外高桥第三发电厂",
+      "en": "Waigaoqiao Power Plant III",
+      "kind": "building",
+      "x": 11300,
+      "y": 13970,
+      "z": 30,
+      "R": 300,
+      "g": 8,
+      "far": 9000,
+      "alt": "Waigaoqiao Power Plant III 外高桥第三发电厂"
+    },
+    {
+      "name": "滨江森林公园",
+      "en": "Binjiang Forest Park",
+      "kind": "park",
+      "x": 16418,
+      "y": 7401,
+      "z": 12,
+      "R": 500,
+      "g": 8,
+      "far": 9000,
+      "alt": "Binjiang Forest Park 滨江森林公园"
+    },
+    {
+      "name": "上海虹桥站",
+      "en": "Shanghai Hongqiao Railway Station",
+      "kind": "station",
+      "x": 60,
+      "y": -16380,
+      "z": 20,
+      "R": 200,
+      "g": 8,
+      "far": 9000,
+      "alt": "Shanghai Hongqiao Railway Station 上海虹桥站"
+    },
+    {
+      "name": "虹桥2号航站楼",
+      "en": "Hongqiao T2",
+      "kind": "building",
+      "x": -74,
+      "y": -15658,
+      "z": 24,
+      "R": 250,
+      "g": 8,
+      "far": 9000,
+      "alt": "Hongqiao T2 虹桥2号航站楼"
+    },
+    {
+      "name": "虹桥T1航站楼",
+      "en": "Hongqiao T1",
+      "kind": "building",
+      "x": -461,
+      "y": -13892,
+      "z": 22,
+      "R": 180,
+      "g": 8,
+      "far": 9000,
+      "alt": "Hongqiao T1 虹桥T1航站楼"
+    },
+    {
+      "name": "宝钢主厂区",
+      "en": "Baosteel Main Plant",
+      "kind": "building",
+      "x": 23954,
+      "y": 465,
+      "z": 20,
+      "R": 2000,
+      "g": 8,
+      "far": 9000,
+      "alt": "Baosteel Main Plant 宝钢主厂区"
+    },
+    {
+      "name": "上海南站",
+      "en": "Shanghai South Railway Station",
+      "kind": "station",
+      "x": -6541,
+      "y": -7204,
+      "z": 20,
+      "R": 180,
+      "g": 8,
+      "far": 9000,
+      "alt": "Shanghai South Railway Station 上海南站"
+    },
+    {
+      "name": "莘庄工业区",
+      "en": "Xinzhuang Industrial Park",
+      "kind": "neighborhood",
+      "x": -15224,
+      "y": -13839,
+      "z": 16,
+      "R": 1500,
+      "g": 8,
+      "far": 9000,
+      "alt": "Xinzhuang Industrial Park 莘庄工业区"
+    },
+    {
+      "name": "马桥强恕学校",
+      "en": "Maqiao Qiangshu School",
+      "kind": "building",
+      "x": -18568,
+      "y": -15960,
+      "z": 16,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Maqiao Qiangshu School 马桥强恕学校"
+    },
+    {
+      "name": "上海交通大学闵行校区",
+      "en": "SJTU Minhang Campus",
+      "kind": "university",
+      "x": -20505,
+      "y": -9459,
+      "z": 16,
+      "R": 800,
+      "g": 8,
+      "far": 9000,
+      "alt": "SJTU Minhang Campus 上海交通大学闵行校区"
+    },
+    {
+      "name": "上海马桥公园",
+      "en": "Maqiao Park",
+      "kind": "park",
+      "x": -18575,
+      "y": -15586,
+      "z": 12,
+      "R": 200,
+      "g": 8,
+      "far": 9000,
+      "alt": "Maqiao Park 上海马桥公园"
+    },
+    {
+      "name": "吴泾第二发电厂",
+      "en": "Wujing No.2 Power Plant",
+      "kind": "building",
+      "x": -18028,
+      "y": -5610,
+      "z": 24,
+      "R": 300,
+      "g": 8,
+      "far": 9000,
+      "alt": "Wujing No.2 Power Plant 吴泾第二发电厂"
+    },
+    {
+      "name": "航头车辆段",
+      "en": "Hangtou Depot",
+      "kind": "building",
+      "x": -18241,
+      "y": 5316,
+      "z": 16,
+      "R": 250,
+      "g": 8,
+      "far": 9000,
+      "alt": "Hangtou Depot 航头车辆段"
+    },
+    {
+      "name": "浦江郊野公园",
+      "en": "Pujiang Country Park",
+      "kind": "park",
+      "x": -18444,
+      "y": -3102,
+      "z": 12,
+      "R": 800,
+      "g": 8,
+      "far": 9000,
+      "alt": "Pujiang Country Park 浦江郊野公园"
+    },
+    {
+      "name": "吴泾消防支队",
+      "en": "Wujing Fire Station",
+      "kind": "building",
+      "x": -18391,
+      "y": -6320,
+      "z": 16,
+      "R": 80,
+      "g": 8,
+      "far": 9000,
+      "alt": "Wujing Fire Station 吴泾消防支队"
+    },
+    {
+      "name": "闵浦大桥",
+      "en": "Minpu Bridge",
+      "kind": "bridge",
+      "x": -18653,
+      "y": -4708,
+      "z": 20,
+      "R": 300,
+      "g": 8,
+      "far": 9000,
+      "alt": "Minpu Bridge 闵浦大桥"
+    },
+    {
+      "name": "华东师范大学闵行校区",
+      "en": "ECNU Minhang Campus",
+      "kind": "university",
+      "x": -20217,
+      "y": -7774,
+      "z": 16,
+      "R": 600,
+      "g": 8,
+      "far": 9000,
+      "alt": "ECNU Minhang Campus 华东师范大学闵行校区"
+    },
+    {
+      "name": "竹园污水处理厂",
+      "en": "Zhuyuan Wastewater Plant",
+      "kind": "building",
+      "x": 10734,
+      "y": 14667,
+      "z": 16,
+      "R": 400,
+      "g": 8,
+      "far": 9000,
+      "alt": "Zhuyuan Wastewater Plant 竹园污水处理厂"
+    },
+    {
+      "name": "月亭公园",
+      "en": "Yueting Park",
+      "kind": "park",
+      "x": 10341,
+      "y": 13791,
+      "z": 12,
+      "R": 400,
+      "g": 8,
+      "far": 9000,
+      "alt": "Yueting Park 月亭公园"
+    },
+    {
+      "name": "闵行经济开发区",
+      "en": "Minhang Economic Development Zone",
+      "kind": "neighborhood",
+      "x": -21832,
+      "y": -14736,
+      "z": 16,
+      "R": 1200,
+      "g": 8,
+      "far": 9000,
+      "alt": "Minhang Economic Development Zone 闵行经济开发区"
+    },
+    {
+      "name": "上海重型机器厂",
+      "en": "Shanghai Heavy Machinery Plant",
+      "kind": "building",
+      "x": -22497,
+      "y": -17297,
+      "z": 16,
+      "R": 250,
+      "g": 8,
+      "far": 9000,
+      "alt": "Shanghai Heavy Machinery Plant 上海重型机器厂"
+    },
+    {
+      "name": "庄行郊野公园",
+      "en": "Zhuanghang Country Park",
+      "kind": "park",
+      "x": -24899,
+      "y": -12782,
+      "z": 12,
+      "R": 200,
+      "g": 8,
+      "far": 9000,
+      "alt": "Zhuanghang Country Park 庄行郊野公园"
+    },
+    {
+      "name": "西渡公园",
+      "en": "Xidu Park",
+      "kind": "park",
+      "x": -24555,
+      "y": -9980,
+      "z": 12,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Xidu Park 西渡公园"
+    },
+    {
+      "name": "闵行滨江公园",
+      "en": "Minhang Riverside Park",
+      "kind": "park",
+      "x": -23252,
+      "y": -11164,
+      "z": 12,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Minhang Riverside Park 闵行滨江公园"
+    },
+    {
+      "name": "上海第二工业大学",
+      "en": "Shanghai Polytechnic University",
+      "kind": "university",
+      "x": 648,
+      "y": 16189,
+      "z": 20,
+      "R": 400,
+      "g": 8,
+      "far": 9000,
+      "alt": "Shanghai Polytechnic University 上海第二工业大学"
+    },
+    {
+      "name": "上海外高桥造船",
+      "en": "Shanghai Waigaoqiao Shipbuilding",
+      "kind": "building",
+      "x": 9573,
+      "y": 16299,
+      "z": 16,
+      "R": 700,
+      "g": 8,
+      "far": 9000,
+      "alt": "Shanghai Waigaoqiao Shipbuilding 上海外高桥造船"
+    },
+    {
+      "name": "高东生态园",
+      "en": "Gaodong Ecological Park",
+      "kind": "park",
+      "x": 5995,
+      "y": 15924,
+      "z": 12,
+      "R": 250,
+      "g": 8,
+      "far": 9000,
+      "alt": "Gaodong Ecological Park 高东生态园"
+    },
+    {
+      "name": "高东公园",
+      "en": "Gaodong Park",
+      "kind": "park",
+      "x": 7042,
+      "y": 15991,
+      "z": 12,
+      "R": 400,
+      "g": 8,
+      "far": 9000,
+      "alt": "Gaodong Park 高东公园"
+    },
+    {
+      "name": "上海商学院奉浦校区",
+      "en": "SBS Fengpu Campus",
+      "kind": "university",
+      "x": -30099,
+      "y": -9569,
+      "z": 16,
+      "R": 250,
+      "g": 8,
+      "far": 9000,
+      "alt": "SBS Fengpu Campus 上海商学院奉浦校区"
+    },
+    {
+      "name": "东方美谷精准医疗产业园",
+      "en": "Oriental Beauty Valley Precision Medicine Park",
+      "kind": "building",
+      "x": -28680,
+      "y": -7442,
+      "z": 16,
+      "R": 120,
+      "g": 8,
+      "far": 9000,
+      "alt": "Oriental Beauty Valley Precision Medicine Park 东方美谷精准医疗产业园"
+    },
+    {
+      "name": "百雀羚",
+      "en": "Pechoin",
+      "kind": "building",
+      "x": -29735,
+      "y": -9105,
+      "z": 16,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Pechoin 百雀羚"
+    },
+    {
+      "name": "二严寺",
+      "en": "Eryan Temple",
+      "kind": "temple",
+      "x": -30631,
+      "y": -10101,
+      "z": 16,
+      "R": 80,
+      "g": 8,
+      "far": 9000,
+      "alt": "Eryan Temple 二严寺"
+    },
+    {
+      "name": "浦江第一湾公园",
+      "en": "Pujiang First Bay Park",
+      "kind": "park",
+      "x": -22449,
+      "y": -6064,
+      "z": 12,
+      "R": 400,
+      "g": 8,
+      "far": 9000,
+      "alt": "Pujiang First Bay Park 浦江第一湾公园"
+    },
+    {
+      "name": "大治河公园",
+      "en": "Dazhihe Park",
+      "kind": "park",
+      "x": -22870,
+      "y": -1824,
+      "z": 12,
+      "R": 300,
+      "g": 8,
+      "far": 9000,
+      "alt": "Dazhihe Park 大治河公园"
+    },
+    {
+      "name": "外高桥粮食储备库",
+      "en": "Waigaoqiao Grain Depot",
+      "kind": "building",
+      "x": 4637,
+      "y": 20786,
+      "z": 16,
+      "R": 600,
+      "g": 8,
+      "far": 9000,
+      "alt": "Waigaoqiao Grain Depot 外高桥粮食储备库"
+    },
+    {
+      "name": "粮食储备库内河港口",
+      "en": "Waigaoqiao Grain Depot Harbour",
+      "kind": "building",
+      "x": 4810,
+      "y": 20583,
+      "z": 12,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Waigaoqiao Grain Depot Harbour 粮食储备库内河港口"
+    },
+    {
+      "name": "言子书院",
+      "en": "Yanzi Institute",
+      "kind": "building",
+      "x": -30288,
+      "y": -7216,
+      "z": 16,
+      "R": 80,
+      "g": 8,
+      "far": 9000,
+      "alt": "Yanzi Institute 言子书院"
+    },
+    {
+      "name": "申亚泰日片林",
+      "en": "Shenyatairi Urban Forest",
+      "kind": "park",
+      "x": -26853,
+      "y": -220,
+      "z": 12,
+      "R": 900,
+      "g": 8,
+      "far": 9000,
+      "alt": "Shenyatairi Urban Forest 申亚泰日片林"
+    },
+    {
+      "name": "南行港公园",
+      "en": "Nanxinggang Park",
+      "kind": "park",
+      "x": -28097,
+      "y": -4718,
+      "z": 12,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Nanxinggang Park 南行港公园"
+    },
+    {
+      "name": "白龙港污水处理厂",
+      "en": "Bailonggang WWTP",
+      "kind": "building",
+      "x": -2280,
+      "y": 24669,
+      "z": 16,
+      "R": 800,
+      "g": 8,
+      "far": 9000,
+      "alt": "Bailonggang WWTP 白龙港污水处理厂"
+    },
+    {
+      "name": "江南造船厂",
+      "en": "Jiangnan Shipyard",
+      "kind": "building",
+      "x": 9069,
+      "y": 26629,
+      "z": 16,
+      "R": 1600,
+      "g": 8,
+      "far": 9000,
+      "alt": "Jiangnan Shipyard 江南造船厂"
+    },
+    {
+      "name": "临港长兴科技园",
+      "en": "Lingang Changxing Science Park",
+      "kind": "building",
+      "x": 10283,
+      "y": 27952,
+      "z": 16,
+      "R": 250,
+      "g": 8,
+      "far": 9000,
+      "alt": "Lingang Changxing Science Park 临港长兴科技园"
+    },
+    {
+      "name": "长兴岛郊野公园",
+      "en": "Changxing Island Country Park",
+      "kind": "park",
+      "x": 15097,
+      "y": 24613,
+      "z": 12,
+      "R": 1400,
+      "g": 8,
+      "far": 9000,
+      "alt": "Changxing Island Country Park 长兴岛郊野公园"
+    },
+    {
+      "name": "九棵树未来艺术中心",
+      "en": "Jiukeshu Future Art Center",
+      "kind": "building",
+      "x": -30680,
+      "y": -6908,
+      "z": 20,
+      "R": 120,
+      "g": 8,
+      "far": 9000,
+      "alt": "Jiukeshu Future Art Center 九棵树未来艺术中心"
+    },
+    {
+      "name": "长兴岛湿地公园",
+      "en": "Changxing Island Wetland Park",
+      "kind": "park",
+      "x": 12497,
+      "y": 23669,
+      "z": 12,
+      "R": 220,
+      "g": 8,
+      "far": 9000,
+      "alt": "Changxing Island Wetland Park 长兴岛湿地公园"
+    },
+    {
+      "name": "新华医院长兴分院",
+      "en": "Xinhua Hospital Changxing Branch",
+      "kind": "building",
+      "x": 13939,
+      "y": 23956,
+      "z": 16,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Xinhua Hospital Changxing Branch 新华医院长兴分院"
+    },
+    {
+      "name": "上海天马",
+      "en": "Shanghai Tianma",
+      "kind": "building",
+      "x": -2888,
+      "y": 20854,
+      "z": 16,
+      "R": 350,
+      "g": 8,
+      "far": 9000,
+      "alt": "Shanghai Tianma 上海天马"
+    },
+    {
+      "name": "青草沙原水厂",
+      "en": "Qingcaosha Raw Water Plant",
+      "kind": "building",
+      "x": 15700,
+      "y": 25270,
+      "z": 12,
+      "R": 700,
+      "g": 8,
+      "far": 9000,
+      "alt": "Qingcaosha Raw Water Plant 青草沙原水厂"
+    },
+    {
+      "name": "振华重工",
+      "en": "Zhenhua Heavy Industries",
+      "kind": "building",
+      "x": 15637,
+      "y": 19981,
+      "z": 16,
+      "R": 1800,
+      "g": 8,
+      "far": 9000,
+      "alt": "Zhenhua Heavy Industries 振华重工"
+    },
+    {
+      "name": "中企联合大厦-奉贤区政务中心",
+      "en": "Fengxian Government Center",
+      "kind": "building",
+      "x": -33781,
+      "y": -7259,
+      "z": 16,
+      "R": 200,
+      "g": 8,
+      "far": 9000,
+      "alt": "Fengxian Government Center 中企联合大厦-奉贤区政务中心"
+    },
+    {
+      "name": "恒龙广场",
+      "en": "Henglong Plaza",
+      "kind": "building",
+      "x": -32051,
+      "y": -7219,
+      "z": 16,
+      "R": 120,
+      "g": 8,
+      "far": 9000,
+      "alt": "Henglong Plaza 恒龙广场"
+    },
+    {
+      "name": "普洛斯合庆物流园",
+      "en": "Prologis Heqing Logistics Park",
+      "kind": "building",
+      "x": -2186,
+      "y": 19510,
+      "z": 16,
+      "R": 400,
+      "g": 8,
+      "far": 9000,
+      "alt": "Prologis Heqing Logistics Park 普洛斯合庆物流园"
+    },
+    {
+      "name": "圣戈班石膏建材（上海）",
+      "en": "Saint-Gobain Gypsum (Shanghai)",
+      "kind": "building",
+      "x": -5846,
+      "y": 19494,
+      "z": 16,
+      "R": 280,
+      "g": 8,
+      "far": 9000,
+      "alt": "Saint-Gobain Gypsum (Shanghai) 圣戈班石膏建材（上海）"
+    },
+    {
+      "name": "上海证券交易所金桥数据中心",
+      "en": "SSE Jinqiao Data Center",
+      "kind": "building",
+      "x": -3145,
+      "y": 18391,
+      "z": 16,
+      "R": 280,
+      "g": 8,
+      "far": 9000,
+      "alt": "SSE Jinqiao Data Center 上海证券交易所金桥数据中心"
+    },
+    {
+      "name": "王港公园",
+      "en": "Wanggang Park",
+      "kind": "park",
+      "x": -2608,
+      "y": 18388,
+      "z": 12,
+      "R": 80,
+      "g": 8,
+      "far": 9000,
+      "alt": "Wanggang Park 王港公园"
+    },
+    {
+      "name": "上海海拉电子",
+      "en": "Shanghai Hella Electronics",
+      "kind": "building",
+      "x": -5262,
+      "y": 18390,
+      "z": 16,
+      "R": 180,
+      "g": 8,
+      "far": 9000,
+      "alt": "Shanghai Hella Electronics 上海海拉电子"
+    },
+    {
+      "name": "金枫公寓",
+      "en": "Jinfeng Apartments",
+      "kind": "building",
+      "x": -2247,
+      "y": 18431,
+      "z": 16,
+      "R": 140,
+      "g": 8,
+      "far": 9000,
+      "alt": "Jinfeng Apartments 金枫公寓"
+    },
+    {
+      "name": "环维电子（上海）",
+      "en": "Huanwei Electronics (Shanghai)",
+      "kind": "building",
+      "x": -3591,
+      "y": 18463,
+      "z": 16,
+      "R": 200,
+      "g": 8,
+      "far": 9000,
+      "alt": "Huanwei Electronics (Shanghai) 环维电子（上海）"
+    },
+    {
+      "name": "宏伟新村",
+      "en": "Hongwei Xincun",
+      "kind": "building",
+      "x": -2659,
+      "y": 18363,
+      "z": 16,
+      "R": 120,
+      "g": 8,
+      "far": 9000,
+      "alt": "Hongwei Xincun 宏伟新村"
+    },
+    {
+      "name": "大东模型塑胶（上海）",
+      "en": "Dadong Model Plastics (Shanghai)",
+      "kind": "building",
+      "x": -4963,
+      "y": 18466,
+      "z": 16,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Dadong Model Plastics (Shanghai) 大东模型塑胶（上海）"
+    },
+    {
+      "name": "鑫港苑",
+      "en": "Xingangyuan",
+      "kind": "building",
+      "x": -1989,
+      "y": 18488,
+      "z": 16,
+      "R": 200,
+      "g": 8,
+      "far": 9000,
+      "alt": "Xingangyuan 鑫港苑"
+    },
+    {
+      "name": "新雅小区",
+      "en": "Xinya Residential Quarter",
+      "kind": "building",
+      "x": -2475,
+      "y": 18469,
+      "z": 16,
+      "R": 80,
+      "g": 8,
+      "far": 9000,
+      "alt": "Xinya Residential Quarter 新雅小区"
+    },
+    {
+      "name": "育贤小学",
+      "en": "Yuxian Primary School (campus outline)",
+      "kind": "building",
+      "x": -31892,
+      "y": -11367,
+      "z": 12,
+      "R": 140,
+      "g": 8,
+      "far": 9000,
+      "alt": "Yuxian Primary School (campus outline) 育贤小学"
+    },
+    {
+      "name": "奉贤区实验中学",
+      "en": "Fengxian Experimental Middle School (campus outline)",
+      "kind": "building",
+      "x": -33322,
+      "y": -11310,
+      "z": 12,
+      "R": 140,
+      "g": 8,
+      "far": 9000,
+      "alt": "Fengxian Experimental Middle School (campus outline) 奉贤区实验中学"
+    },
+    {
+      "name": "奉贤区实验小学（东校区）",
+      "en": "Fengxian Experimental Primary School (East Campus, outline)",
+      "kind": "building",
+      "x": -32937,
+      "y": -11271,
+      "z": 12,
+      "R": 120,
+      "g": 8,
+      "far": 9000,
+      "alt": "Fengxian Experimental Primary School (East Campus, outline) 奉贤区实验小学（东校区）"
+    },
+    {
+      "name": "保集·澜湾",
+      "en": "Baoji Lanwan",
+      "kind": "building",
+      "x": -2087,
+      "y": 17490,
+      "z": 16,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Baoji Lanwan 保集·澜湾"
+    },
+    {
+      "name": "保集·澜湾",
+      "en": "Baoji Lanwan (north)",
+      "kind": "building",
+      "x": -2058,
+      "y": 17769,
+      "z": 16,
+      "R": 150,
+      "g": 8,
+      "far": 9000,
+      "alt": "Baoji Lanwan (north) 保集·澜湾"
+    },
+    {
+      "name": "王港小学",
+      "en": "Wanggang Primary School",
+      "kind": "building",
+      "x": -2618,
+      "y": 17542,
+      "z": 16,
+      "R": 120,
+      "g": 8,
+      "far": 9000,
+      "alt": "Wanggang Primary School 王港小学"
     }
   ],
   "views": {
@@ -3638,6 +4526,669 @@
         60.0,
         5250.0
       ]
+    },
+    "gongqing": {
+      "label": "Gongqing Forest Park",
+      "target": [
+        8970,
+        16,
+        8089
+      ],
+      "pos": [
+        8200,
+        140,
+        7000
+      ]
+    },
+    "fuxing_island": {
+      "label": "Fuxing Island",
+      "target": [
+        5272,
+        14,
+        8196
+      ],
+      "pos": [
+        4500,
+        120,
+        7300
+      ]
+    },
+    "waigaoqiao": {
+      "label": "Waigaoqiao Port",
+      "target": [
+        13624,
+        16,
+        10932
+      ],
+      "pos": [
+        12000,
+        180,
+        9500
+      ]
+    },
+    "hongqiao": {
+      "label": "Hongqiao T2 / Station",
+      "target": [
+        0,
+        20,
+        -16000
+      ],
+      "pos": [
+        800,
+        180,
+        -14500
+      ]
+    },
+    "baosteel": {
+      "label": "Baosteel",
+      "target": [
+        23954,
+        20,
+        465
+      ],
+      "pos": [
+        22000,
+        220,
+        -800
+      ]
+    },
+    "south_station": {
+      "label": "Shanghai South Station",
+      "target": [
+        -6541,
+        16,
+        -7204
+      ],
+      "pos": [
+        -6000,
+        110,
+        -6400
+      ]
+    },
+    "xinzhuang": {
+      "label": "Xinzhuang Industrial Park",
+      "target": [
+        -15224,
+        16,
+        -13839
+      ],
+      "pos": [
+        -14000,
+        180,
+        -12500
+      ]
+    },
+    "binjiang_park": {
+      "label": "Binjiang Forest Park",
+      "target": [
+        16418,
+        12,
+        7401
+      ],
+      "pos": [
+        15000,
+        130,
+        6200
+      ]
+    },
+    "sjtu_minhang": {
+      "label": "SJTU Minhang",
+      "target": [
+        -20505,
+        16,
+        -9459
+      ],
+      "pos": [
+        -19000,
+        180,
+        -8000
+      ]
+    },
+    "maqiao": {
+      "label": "Maqiao Qiangshu School",
+      "target": [
+        -18568,
+        16,
+        -15960
+      ],
+      "pos": [
+        -17500,
+        120,
+        -14800
+      ]
+    },
+    "pujiang_country_park": {
+      "label": "Pujiang Country Park",
+      "target": [
+        -18444,
+        12,
+        -3102
+      ],
+      "pos": [
+        -17000,
+        160,
+        -1800
+      ]
+    },
+    "minpu_bridge": {
+      "label": "Minpu Bridge",
+      "target": [
+        -18653,
+        16,
+        -4708
+      ],
+      "pos": [
+        -17500,
+        120,
+        -3800
+      ]
+    },
+    "zhuyuan": {
+      "label": "Zhuyuan Wastewater Plant / Yueting Park",
+      "target": [
+        10734,
+        12,
+        14667
+      ],
+      "pos": [
+        9000,
+        140,
+        13200
+      ]
+    },
+    "yueting_park": {
+      "label": "Yueting Park",
+      "target": [
+        10341,
+        12,
+        13791
+      ],
+      "pos": [
+        9000,
+        110,
+        12600
+      ]
+    },
+    "minhang_edz": {
+      "label": "Minhang Economic Development Zone",
+      "target": [
+        -21832,
+        16,
+        -14736
+      ],
+      "pos": [
+        -20000,
+        180,
+        -13200
+      ]
+    },
+    "zhuanghang_park": {
+      "label": "Zhuanghang Country Park",
+      "target": [
+        -24899,
+        12,
+        -12782
+      ],
+      "pos": [
+        -23500,
+        120,
+        -11600
+      ]
+    },
+    "shanghai_polytechnic": {
+      "label": "Shanghai Polytechnic University",
+      "target": [
+        648,
+        16,
+        16189
+      ],
+      "pos": [
+        -400,
+        140,
+        15000
+      ]
+    },
+    "waigaoqiao_shipyard": {
+      "label": "Waigaoqiao Shipbuilding (north edge)",
+      "target": [
+        9573,
+        16,
+        16800
+      ],
+      "pos": [
+        8000,
+        160,
+        15500
+      ]
+    },
+    "gaodong_parks": {
+      "label": "Gaodong Ecological Park / Gaodong Park",
+      "target": [
+        6500,
+        12,
+        15950
+      ],
+      "pos": [
+        5200,
+        120,
+        14800
+      ]
+    },
+    "sbs_fengpu": {
+      "label": "SBS Fengpu Campus",
+      "target": [
+        -30099,
+        16,
+        -9569
+      ],
+      "pos": [
+        -28800,
+        140,
+        -8400
+      ]
+    },
+    "oriental_beauty_valley": {
+      "label": "Oriental Beauty Valley",
+      "target": [
+        -28680,
+        16,
+        -7442
+      ],
+      "pos": [
+        -27500,
+        110,
+        -6400
+      ]
+    },
+    "pechoin": {
+      "label": "Pechoin",
+      "target": [
+        -29735,
+        16,
+        -9105
+      ],
+      "pos": [
+        -28500,
+        110,
+        -8000
+      ]
+    },
+    "eryan_temple": {
+      "label": "Eryan Temple",
+      "target": [
+        -30631,
+        16,
+        -10101
+      ],
+      "pos": [
+        -29400,
+        80,
+        -9200
+      ]
+    },
+    "pujiang_first_bay": {
+      "label": "Pujiang First Bay Park",
+      "target": [
+        -22449,
+        12,
+        -6064
+      ],
+      "pos": [
+        -21200,
+        140,
+        -4800
+      ]
+    },
+    "dazhihe_park": {
+      "label": "Dazhihe Park",
+      "target": [
+        -22870,
+        12,
+        -1824
+      ],
+      "pos": [
+        -21600,
+        120,
+        -800
+      ]
+    },
+    "waigaoqiao_grain_depot": {
+      "label": "Waigaoqiao Grain Depot",
+      "target": [
+        4637,
+        16,
+        20786
+      ],
+      "pos": [
+        3200,
+        160,
+        19500
+      ]
+    },
+    "yanzi_academy": {
+      "label": "Yanzi Institute",
+      "target": [
+        -30288,
+        16,
+        -7216
+      ],
+      "pos": [
+        -29200,
+        80,
+        -6200
+      ]
+    },
+    "shenyatairi_forest": {
+      "label": "Shenyatairi Urban Forest",
+      "target": [
+        -26853,
+        12,
+        -220
+      ],
+      "pos": [
+        -25000,
+        180,
+        1200
+      ]
+    },
+    "nanxinggang_park": {
+      "label": "Nanxinggang Park",
+      "target": [
+        -28097,
+        12,
+        -4718
+      ],
+      "pos": [
+        -26800,
+        80,
+        -3600
+      ]
+    },
+    "bailonggang_plant": {
+      "label": "Bailonggang WWTP",
+      "target": [
+        -2280,
+        16,
+        24669
+      ],
+      "pos": [
+        -800,
+        180,
+        23200
+      ]
+    },
+    "jiangnan_shipyard_west": {
+      "label": "Jiangnan Shipyard (west, in-band)",
+      "target": [
+        8717,
+        16,
+        26629
+      ],
+      "pos": [
+        7500,
+        200,
+        25200
+      ]
+    },
+    "jiangnan_shipyard": {
+      "label": "Jiangnan Shipyard",
+      "target": [
+        9069,
+        16,
+        26629
+      ],
+      "pos": [
+        7500,
+        220,
+        24800
+      ]
+    },
+    "lingang_changxing_tech": {
+      "label": "Lingang Changxing Science Park",
+      "target": [
+        10283,
+        16,
+        27952
+      ],
+      "pos": [
+        9000,
+        140,
+        26800
+      ]
+    },
+    "changxing_island_country_park": {
+      "label": "Changxing Island Country Park",
+      "target": [
+        15097,
+        12,
+        24613
+      ],
+      "pos": [
+        16700,
+        240,
+        22800
+      ]
+    },
+    "jiukeshu_arts_center": {
+      "label": "Jiukeshu Future Art Center",
+      "target": [
+        -30680,
+        16,
+        -6908
+      ],
+      "pos": [
+        -29600,
+        90,
+        -5900
+      ]
+    },
+    "changxing_wetland_park": {
+      "label": "Changxing Island Wetland Park",
+      "target": [
+        12497,
+        12,
+        23669
+      ],
+      "pos": [
+        11700,
+        120,
+        22700
+      ]
+    },
+    "xinhua_changxing_branch": {
+      "label": "Xinhua Hospital Changxing Branch",
+      "target": [
+        13939,
+        16,
+        23956
+      ],
+      "pos": [
+        13200,
+        90,
+        23100
+      ]
+    },
+    "shanghai_tianma": {
+      "label": "Shanghai Tianma",
+      "target": [
+        -2888,
+        16,
+        20854
+      ],
+      "pos": [
+        -1800,
+        140,
+        19800
+      ]
+    },
+    "qingcaosha_water_plant": {
+      "label": "Qingcaosha Raw Water Plant",
+      "target": [
+        15700,
+        12,
+        25270
+      ],
+      "pos": [
+        16900,
+        170,
+        24250
+      ]
+    },
+    "zhenhua_heavy_industries": {
+      "label": "Zhenhua Heavy Industries",
+      "target": [
+        15637,
+        16,
+        19981
+      ],
+      "pos": [
+        12800,
+        280,
+        17600
+      ]
+    },
+    "fengxian_government_center": {
+      "label": "中企联合大厦-奉贤区政务中心",
+      "target": [
+        -33781,
+        16,
+        -7259
+      ],
+      "pos": [
+        -33200,
+        90,
+        -7800
+      ]
+    },
+    "henglong_plaza": {
+      "label": "恒龙广场",
+      "target": [
+        -32051,
+        16,
+        -7219
+      ],
+      "pos": [
+        -31500,
+        80,
+        -7700
+      ]
+    },
+    "prologis_heqing": {
+      "label": "普洛斯合庆物流园",
+      "target": [
+        -2186,
+        16,
+        19510
+      ],
+      "pos": [
+        -800,
+        120,
+        18600
+      ]
+    },
+    "saint_gobain_gypsum": {
+      "label": "圣戈班石膏建材（上海）",
+      "target": [
+        -5846,
+        16,
+        19494
+      ],
+      "pos": [
+        -5000,
+        110,
+        18650
+      ]
+    },
+    "sse_jinqiao_datacenter": {
+      "label": "上海证券交易所金桥数据中心",
+      "target": [
+        -3145,
+        16,
+        18391
+      ],
+      "pos": [
+        -2400,
+        110,
+        17600
+      ]
+    },
+    "wanggang_park": {
+      "label": "王港公园",
+      "target": [
+        -2608,
+        12,
+        18388
+      ],
+      "pos": [
+        -2200,
+        60,
+        18000
+      ]
+    },
+    "yuxian_primary": {
+      "label": "育贤小学 (campus outline)",
+      "target": [
+        -31892,
+        12,
+        -11367
+      ],
+      "pos": [
+        -31400,
+        70,
+        -11800
+      ]
+    },
+    "fengxian_experimental_middle": {
+      "label": "奉贤区实验中学 (campus outline)",
+      "target": [
+        -33322,
+        12,
+        -11310
+      ],
+      "pos": [
+        -32800,
+        80,
+        -11700
+      ]
+    },
+    "fengxian_experimental_primary_east": {
+      "label": "奉贤区实验小学（东校区） (campus outline)",
+      "target": [
+        -32937,
+        12,
+        -11271
+      ],
+      "pos": [
+        -32450,
+        70,
+        -11650
+      ]
+    },
+    "baoji_lanwan": {
+      "label": "保集·澜湾",
+      "target": [
+        -2087,
+        16,
+        17490
+      ],
+      "pos": [
+        -1400,
+        90,
+        16800
+      ]
+    },
+    "wanggang_primary": {
+      "label": "王港小学",
+      "target": [
+        -2618,
+        16,
+        17542
+      ],
+      "pos": [
+        -2000,
+        70,
+        17000
+      ]
     }
   },
   "sources": {
@@ -4142,10 +5693,1562 @@
       "dem": "Copernicus GLO-30",
       "osm": "OpenStreetMap (ODbL)",
       "note": "streamed gongqing block on the same citywide grid; earlier tiles not rebuilt or renumbered"
+    },
+    "settled_stitch": {
+      "at": "2026-11-13 11:48 Asia/Shanghai",
+      "window": {
+        "x0": -34816,
+        "y0": -19456,
+        "W": 30720,
+        "D": 28672
+      },
+      "bands": [
+        "W",
+        "W2",
+        "W3",
+        "SW",
+        "WW",
+        "WX",
+        "WY",
+        "WZ",
+        "S",
+        "S2",
+        "S3",
+        "S4",
+        "N",
+        "N2",
+        "N3",
+        "N4",
+        "N5",
+        "EN2",
+        "EN",
+        "E",
+        "ENY",
+        "WA",
+        "S5",
+        "EY",
+        "WB",
+        "EYN",
+        "WC",
+        "S6",
+        "EYN2",
+        "S7",
+        "EYN3",
+        "EYN3E",
+        "EYNW",
+        "EYN3EX",
+        "S7W",
+        "EYN3ES",
+        "EYNWS",
+        "EYN3EXS",
+        "EYGAP",
+        "WD",
+        "EYNWS2",
+        "EYNWS3",
+        "WDS",
+        "EYNWS4"
+      ],
+      "deferred": [
+        "WDW",
+        "EYNWS5"
+      ],
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no LiDAR)",
+      "note": "Palette frozen at 196. Style rasters still cover only the accepted core. EYNWS4 folded in (typ tx=-48..-17 x typ ty=128..135; 8 m -6..-3 x 16). Window x=-34816..30720, y=-19456..28672 is a bounding box (not expanded); settled tiles are non-rectangular. 1 m columns (typ tx: typ ty): -272..-241: -96..63; -240..-49: -152..63; -48..-17: -152..63, 128..223; -16..79: -152..223; 80..143: -56..223; 144..239: -56..63. 8 m: -34..-31: -12..7; -30..-7: -19..7; -6..-3: -19..7, 16..27; -2..9: -19..27; 10..17: -7..27; 18..29: -7..7. No tiles invented in the remaining gaps. In progress, not ingested: EYNWS5 (typ tx=-48..-17 x typ ty=120..127; 8 m -6..-3 x typ ty=15) and WDW (typ tx=-280..-273 x typ ty=-88..-57; 8 m typ tx=-35 x typ ty=-11..-8), the latter outside the current window (west of typ tx=-272). Full-window ground_all / foliage.bin deferred. Dev server pid 438670 serves /data/* from disk (missing -> 404)."
+    },
+    "band_W": {
+      "bbox_grid": [
+        -2048,
+        -11264,
+        10240,
+        -7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          79
+        ],
+        "ty": [
+          -88,
+          -57
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          9
+        ],
+        "ty": [
+          -11,
+          -8
+        ]
+      },
+      "osm": "data/raw/W/osm_W.json",
+      "fragment": "work/W/meta_fragment_W.json"
+    },
+    "band_W2": {
+      "bbox_grid": [
+        -2048,
+        -15360,
+        10240,
+        -11264
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          79
+        ],
+        "ty": [
+          -120,
+          -89
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          9
+        ],
+        "ty": [
+          -15,
+          -12
+        ]
+      },
+      "osm": "data/raw/W2/osm_W2.json",
+      "fragment": "work/W2/meta_fragment_W2.json"
+    },
+    "band_W3": {
+      "bbox_grid": [
+        -2048,
+        -19456,
+        10240,
+        -15360
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          79
+        ],
+        "ty": [
+          -152,
+          -121
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          9
+        ],
+        "ty": [
+          -19,
+          -16
+        ]
+      },
+      "osm": "data/raw/W3/osm_W3.json",
+      "fragment": "work/W3/meta_fragment_W3.json"
+    },
+    "band_SW": {
+      "bbox_grid": [
+        -6144,
+        -19456,
+        -2048,
+        -11264
+      ],
+      "tiles_1m": {
+        "tx": [
+          -48,
+          -17
+        ],
+        "ty": [
+          -152,
+          -89
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -6,
+          -3
+        ],
+        "ty": [
+          -19,
+          -12
+        ]
+      },
+      "osm": "data/raw/SW/osm_SW.json",
+      "fragment": "work/SW/meta_fragment_SW.json"
+    },
+    "band_WW": {
+      "bbox_grid": [
+        -6144,
+        -11264,
+        -2048,
+        -7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          -48,
+          -17
+        ],
+        "ty": [
+          -88,
+          -57
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -6,
+          -3
+        ],
+        "ty": [
+          -11,
+          -8
+        ]
+      },
+      "osm": "data/raw/WW/osm_WW.json",
+      "fragment": "work/WW/meta_fragment_WW.json"
+    },
+    "band_WX": {
+      "bbox_grid": [
+        -10240,
+        -19456,
+        -6144,
+        -7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          -80,
+          -49
+        ],
+        "ty": [
+          -152,
+          -57
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -10,
+          -7
+        ],
+        "ty": [
+          -19,
+          -8
+        ]
+      },
+      "osm": "data/raw/WX/osm_WX.json",
+      "fragment": "work/WX/meta_fragment_WX.json"
+    },
+    "band_WY": {
+      "bbox_grid": [
+        -14336,
+        -19456,
+        -10240,
+        -7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          -112,
+          -81
+        ],
+        "ty": [
+          -152,
+          -57
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -14,
+          -11
+        ],
+        "ty": [
+          -19,
+          -8
+        ]
+      },
+      "osm": "data/raw/WY/osm_WY.json",
+      "fragment": "work/WY/meta_fragment_WY.json"
+    },
+    "band_WZ": {
+      "bbox_grid": [
+        -18432,
+        -19456,
+        -14336,
+        -7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          -144,
+          -113
+        ],
+        "ty": [
+          -152,
+          -57
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -18,
+          -15
+        ],
+        "ty": [
+          -19,
+          -8
+        ]
+      },
+      "osm": "data/raw/WZ/osm_WZ.json",
+      "fragment": "work/WZ/meta_fragment_WZ.json"
+    },
+    "band_S": {
+      "bbox_grid": [
+        -6144,
+        -7168,
+        -2048,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          -48,
+          -17
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -6,
+          -3
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "osm": "OpenStreetMap (ODbL), osm.fr shanghai extract cached as data/raw/shanghai-latest.osm.pbf, replication timestamp 2026-11-11T00:17:14Z, cut to data/raw/S/osm_S.json (bbox S,W,N,E = 31.1512,121.4064,31.2311,121.5909)",
+      "fragment": "work/S/meta_fragment_S.json"
+    },
+    "band_S2": {
+      "bbox_grid": [
+        -10240,
+        -7168,
+        -6144,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          -80,
+          -49
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -10,
+          -7
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "osm": "OpenStreetMap (ODbL), osm.fr shanghai extract cached as data/raw/shanghai-latest.osm.pbf, replication timestamp 2026-11-11T00:17:14Z, cut to data/raw/S2/osm_S2.json (bbox S,W,N,E = 31.1151,121.4154,31.1949,121.5998)",
+      "fragment": "work/S2/meta_fragment_S2.json"
+    },
+    "band_S3": {
+      "bbox_grid": [
+        -14336,
+        -7168,
+        -10240,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          -112,
+          -81
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -14,
+          -11
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "osm": "OpenStreetMap (ODbL), osm.fr shanghai extract cached as data/raw/shanghai-latest.osm.pbf, replication timestamp 2026-11-11T00:17:14Z, cut to data/raw/S3/osm_S3.json (bbox S,W,N,E = 31.0790,121.4243,31.1588,121.6087). Landmark bounds remeasured from the unclipped pbf.",
+      "fragment": "work/S3/meta_fragment_S3.json"
+    },
+    "band_S4": {
+      "bbox_grid": [
+        -18432,
+        -7168,
+        -14336,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          -144,
+          -113
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -18,
+          -15
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "osm": "OpenStreetMap (ODbL), osm.fr shanghai extract cached as data/raw/shanghai-latest.osm.pbf, replication timestamp 2026-11-11T00:17:14Z, cut to data/raw/S4/osm_S4.json (bbox S,W,N,E = 31.0428,121.4333,31.1226,121.6176). Landmark bounds remeasured from the unclipped pbf.",
+      "fragment": "work/S4/meta_fragment_S4.json"
+    },
+    "band_N": {
+      "bbox_grid": [
+        10240,
+        -7168,
+        14336,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          80,
+          111
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          10,
+          13
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "osm": "data/raw/N/osm_N.json",
+      "fragment": "work/N/meta_fragment_N.json"
+    },
+    "band_N2": {
+      "bbox_grid": [
+        14336,
+        -7168,
+        18432,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          112,
+          143
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          14,
+          17
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "osm": "data/raw/N2/osm_N2.json",
+      "fragment": "work/N2/meta_fragment_N2.json"
+    },
+    "band_N3": {
+      "bbox_grid": [
+        18432,
+        -7168,
+        22528,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          144,
+          175
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          18,
+          21
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "osm": "data/raw/N3/osm_N3.json",
+      "fragment": "work/N3/meta_fragment_N3.json"
+    },
+    "band_N4": {
+      "bbox_grid": [
+        22528,
+        -7168,
+        26624,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          176,
+          207
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          22,
+          25
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "osm": "data/raw/N4/osm_N4.json",
+      "fragment": "work/N4/meta_fragment_N4.json"
+    },
+    "band_N5": {
+      "bbox_grid": [
+        26624,
+        -7168,
+        30720,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          208,
+          239
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          26,
+          29
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "osm": "data/raw/N5/osm_N5.json",
+      "fragment": "work/N5/meta_fragment_N5.json"
+    },
+    "band_EN2": {
+      "bbox_grid": [
+        14336,
+        8192,
+        18432,
+        12288
+      ],
+      "tiles_1m": {
+        "tx": [
+          112,
+          143
+        ],
+        "ty": [
+          64,
+          95
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          14,
+          17
+        ],
+        "ty": [
+          8,
+          11
+        ]
+      },
+      "osm": "data/raw/EN2/osm_EN2.json",
+      "fragment": "work/EN2/meta_fragment_EN2.json"
+    },
+    "band_EN": {
+      "bbox_grid": [
+        10240,
+        8192,
+        14336,
+        12288
+      ],
+      "tiles_1m": {
+        "tx": [
+          80,
+          111
+        ],
+        "ty": [
+          64,
+          95
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          10,
+          13
+        ],
+        "ty": [
+          8,
+          11
+        ]
+      },
+      "osm": "data/raw/EN/osm_EN.json",
+      "fragment": "work/EN/meta_fragment_EN.json"
+    },
+    "band_E": {
+      "bbox_grid": [
+        -2048,
+        8192,
+        10240,
+        12288
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          79
+        ],
+        "ty": [
+          64,
+          95
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          9
+        ],
+        "ty": [
+          8,
+          11
+        ]
+      },
+      "osm": "data/raw/E/osm_E.json",
+      "fragment": "work/E/meta_fragment_E.json"
+    },
+    "band_ENY": {
+      "bbox_grid": [
+        10240,
+        12288,
+        18432,
+        16384
+      ],
+      "tiles_1m": {
+        "tx": [
+          80,
+          143
+        ],
+        "ty": [
+          96,
+          127
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          10,
+          17
+        ],
+        "ty": [
+          12,
+          15
+        ]
+      },
+      "osm": "data/raw/ENY/osm_ENY.json",
+      "fragment": "work/ENY/meta_fragment_ENY.json"
+    },
+    "band_WA": {
+      "bbox_grid": [
+        -22528,
+        -19456,
+        -18432,
+        -7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          -176,
+          -145
+        ],
+        "ty": [
+          -152,
+          -57
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -22,
+          -19
+        ],
+        "ty": [
+          -19,
+          -8
+        ]
+      },
+      "osm": "data/raw/WA/osm_WA.json",
+      "fragment": "work/WA/meta_fragment_WA.json"
+    },
+    "band_S5": {
+      "bbox_grid": [
+        -22528,
+        -7168,
+        -18432,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          -176,
+          -145
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -22,
+          -19
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "osm": "OpenStreetMap (ODbL), osm.fr shanghai extract cached as data/raw/shanghai-latest.osm.pbf, replication timestamp 2026-11-11T00:17:14Z, cut to data/raw/S5/osm_S5.json (bbox S,W,N,E = 31.0067,121.4422,31.0865,121.6264). Landmark bounds remeasured from the unclipped pbf.",
+      "fragment": "work/S5/meta_fragment_S5.json",
+      "seam_S4_S5": true
+    },
+    "band_EY": {
+      "bbox_grid": [
+        -2048,
+        12288,
+        10240,
+        16384
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          79
+        ],
+        "ty": [
+          96,
+          127
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          9
+        ],
+        "ty": [
+          12,
+          15
+        ]
+      },
+      "osm": "data/raw/EY/osm_EY.json",
+      "fragment": "work/EY/meta_fragment_EY.json",
+      "sea": "work/EY/sea_EY.wkt",
+      "note": "band EY (+y over E, west of ENY); meta.json NOT modified; palette frozen 196; E cores not rewritten except typ ty=95 +y apron; ENY cores not rewritten except typ tx=80 typ ty=96..127 -x apron"
+    },
+    "band_WB": {
+      "bbox_grid": [
+        -26624,
+        -19456,
+        -22528,
+        -7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          -208,
+          -177
+        ],
+        "ty": [
+          -152,
+          -57
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -26,
+          -23
+        ],
+        "ty": [
+          -19,
+          -8
+        ]
+      },
+      "osm": "data/raw/WB/osm_WB.json",
+      "fragment": "work/WB/meta_fragment_WB.json",
+      "note": "8 m typ ty=-7 not written (no north neighbor); +y 1 m ground apron is 0 pending S6"
+    },
+    "band_EYN": {
+      "bbox_grid": [
+        -2048,
+        16384,
+        10240,
+        20480
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          79
+        ],
+        "ty": [
+          128,
+          159
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          9
+        ],
+        "ty": [
+          16,
+          19
+        ]
+      },
+      "osm": "data/raw/EYN/osm_EYN.json",
+      "fragment": "work/EYN/meta_fragment_EYN.json",
+      "sea": "work/EYN/sea_EYN.wkt",
+      "note": "band EYN (+y over EY); meta.json NOT modified; palette frozen 196; EY cores not rewritten except typ ty=127 +y apron; ENY not rewritten; +x apron 0 (no east neighbor)"
+    },
+    "band_WC": {
+      "bbox_grid": [
+        -30720,
+        -19456,
+        -26624,
+        -7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          -240,
+          -209
+        ],
+        "ty": [
+          -152,
+          -57
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -30,
+          -27
+        ],
+        "ty": [
+          -19,
+          -8
+        ]
+      },
+      "osm": "data/raw/WC/osm_WC.json",
+      "fragment": "work/WC/meta_fragment_WC.json",
+      "note": "8 m typ ty=-7 not written (no north neighbor); +y 1 m ground apron is 0; do not invent north strip"
+    },
+    "band_S6": {
+      "bbox_grid": [
+        -26624,
+        -7168,
+        -22528,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          -208,
+          -177
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -26,
+          -23
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "dem": "Copernicus GLO-30 mosaic by native lon/lat bounds: cached N31E121 (data/raw/Copernicus_DSM_COG_10_N31_00_E121_00_DEM.tif) plus N30E121 reused from data/raw/WA/Copernicus_DSM_COG_10_N30_00_E121_00_DEM.tif (symlink also at data/raw/S6/). Partition at the official join lat=31.000138...; no extrapolation, no invented elevation. 800 m padded bbox crosses south of 31°N; all 62,914,560 ground cells filled from a native tile (0 outside both bounds).",
+      "osm": "OpenStreetMap (ODbL), osm.fr shanghai extract cached as data/raw/shanghai-latest.osm.pbf, replication timestamp 2026-11-11T00:17:14Z, cut to data/raw/S6/osm_S6.json (bbox S,W,N,E = 30.9705,121.4511,31.0503,121.6353; 2639 nodes, 10208 ways, 605 relations). Landmark bounds remeasured from the unclipped pbf.",
+      "note": "worker-S band S6 on the same citywide grid/origin/theta; palette frozen to the 196 meta entries (0 snapped); no typ ty<-56 written by this worker; S5|S6 seam (x=-22528) closed both ways (1 m tx=-176/-177, 8 m tx=-22/-23, including 1f, typ ty=-56..63 / 8 m ty=-7..7 only). -y apron of typ ty=-56 / 8 m ty=-7 filled from work/WB/ground_WB.npz row y=-7169; typ ty<-56 and WB tiles were not rewritten."
+    },
+    "band_EYN2": {
+      "bbox_grid": [
+        -2048,
+        20480,
+        10240,
+        24576
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          79
+        ],
+        "ty": [
+          160,
+          191
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          9
+        ],
+        "ty": [
+          20,
+          23
+        ]
+      },
+      "osm": "data/raw/EYN2/osm_EYN2.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile)",
+      "fragment": "work/EYN2/meta_fragment_EYN2.json",
+      "sea": "work/EYN2/sea_EYN2.wkt",
+      "bytes": 6339769,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "note": "band EYN2 (+y over EYN) to finish 外高桥粮食储备库; palette frozen 196; EYN|EYN2 already closed both ways (do not re-brush); typ tx>=80 not written at this latitude; +x apron 0, not invented. typ ty=160..191 only in typ tx=-16..79."
+    },
+    "band_S7": {
+      "bbox_grid": [
+        -30720,
+        -7168,
+        -26624,
+        8192
+      ],
+      "tiles_1m": {
+        "tx": [
+          -240,
+          -209
+        ],
+        "ty": [
+          -56,
+          63
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -30,
+          -27
+        ],
+        "ty": [
+          -7,
+          7
+        ]
+      },
+      "dem": "Copernicus GLO-30 mosaic by native lon/lat bounds: cached N31E121 plus N30E121 reused from data/raw/WA/ (symlink at data/raw/S7/). Partition at official join lat=31.000138...; no extrapolation. 800 m padded bbox crosses south of 31°N; all 62,914,560 ground cells filled from a native tile (0 outside both bounds). fill_nan used in-band neighbors only: 1,360,364 cells filled from neighbors, 0 forced to zero.",
+      "osm": "OpenStreetMap (ODbL), osm.fr shanghai extract cached as data/raw/shanghai-latest.osm.pbf, replication timestamp 2026-11-11T00:17:14Z, cut to data/raw/S7/osm_S7.json (bbox S,W,N,E = 30.9344,121.4601,31.0142,121.6442; 1726 nodes, 5611 ways, 424 relations). Landmark bounds remeasured from the unclipped pbf.",
+      "note": "worker-S band S7 on the same citywide grid/origin/theta; palette frozen to the 196 meta entries (0 snapped); no typ ty<-56 written by this worker; S6|S7 seam (x=-26624) closed both ways (1 m tx=-208/-209, 8 m tx=-26/-27, including 1f, typ ty=-56..63 / 8 m ty=-7..7 only, S6 cores untouched). S7 ground generated from DEM/OSM only (WC typ ty=-57 +y ground apron was 0 and was not used to infer S7 south elevation). After voxelize, union-wrote S7 typ ty=-56 south edge into WC typ ty=-57 +y apron and 8 m typ ty=-7 south into typ ty=-8 +y apron (aprons only, no erase, WC cores unchanged)."
+    },
+    "band_EYN3": {
+      "bbox_grid": [
+        -2048,
+        24576,
+        10240,
+        28672
+      ],
+      "tiles_1m": {
+        "tx": [
+          -16,
+          79
+        ],
+        "ty": [
+          192,
+          223
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -2,
+          9
+        ],
+        "ty": [
+          24,
+          27
+        ]
+      },
+      "osm": "data/raw/EYN3/osm_EYN3.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile)",
+      "fragment": "work/EYN3/meta_fragment_EYN3.json",
+      "sea": "work/EYN3/sea_EYN3.wkt",
+      "bytes": 4292768,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "note": "band EYN3 (+y over EYN2) for the NE block of 白龙港污水处理厂 (x>=-2048, y=24576..25612); west edge x=-3509..-2048 left for a later west neighbor; palette frozen 196; EYN2|EYN3 already closed both ways (do not re-brush); typ tx>=80 and typ tx<=-17 not written. typ ty=192..223 only in typ tx=-16..79."
+    },
+    "band_EYN3E": {
+      "bbox_grid": [
+        10240,
+        24576,
+        14336,
+        28672
+      ],
+      "tiles_1m": {
+        "tx": [
+          80,
+          111
+        ],
+        "ty": [
+          192,
+          223
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          10,
+          13
+        ],
+        "ty": [
+          24,
+          27
+        ]
+      },
+      "osm": "data/raw/EYN3E/osm_EYN3E.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile; padded window fully inside tile native lon/lat, no extrapolation)",
+      "fragment": "work/EYN3E/meta_fragment_EYN3E.json",
+      "sea": "work/EYN3E/sea_EYN3E.wkt",
+      "bytes": 3001649,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "note": "band EYN3E (east of EYN3, x=10240..14336, y=24576..28672) to finish 江南造船厂 and 临港长兴科技园; both complete when unioned with EYN3; palette frozen 196; EYN3|EYN3E already closed (do not re-brush); typ tx>=112 and typ ty outside 192..223 not written. Window W stays 30720; typ tx=112..239 at typ ty=192..223 not invented."
+    },
+    "band_EYNW": {
+      "bbox_grid": [
+        -6144,
+        20480,
+        -2048,
+        28672
+      ],
+      "tiles_1m": {
+        "tx": [
+          -48,
+          -17
+        ],
+        "ty": [
+          160,
+          223
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -6,
+          -3
+        ],
+        "ty": [
+          20,
+          27
+        ]
+      },
+      "osm": "data/raw/EYNW/osm_EYNW.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile)",
+      "fragment": "work/EYNW/meta_fragment_EYNW.json",
+      "sea": "work/EYNW/sea_EYNW.wkt",
+      "bytes": 5629866,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "note": "band EYNW (west of EYN2+EYN3, x=-6144..-2048, y=20480..28672) to finish 白龙港污水处理厂 west of x=-2048; complete across EYN2+EYN3+EYNW (leftover=0); palette frozen 196; typ tx=-16 -x apron already closed by the worker (do not re-brush); typ tx<=-49 not written. typ ty=160..223 in typ tx=-48..-17 now settled."
+    },
+    "band_EYN3EX": {
+      "bbox_grid": [
+        14336,
+        24576,
+        18432,
+        28672
+      ],
+      "tiles_1m": {
+        "tx": [
+          112,
+          143
+        ],
+        "ty": [
+          192,
+          223
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          14,
+          17
+        ],
+        "ty": [
+          24,
+          27
+        ]
+      },
+      "osm": "data/raw/EYN3EX/osm_EYN3EX.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile; padded window fully inside tile native lon/lat, no extrapolation)",
+      "fragment": "work/EYN3EX/meta_fragment_EYN3EX.json",
+      "sea": "work/EYN3EX/sea_EYN3EX.wkt",
+      "bytes": 2629087,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "note": "band EYN3EX (east of EYN3E, x=14336..18432, y=24576..28672) to take the +x remainder of 长兴岛郊野公园 (xmax=16666, inside this band); south edge ymin=23423 still south of y=24576, park not complete; palette frozen 196; EYN3E|EYN3EX already closed (do not re-brush); typ tx>=144 and typ ty outside 192..223 not written."
+    },
+    "band_S7W": {
+      "bbox_grid_actual": [
+        -34816,
+        -7168,
+        -30720,
+        8192
+      ],
+      "bbox_grid_assigned": [
+        -34816,
+        -7168,
+        -30720,
+        -3072
+      ],
+      "tiles_1m_actual": {
+        "tx": [
+          -272,
+          -241
+        ],
+        "ty": [
+          -56,
+          63
+        ],
+        "count": 3840
+      },
+      "tiles_1m_assigned": {
+        "tx": [
+          -272,
+          -241
+        ],
+        "ty": [
+          -56,
+          -25
+        ],
+        "count": 1024
+      },
+      "tiles_8m_actual": {
+        "tx": [
+          -34,
+          -31
+        ],
+        "ty": [
+          -7,
+          7
+        ],
+        "count": 60
+      },
+      "tiles_8m_assigned": {
+        "tx": [
+          -34,
+          -31
+        ],
+        "ty": [
+          -7,
+          -4
+        ],
+        "count": 16
+      },
+      "scope_note": "Worker ran the full S7 height (typ ty=-56..63) because the assigned typ ty=-56..-25 limit did not reach it before voxelize; all tiles are finished output (not partial intermediates), same pipeline/palette/quality. Integrator decides whether to register only typ ty=-56..-25 or all of it. No tiles deleted.",
+      "dem": "Copernicus GLO-30 mosaic by native lon/lat bounds (N31E121 cached + N30E121 from data/raw/WA/); band lies entirely south of 31°N after padding (lat 30.898..30.978), so effectively N30E121; no extrapolation. fill_nan in-band only: 936,574 filled from in-band neighbours, 0 forced to zero.",
+      "osm": "osm.fr shanghai pbf, timestamp 2026-11-11T00:17:14Z, cut to data/raw/S7W/osm_S7W.json (S,W,N,E=30.8982,121.4690,30.9780,121.6530; 1812 nodes, 5564 ways, 536 relations). Landmark bounds from the unclipped pbf.",
+      "note": "palette frozen 196, 0 snapped; S7|S7W seam (x=-30720) closed both ways for typ ty=-56..63 / 8 m ty=-7..7; S7 cores unchanged. No south neighbour WD exists, so -y apron left 0 and nothing written at typ ty<-56.",
+      "registered": {
+        "tiles_1m": {
+          "tx": [
+            -272,
+            -241
+          ],
+          "ty": [
+            -56,
+            63
+          ],
+          "count": 3840
+        },
+        "tiles_1f": {
+          "count": 3840
+        },
+        "tiles_8m": {
+          "tx": [
+            -34,
+            -31
+          ],
+          "ty": [
+            -7,
+            7
+          ],
+          "count": 60
+        },
+        "why_full_height": "Integrator registered the actual full height (typ ty=-56..63), not the assigned -56..-25: same-pipeline finished output, palette 196 / 0 snapped, S7|S7W seam closed both ways (apron mismatch 0), S7 typ tx=-240 cores identical to backup; and w1243371488 (ymax=-2779) needs typ ty>=-24 to be complete."
+      },
+      "fragment": "work/S7W/meta_fragment_S7W.json"
+    },
+    "band_EYN3ES": {
+      "bbox_grid": [
+        10240,
+        20480,
+        14336,
+        24576
+      ],
+      "tiles_1m": {
+        "tx": [
+          80,
+          111
+        ],
+        "ty": [
+          160,
+          191
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          10,
+          13
+        ],
+        "ty": [
+          20,
+          23
+        ]
+      },
+      "osm": "data/raw/EYN3ES/osm_EYN3ES.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile; padded window fully inside tile native lon/lat, no extrapolation)",
+      "bytes": 2251830,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "fragment": "work/EYN3ES/meta_fragment_EYN3ES.json",
+      "sea": "work/EYN3ES/sea_EYN3ES.wkt",
+      "note": "band EYN3ES (x=10240..14336, y=20480..24576), range confirmed by integrator as typ tx=80..111 x typ ty=160..191 (8 m 10..13 x 20..23). EYN2|EYN3ES and EYN3ES|EYN3E closed both ways (apron mismatch 0; neighbour cores identical to backup); do not re-brush. +x / -y aprons 0."
+    },
+    "band_EYNWS": {
+      "bbox_grid": [
+        -6144,
+        19456,
+        -2048,
+        20480
+      ],
+      "tiles_1m": {
+        "tx": [
+          -48,
+          -17
+        ],
+        "ty": [
+          152,
+          159
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -6,
+          -3
+        ],
+        "ty": [
+          19,
+          19
+        ]
+      },
+      "osm": "data/raw/EYNWS/osm_EYNWS.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile)",
+      "bytes": 766120,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "sea": "none (no coastline sea in band)",
+      "fragment": "work/EYNWS/meta_fragment_EYNWS.json",
+      "foliage_note": "foliage all zero (industrial only; no OSM trees/parks)",
+      "note": "band EYNWS (x=-6144..-2048, y=19456..20480): typ tx=-48..-17 x typ ty=152..159, 8 m typ tx=-6..-3 x ty=19. EYNWS|EYNW and EYNWS|EYN closed both ways (apron mismatch 0; neighbour cores identical to backup); do not re-brush. South/west aprons 0. No sea."
+    },
+    "band_EYN3EXS": {
+      "bbox_grid": [
+        14336,
+        20480,
+        18432,
+        24576
+      ],
+      "tiles_1m": {
+        "tx": [
+          112,
+          143
+        ],
+        "ty": [
+          160,
+          191
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          14,
+          17
+        ],
+        "ty": [
+          20,
+          23
+        ]
+      },
+      "osm": "data/raw/EYN3EXS/osm_EYN3EXS.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile; padded window inside tile native lon/lat, no extrapolation)",
+      "bytes": 3928355,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "sea": "work/EYN3EXS/sea_EYN3EXS.wkt (coastline fill 0.135 km2, flat 0 m) unioned into work/integrator/sea_union.wkt",
+      "fragment": "work/EYN3EXS/meta_fragment_EYN3EXS.json",
+      "note": "band EYN3EXS (x=14336..18432, y=20480..24576): typ tx=112..143 x typ ty=160..191, 8 m typ tx=14..17 x ty=20..23. EYN3ES|EYN3EXS and EYN3EXS|EYN3EX closed both ways (apron mismatch 0; neighbour cores identical to backup); do not re-brush. +x/-y aprons 0 (south apron may be patched by EYGAP). 长兴岛郊野公园 w451842931 complete (EYN3E+EYN3EX+EYN3ES+EYN3EXS); 青草沙原水厂 w1289567396 complete (EYN3EX+EYN3EXS). 振华重工 w145717018 still ~2.23 km2 south of y=20480."
+    },
+    "band_EYGAP": {
+      "bbox_grid": [
+        10240,
+        16384,
+        18432,
+        20480
+      ],
+      "tiles_1m": {
+        "tx": [
+          80,
+          143
+        ],
+        "ty": [
+          128,
+          159
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          10,
+          17
+        ],
+        "ty": [
+          16,
+          19
+        ]
+      },
+      "osm": "data/raw/EYGAP/osm_EYGAP.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile; padded window inside tile native lon/lat, no extrapolation)",
+      "bytes": 2718966,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "sea": "work/EYGAP/sea_EYGAP.wkt (coastline fill 28.42 km2, flat 0 m) unioned into work/integrator/sea_union.wkt",
+      "fragment": "work/EYGAP/meta_fragment_EYGAP.json",
+      "note": "band EYGAP (x=10240..18432, y=16384..20480): typ tx=80..143 x typ ty=128..159, 8 m typ tx=10..17 x ty=16..19. Seams closed west (EYN tx=79) then south (ENY ty=127) then north (EYN3ES/EYN3EXS ty=160); apron mismatch 0; 340 neighbour cores identical to backup (ty=160 cores checked against current disk tiles, aprons left as EYGAP wrote them). +x apron 0 (tx=144 has no tiles). 振华重工 w145717018 complete (EYGAP+EYN3ES+EYN3EXS, 1 m2 rounding). 潘石公园 w1267884784 still ~18 m past x=18432, not marked complete."
+    },
+    "band_WD": {
+      "bbox_grid": [
+        -34816,
+        -11264,
+        -30720,
+        -7168
+      ],
+      "tiles_1m": {
+        "tx": [
+          -272,
+          -241
+        ],
+        "ty": [
+          -88,
+          -57
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -34,
+          -31
+        ],
+        "ty": [
+          -11,
+          -8
+        ]
+      },
+      "osm": "data/raw/WD/osm_WD.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N30E121 from data/raw/WA/; padded window inside tile native lon/lat, no extrapolation)",
+      "bytes": 4338063,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "sea": "none (no coastline in band)",
+      "fragment": "work/WD/meta_fragment_WD.json",
+      "note": "band WD (x=-34816..-30720, y=-11264..-7168): typ tx=-272..-241 x typ ty=-88..-57, 8 m typ tx=-34..-31 x typ ty=-11..-8. East seam WC|WD copy-closed both ways (apron mismatch 0). North seam S7W|WD union-closed (aprons only, cores untouched and identical to backup; union invariant holds, ground mismatch 0); do not re-brush. -x/-y aprons 0. No sea. Complete with S7W: 奉贤区实验中学崇实校区, 中企联合大厦-奉贤区政务中心, 恒龙广场, 迎春路居住区, unnamed park w867746253. South typ ty<=-89 (育贤小学 etc.) and west 红叶公园 still out of bounds; window not expanded."
+    },
+    "band_EYNWS2": {
+      "bbox_grid": [
+        -6144,
+        18432,
+        -2048,
+        19456
+      ],
+      "tiles_1m": {
+        "tx": [
+          -48,
+          -17
+        ],
+        "ty": [
+          144,
+          151
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -6,
+          -3
+        ],
+        "ty": [
+          18,
+          18
+        ]
+      },
+      "osm": "data/raw/EYNWS2/osm_EYNWS2.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile)",
+      "bytes": 868022,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "sea": "none (no coastline sea in band)",
+      "fragment": "work/EYNWS2/meta_fragment_EYNWS2.json",
+      "note": "band EYNWS2 (x=-6144..-2048, y=18432..19456): typ tx=-48..-17 x typ ty=144..151, 8 m typ tx=-6..-3 x ty=18. EYNWS2|EYNWS (ty=151|152) and EYNWS2|EYN (tx=-17|-16) closed both ways (apron mismatch 0; 85 neighbour cores identical to backup); do not re-brush. South/west aprons 0. No sea. 普洛斯合庆物流园 w1242242492 complete across EYNWS2+EYNWS+EYN; 圣戈班石膏建材（上海） w1239912082 complete across EYNWS2+EYNWS."
+    },
+    "band_EYNWS3": {
+      "bbox_grid": [
+        -6144,
+        17408,
+        -2048,
+        18432
+      ],
+      "tiles_1m": {
+        "tx": [
+          -48,
+          -17
+        ],
+        "ty": [
+          136,
+          143
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -6,
+          -3
+        ],
+        "ty": [
+          17,
+          17
+        ]
+      },
+      "osm": "data/raw/EYNWS3/osm_EYNWS3.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile)",
+      "bytes": 827801,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "sea": "none (no coastline sea in band)",
+      "fragment": "work/EYNWS3/meta_fragment_EYNWS3.json",
+      "note": "band EYNWS3 (x=-6144..-2048, y=17408..18432): typ tx=-48..-17 x typ ty=136..143, 8 m typ tx=-6..-3 x ty=17. EYNWS3|EYNWS2 (ty=143|144) and EYNWS3|EYN (tx=-17|-16, ty=136..143) closed both ways (apron mismatch 0; 85 neighbour cores identical to backup); do not re-brush. South/west aprons 0. No sea. Nine dispatch landmarks complete with EYNWS2/EYN. 奇华顿食用香精香料（上海） still ~110 m west of x=-6144, not marked complete."
+    },
+    "band_WDS": {
+      "bbox_grid": [
+        -34816,
+        -12288,
+        -30720,
+        -11264
+      ],
+      "tiles_1m": {
+        "tx": [
+          -272,
+          -241
+        ],
+        "ty": [
+          -96,
+          -89
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -34,
+          -31
+        ],
+        "ty": [
+          -12,
+          -12
+        ]
+      },
+      "osm": "data/raw/WDS/osm_WDS.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N30E121 from data/raw/WA/; padded window inside tile native lon/lat, no extrapolation)",
+      "bytes": 839780,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "sea": "none (no coastline in band)",
+      "fragment": "work/WDS/meta_fragment_WDS.json",
+      "foliage_note": "foliage all zero (no OSM trees/woods in band)",
+      "note": "band WDS (x=-34816..-30720, y=-12288..-11264): typ tx=-272..-241 x typ ty=-96..-89, 8 m typ tx=-34..-31 x typ ty=-12. East seam WC|WDS copy-closed both ways (apron mismatch 0). North seam WD|WDS union-closed (aprons only, cores untouched and identical to backup; union invariant holds); do not re-brush. -x/-y aprons 0. No sea. Complete with WD: 育贤小学 w1375151437, 奉贤区实验中学 w1374665355, 奉贤区实验小学（东校区） w1375150733, 淀港 w631596391 (campus outlines only, no building footprints). 红叶公园 w868284106 still ~154 m west of x=-34816, not marked complete; window not expanded."
+    },
+    "band_EYNWS4": {
+      "bbox_grid": [
+        -6144,
+        16384,
+        -2048,
+        17408
+      ],
+      "tiles_1m": {
+        "tx": [
+          -48,
+          -17
+        ],
+        "ty": [
+          128,
+          135
+        ]
+      },
+      "tiles_8m": {
+        "tx": [
+          -6,
+          -3
+        ],
+        "ty": [
+          16,
+          16
+        ]
+      },
+      "osm": "data/raw/EYNWS4/osm_EYNWS4.json",
+      "osm_timestamp": "2026-11-11T00:17:14Z",
+      "dem": "Copernicus GLO-30 (cached N31E121; no new tile)",
+      "bytes": 756850,
+      "palette_len": 196,
+      "n_snapped": 0,
+      "sea": "none (no coastline sea in band)",
+      "fragment": "work/EYNWS4/meta_fragment_EYNWS4.json",
+      "note": "band EYNWS4 (x=-6144..-2048, y=16384..17408): typ tx=-48..-17 x typ ty=128..135, 8 m typ tx=-6..-3 x ty=16. EYNWS4|EYNWS3 (ty=135|136) and EYNWS4|EYN (tx=-17|-16, ty=128..135) closed both ways (apron mismatch 0; 85 neighbour cores identical to backup); do not re-brush. South/west aprons 0. No sea. 保集·澜湾 w727240841 complete across EYNWS4+EYNWS3+EYN; 王港小学 w948685800 complete across EYNWS4+EYNWS3. Same-named 保集·澜湾 w727240840 already complete in EYNWS3/EYN."
     }
   },
-  "x0": -2048,
-  "y0": -7168,
+  "x0": -34816,
+  "y0": -19456,
   "raster_chunks": {
     "s": 2048,
     "nx": 6,
@@ -4154,6 +7257,6 @@
     "y0": -7168,
     "RW": 12288,
     "RH": 15360,
-    "note": "1 m rasters split into CS×CS chunks (≤8192) for WebGL; layer = cy*nx+cx"
+    "note": "1 m rasters split into CS×CS chunks (≤8192) for WebGL; layer = cy*nx+cx. These style maps still cover only the accepted core window x=-2048..10240, y=-7168..8192. The streamed tile window is larger; the viewer samples rasters/foliage.bin/terrain.bin from this origin (uMap0 / uRasSize). Full-window rasters would exceed WebGL 8192 and box memory."
   }
 }

@@ -43,16 +43,23 @@ export interface VoxelUniforms {
   uMap0: U<THREE.Vector2>;
   uRasCS: U<number>;
   uRasNx: U<number>;
+  uRasSize: U<THREE.Vector2>;
 }
 
 const tiny = (format: THREE.PixelFormat, data: Uint8Array | Uint16Array, type?: THREE.TextureDataType) => dataTexture(data, 1, 1, format, type);
 
 export function makeUniforms(meta: Meta): VoxelUniforms {
+  // Style maps (zones/windows/foliage.bin/terrain.bin/lamps) stay on raster_chunks
+  // when the streamed tile window is larger than one 8192 texture.
+  const rc = meta.raster_chunks;
+  const sx0 = rc?.x0 ?? meta.x0 ?? 0, sy0 = rc?.y0 ?? meta.y0 ?? 0;
+  const sW = rc ? rc.x0 + rc.RW : meta.W, sD = rc ? rc.y0 + rc.RH : meta.D;
+  const sRW = rc?.RW ?? (meta.W - (meta.x0 ?? 0)), sRH = rc?.RH ?? (meta.D - (meta.y0 ?? 0));
   return {
     uPalette: { value: makePaletteTexture(meta.palette) },
-    uLampMap: { value: makeLampTexture(meta) },
-    uSize: { value: new THREE.Vector2(meta.W, meta.D) },
-    uMap0: { value: new THREE.Vector2(meta.x0 ?? 0, meta.y0 ?? 0) },
+    uLampMap: { value: makeLampTexture(meta, sW, sD) },
+    uSize: { value: new THREE.Vector2(sW, sD) },
+    uMap0: { value: new THREE.Vector2(sx0, sy0) },
     uNight: { value: 0 },
     uTime: { value: 0 },
     uHorizon: { value: new THREE.Color(0.7, 0.75, 0.8) },
@@ -81,6 +88,7 @@ export function makeUniforms(meta: Meta): VoxelUniforms {
     uZFBlk: { value: tiny(THREE.RedFormat, new Uint8Array(1)) },
     uRasCS: { value: meta.raster_chunks?.s ?? 1 },
     uRasNx: { value: meta.raster_chunks?.nx ?? 1 },
+    uRasSize: { value: new THREE.Vector2(sRW, sRH) },
   };
 }
 
@@ -93,9 +101,9 @@ function makePaletteTexture(palette: Meta['palette']) {
 }
 
 // warm pools of street light on the ground (2 m texels), and an even wash over floodlit pitches
-function makeLampTexture(meta: Meta) {
+function makeLampTexture(meta: Meta, W = meta.W, D = meta.D) {
   const s = 0.5, cv = document.createElement('canvas');
-  cv.width = meta.W * s; cv.height = meta.D * s;
+  cv.width = W * s; cv.height = D * s;
   const ctx = cv.getContext('2d')!;
   ctx.fillStyle = '#000'; ctx.fillRect(0, 0, cv.width, cv.height);
   ctx.globalCompositeOperation = 'lighter';
@@ -171,7 +179,10 @@ const BUILD_VERTEX = `
 // Where the budget leaves the city to the 8 m clay (city.ts, uZOn): a city block is real once uZFBlk says so
 const ZONES_PARS = `
   uniform int uZOn; uniform highp usampler2DArray uZBlk; uniform sampler2D uZFBlk; uniform vec2 uMap0;
-  uniform int uRasCS; uniform int uRasNx;
+  uniform int uRasCS; uniform int uRasNx; uniform vec2 uRasSize;
+  bool rasInside(vec2 map) {
+    return map.x >= 0.0 && map.y >= 0.0 && map.x < uRasSize.x && map.y < uRasSize.y;
+  }
   ivec3 rasCoord(vec2 map) {
     ivec2 p = ivec2(floor(map));
     int cs = max(uRasCS, 1), nx = max(uRasNx, 1);
@@ -180,7 +191,9 @@ const ZONES_PARS = `
   }
   bool zreal(vec3 c) {
     if (uZOn == 0) return true;
-    uint id = texelFetch(uZBlk, rasCoord(c.xz - uMap0), 0).r;
+    vec2 map = c.xz - uMap0;
+    if (!rasInside(map)) return true;
+    uint id = texelFetch(uZBlk, rasCoord(map), 0).r;
     int w = textureSize(uZFBlk, 0).x;
     return texelFetch(uZFBlk, ivec2(int(id) % w, int(id) / w), 0).r > 0.5;
   }`;
@@ -198,7 +211,8 @@ const FRAG_PARS = `
   // a building's share of lit windows now: its type's typological median times the building's own habit, a point on the
   // type's spread (scripts/windows.py; schematic curves, not a counted Shanghai facade survey)
   vec3 building(vec3 cell) {
-    int v = int(texelFetch(uWinMap, rasCoord(cell.xz - uMap0), 0).r * 255.0 + 0.5);
+    vec2 wmap = cell.xz - uMap0;
+    int v = rasInside(wmap) ? int(texelFetch(uWinMap, rasCoord(wmap), 0).r * 255.0 + 0.5) : 0;
     int kind = v & 7;
     float habit = (float(v >> 3) + 0.5) / 32.0;
     if (kind == 0) { kind = 1; habit = hash12(floor(cell.xz / 24.0)); }

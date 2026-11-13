@@ -27,6 +27,10 @@ export function rasterIndexFromMeta(meta: Meta): RasterIndex {
 export function bindRasterUniforms(U: VoxelUniforms, index: RasterIndex) {
   U.uRasCS.value = index.s;
   U.uRasNx.value = index.nx;
+  if (U.uRasSize) U.uRasSize.value.set(index.RW, index.RH);
+  // Style maps (zones / windows / foliage.bin / terrain.bin) keep this origin,
+  // which may be smaller than the streamed tile window (WebGL 8192 + memory).
+  if (U.uMap0) U.uMap0.value.set(index.x0, index.y0);
 }
 
 function arrayTexture(

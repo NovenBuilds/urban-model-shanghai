@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import type { Meta } from './types';
 import { dataTexture, fetchGzip, fetchJson } from './util';
 import type { VoxelUniforms } from './voxelMaterial';
+import { rasterIndexFromMeta } from './rasterChunks';
 
 interface Phase { day: number; sd: number; n: number }
 interface Class { species: string; leaf: Phase | null; colour: Phase | null; fall: Phase | null; autumn?: string }
@@ -11,7 +12,8 @@ export const FOLIAGE_CLASSES = 16;
 
 export async function loadFoliage(meta: Meta, U: VoxelUniforms) {
   const [ph, buf] = await Promise.all([fetchJson<Phenology>('data/phenology.json'), fetchGzip('data/foliage.bin')]);
-  const x0 = meta.x0 ?? 0, y0 = meta.y0 ?? 0, w = (meta.W - x0) >> 1, h = (meta.D - y0) >> 1, a = new Uint8Array(buf), rg = new Uint8Array(w * h * 2);
+  const ras = rasterIndexFromMeta(meta);
+  const w = ras.RW >> 1, h = ras.RH >> 1, a = new Uint8Array(buf), rg = new Uint8Array(w * h * 2);
   for (let i = 0; i < w * h; i++) { rg[2 * i] = a[i]; rg[2 * i + 1] = a[w * h + i]; }
   const tex = dataTexture(rg, w, h, THREE.RGFormat);
   tex.magFilter = tex.minFilter = THREE.NearestFilter;
