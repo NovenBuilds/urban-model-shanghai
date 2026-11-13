@@ -65,6 +65,10 @@ BAND = dict(x0=-2048, x1=10240, y0=-11264, y1=-7168)
 BANDS = {
     "W": dict(x0=-2048, x1=10240, y0=-11264, y1=-7168),
     "W2": dict(x0=-2048, x1=10240, y0=-15360, y1=-11264),
+    "W3": dict(x0=-2048, x1=10240, y0=-19456, y1=-15360),
+    "SW": dict(x0=-6144, x1=-2048, y0=-19456, y1=-11264),
+    "WW": dict(x0=-6144, x1=-2048, y0=-11264, y1=-7168),
+    "WX": dict(x0=-10240, x1=-6144, y0=-19456, y1=-7168),
 }
 OPTS = {}
 WORK = ROOT / "work" / "W"  # half-open; seam with the first window at y=0
@@ -615,10 +619,46 @@ def main(y0=None, y1=None, name="", restamp=False, osm_path=None, x0=None, x1=No
             return None
         out = np.zeros((X1 - X0,), np.int32)
         ca, cb = max(X0, ox0), min(X1, ox0 + z["ground"].shape[1])
+        if ca >= cb:
+            return None
         gg = np.clip(np.round(z["ground"][r, ca - ox0:cb - ox0] - BASE), 1, 250).astype(np.int32)
         ww = z["water"][r, ca - ox0:cb - ox0]
         out[ca - X0:cb - X0] = np.where(ww == 1, np.maximum(gg - 1, 1), gg)
         return out
+
+    def own_col(path, x):
+        """column x (tile ground, water -1 rule) from one of worker-W's own ground_*.npz"""
+        z = np.load(path)
+        oy0, ox0 = int(z["y0"]), int(z["x0"])
+        c = x - ox0
+        if not (0 <= c < z["ground"].shape[1]):
+            return None
+        out = np.zeros((Y1 - Y0,), np.int32)
+        valid = np.zeros((Y1 - Y0,), bool)
+        ra, rb = max(Y0, oy0), min(Y1, oy0 + z["ground"].shape[0])
+        if ra >= rb:
+            return None
+        gg = np.clip(np.round(z["ground"][ra - oy0:rb - oy0, c] - BASE), 1, 250).astype(np.int32)
+        ww = z["water"][ra - oy0:rb - oy0, c]
+        out[ra - Y0:rb - Y0] = np.where(ww == 1, np.maximum(gg - 1, 1), gg)
+        valid[ra - Y0:rb - Y0] = True
+        return out, valid
+
+    def composite_cols(paths, x, label):
+        col = np.zeros((Y1 - Y0,), np.int32)
+        ok = np.zeros((Y1 - Y0,), bool)
+        used = []
+        for path in paths or []:
+            got = own_col(path, x)
+            if got is None:
+                continue
+            c, v = got
+            col[v] = c[v]
+            ok |= v
+            used.append(str(path))
+        if used:
+            note(label, "x=", x, "from", ", ".join(used), "cells", int(ok.sum()), "/", len(col))
+        return col if ok.any() else None
 
     g_first_own = own_row(OPTS["seam_north"], Y1) if OPTS.get("seam_north") else None
     g_south_own = own_row(OPTS["seam_south"], Y0 - 1) if OPTS.get("seam_south") else None
@@ -649,14 +689,19 @@ def main(y0=None, y1=None, name="", restamp=False, osm_path=None, x0=None, x1=No
         np.savez_compressed(seam_cache, row_int=g_first0, y=Y1, x0=X0, x1=X1, src=str(OPTS["seam_north"]))
     else:
         if g_row is None:
-            raise SystemExit("could not read y=Y1 seam row from ground_all.npz")
-        np.savez_compressed(seam_cache, row=g_row[0], valid=g_row[1], y=Y1, x0=X0, x1=X1)
-        g_first0 = np.where(g_row[1], np.clip(np.round(g_row[0] - BASE), 1, 250), 0).astype(np.int32)
+            note("north seam y=Y1 left 0 (no seam-north and ground_all has no row; outer edge)")
+            g_first0 = np.zeros((X1 - X0,), np.int32)
+            np.savez_compressed(seam_cache, row_int=g_first0, y=Y1, x0=X0, x1=X1, src="zeros")
+        else:
+            np.savez_compressed(seam_cache, row=g_row[0], valid=g_row[1], y=Y1, x0=X0, x1=X1)
+            g_first0 = np.where(g_row[1], np.clip(np.round(g_row[0] - BASE), 1, 250), 0).astype(np.int32)
     g_south = g_south_own
     if g_south is not None:
         note("south seam (y=Y0-1) from", OPTS["seam_south"])
-    g_west = None
-    g_east = np.zeros((Y1 - Y0,), np.int32)
+    g_west = composite_cols(OPTS.get("seam_west"), X0 - 1, "west seam (x=X0-1)")
+    g_east = composite_cols(OPTS.get("seam_east"), X1, "east seam (x=X1)")
+    if g_east is None:
+        g_east = np.zeros((Y1 - Y0,), np.int32)
     # restamp: tiles whose core ground moved by more than 0.4 m
     changed = None
     if restamp:
@@ -809,12 +854,16 @@ def main(y0=None, y1=None, name="", restamp=False, osm_path=None, x0=None, x1=No
 
     def merge_old_1f(path, counts, gw, runs):
         """Union with a pre-existing 1f tile (crown spill from the accepted band): old voxels win where set."""
-        if not path.exists():
+        if not path.exists() or path.stat().st_size < 32:
             return counts, runs
         dst = bk / path.name
         if not dst.exists():
             shutil.copy2(path, dst)
-        oc, og, orr = T.load_node(dst)
+        try:
+            oc, og, orr = T.load_node(dst)
+        except Exception as ex:
+            note("  skip unreadable pre-existing 1f", path.name, ex)
+            return counts, runs
         newv = T.vol_from_runs(counts, runs.reshape(-1, 3) if len(runs) else np.zeros((0, 3), np.uint16))
         oldv = T.vol_from_runs(oc, orr)
         h = max(newv.shape[0], oldv.shape[0])
@@ -863,9 +912,24 @@ def main(y0=None, y1=None, name="", restamp=False, osm_path=None, x0=None, x1=No
             assert_west(tx, ty, 1)
             if OPTS.get("write_ty") is not None and ty not in OPTS["write_ty"]:
                 continue
+            if OPTS.get("write_tx") is not None and tx not in OPTS["write_tx"]:
+                continue
             # never overwrite already-accepted 1 m tiles (hole-fill / new bands only)
             if not restamp and not OPTS.get("force") and (TILE_OUT / "tiles" / "1" / f"{tx}_{ty}.bin").exists():
                 nskip += 1
+                # resume: stamp already-written 1 m tiles into vol8 so 8 m clay is complete
+                try:
+                    _c, _gw, _r = T.load_node(TILE_OUT / "tiles" / "1" / f"{tx}_{ty}.bin")
+                    _core = T.vol_from_runs(_c, _r)[:, 1:1 + N, 1:1 + N]
+                    _ds = T.downsample(_core, 8)
+                    _r8 = (ty * N - Y0) // 8
+                    _c8 = (tx * N - X0) // 8
+                    _h8, _d8, _w8 = _ds.shape
+                    if 0 <= _r8 < D8 and 0 <= _c8 < W8:
+                        vol8[:_h8, _r8:_r8 + _d8, _c8:_c8 + _w8] = _ds[:, :min(_d8, D8 - _r8), :min(_w8, W8 - _c8)]
+                    del _c, _gw, _r, _core, _ds
+                except Exception as ex:
+                    note("warn resume vol8", tx, ty, ex)
                 continue
             r0, c0 = ty * N - 1, tx * N - 1
             rows = cols = N + 2
@@ -957,7 +1021,14 @@ def main(y0=None, y1=None, name="", restamp=False, osm_path=None, x0=None, x1=No
     del vol8
 
     rgb_lut = np.array([e[:3] for e in pal.entries] + [(0, 0, 0)] * (65536 - len(pal.entries)), np.uint8)
-    Image.fromarray(rgb_lut[surf][::4, ::4]).save(WORK / f"topdown_{name}.jpg", quality=85)
+    td = Image.fromarray(rgb_lut[surf][::4, ::4])
+    td.save(WORK / f"topdown_{name}.jpg", quality=85)
+    w, h = td.size
+    if max(w, h) > 900:
+        sc = 900 / max(w, h)
+        td.resize((max(1, int(w * sc)), max(1, int(h * sc))), Image.Resampling.BILINEAR).save(
+            WORK / f"topdown_{name}_small.jpg", quality=85)
+        note("topdown small", int(w * sc), "x", int(h * sc))
     frag = {
         "band": WORK.name, "bbox_grid": [X0, Y0, X1, Y1],
         "tiles_1m": {"tx": [tx0, tx1 - 1], "ty": [ty0, ty1 - 1]},
@@ -983,10 +1054,13 @@ if __name__ == "__main__":
     ap.add_argument("--restamp", action="store_true")
     ap.add_argument("--osm", default=None)
     ap.add_argument("--band", default="W", choices=sorted(BANDS))
-    ap.add_argument("--seam-north", default=None, help="worker-W ground_*.npz for the y=Y1 apron (else ground_all)")
+    ap.add_argument("--seam-north", default=None, help="worker-W ground_*.npz for the y=Y1 apron (else ground_all or zeros)")
     ap.add_argument("--seam-south", default=None, help="worker-W ground_*.npz for the y=Y0-1 apron")
+    ap.add_argument("--seam-east", action="append", default=None, help="worker-W ground_*.npz for the x=X1 apron (repeatable)")
+    ap.add_argument("--seam-west", action="append", default=None, help="worker-W ground_*.npz for the x=X0-1 apron (repeatable)")
     ap.add_argument("--ground-npz", default=None, help="reuse a flattened ground npz (re-seam of owned tiles)")
     ap.add_argument("--write-ty", type=int, action="append", default=None, help="only write these 1 m ty rows")
+    ap.add_argument("--write-tx", type=int, action="append", default=None, help="only write these 1 m tx columns")
     ap.add_argument("--force", action="store_true", help="re-seam: rewrite owned in-band 1 m tiles, 1f apron ring only, no 8 m")
     args = ap.parse_args()
     BAND = BANDS[args.band]
@@ -994,6 +1068,8 @@ if __name__ == "__main__":
     WORK.mkdir(parents=True, exist_ok=True)
     X0, X1, Y0, Y1 = BAND["x0"], BAND["x1"], BAND["y0"], BAND["y1"]
     OPTS.update(seam_north=args.seam_north, seam_south=args.seam_south, ground_npz=args.ground_npz, force=args.force,
-                write_ty=set(args.write_ty) if args.write_ty else None)
+                write_ty=set(args.write_ty) if args.write_ty else None,
+                write_tx=set(args.write_tx) if args.write_tx else None,
+                seam_east=args.seam_east, seam_west=args.seam_west)
     main(y0=args.y0, y1=args.y1, name=args.name, restamp=args.restamp, osm_path=args.osm,
          x0=args.x0, x1=args.x1)

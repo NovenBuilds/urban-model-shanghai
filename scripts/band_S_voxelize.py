@@ -1,12 +1,12 @@
-"""Band S (worker-S): x=-6144..-2048, y=-7168..8192 on the citywide grid.
+"""Worker-S band voxelizer (S, S2, …) on the citywide grid.
 
 Reuses the exact per-tile logic of voxelize_west.py (frozen copy band_S_vw_snapshot.py) with:
-- no writes to meta.json / ground_all.npz / data/debug (everything band-local goes to work/S/)
-- palette frozen: unknown colours snap to the nearest existing palette entry of the same material,
-  so parallel bands cannot collide on new palette ids
+- no writes to meta.json / ground_all.npz / foliage.bin / data/debug (band-local files go to work/<band>/)
+- palette frozen to the 196 meta entries: unknown colours snap to the nearest existing
+  entry of the same material so parallel bands cannot collide on new palette ids
 - ground computed once for the whole band (chunked nearest-fill, bbox-limited park flatten),
   voxelized in y-chunks; 8 m clay from a whole-band 8 m volume
-- +x apron (x=-2048) from the accepted ground_all.npz column x=-2048
+- +x apron from --seam-east ground_*.npz (column at x=X1), not from ground_all.npz
 Not LiDAR: Copernicus GLO-30 + OSM.
 """
 from __future__ import annotations
@@ -30,16 +30,53 @@ import band_S_sculpt_snapshot as SC  # noqa: E402
 import tiles as T  # noqa: E402
 from osm import OSM  # noqa: E402
 
+BANDS = {
+    "S":  dict(x0=-6144,  x1=-2048, y0=-7168, y1=8192, osm="data/raw/S/osm_S.json",   seam_east=None),
+    "S2": dict(x0=-10240, x1=-6144, y0=-7168, y1=8192, osm="data/raw/S2/osm_S2.json", seam_east="work/S/ground_S.npz"),
+    "S3": dict(x0=-14336, x1=-10240, y0=-7168, y1=8192, osm="data/raw/S3/osm_S3.json", seam_east="work/S2/ground_S2.npz"),
+}
+
+BAND = "S"
 X0, X1, Y0, Y1 = -6144, -2048, -7168, 8192
-TX0, TX1, TY0, TY1 = X0 // 128, X1 // 128, Y0 // 128, Y1 // 128   # -48..-17, -56..63
+TX0, TX1, TY0, TY1 = X0 // 128, X1 // 128, Y0 // 128, Y1 // 128
 WORK = ROOT / "work" / "S"
 OUT = ROOT / "web" / "public" / "data"
 OSM_PATH = ROOT / "data" / "raw" / "S" / "osm_S.json"
-META = json.loads((WORK / "meta_snapshot.json").read_text())
-BASE = int(META.get("base", -9))
+SEAM_EAST = None
+META = None
+BASE = -9
 HMAX = 400
 N = T.N
 note = VW.note
+
+
+def configure(band="S", x0=None, x1=None, y0=None, y1=None, osm=None, work=None, seam_east=None, meta=None):
+    """Set band bounds and paths. Call before phase_ground / main."""
+    global BAND, X0, X1, Y0, Y1, TX0, TX1, TY0, TY1, WORK, OSM_PATH, SEAM_EAST, META, BASE
+    BAND = band
+    spec = dict(BANDS.get(band, {}))
+    X0 = int(x0 if x0 is not None else spec.get("x0", X0))
+    X1 = int(x1 if x1 is not None else spec.get("x1", X1))
+    Y0 = int(y0 if y0 is not None else spec.get("y0", Y0))
+    Y1 = int(y1 if y1 is not None else spec.get("y1", Y1))
+    TX0, TX1, TY0, TY1 = X0 // 128, X1 // 128, Y0 // 128, Y1 // 128
+    WORK = Path(work) if work else ROOT / "work" / BAND
+    WORK.mkdir(parents=True, exist_ok=True)
+    OSM_PATH = Path(osm) if osm else ROOT / spec.get("osm", f"data/raw/{BAND}/osm_{BAND}.json")
+    if not OSM_PATH.is_absolute():
+        OSM_PATH = ROOT / OSM_PATH
+    se = seam_east if seam_east is not None else spec.get("seam_east")
+    SEAM_EAST = Path(se) if se else None
+    if SEAM_EAST is not None and not SEAM_EAST.is_absolute():
+        SEAM_EAST = ROOT / SEAM_EAST
+    meta_path = Path(meta) if meta else (WORK / "meta_snapshot.json")
+    if not meta_path.is_absolute():
+        meta_path = ROOT / meta_path
+    if not meta_path.exists():
+        meta_path = ROOT / "work" / "S" / "meta_snapshot.json"
+    META = json.loads(meta_path.read_text())
+    BASE = int(META.get("base", -9))
+    note("configured", BAND, "x", X0, "..", X1, "y", Y0, "..", Y1, "osm", OSM_PATH, "seam-east", SEAM_EAST)
 
 
 class SnapPalette(VW.Palette):
@@ -136,12 +173,12 @@ def flatten_parks_fast(ground_m, osm, water_mask, origin, building_mask):
 
 def phase_ground(osm):
     RW, RD = X1 - X0, Y1 - Y0
-    gp = WORK / "ground_S.npz"
+    gp = WORK / f"ground_{BAND}.npz"
     if gp.exists():
         z = np.load(gp)
         note("loaded", gp)
         return z["ground"].astype(np.float32), z["water"].astype(np.uint8), z["buildings"].astype(np.uint8)
-    dp = WORK / "dem_S.npy"
+    dp = WORK / f"dem_{BAND}.npy"
     if dp.exists():
         dem = np.load(dp)
     else:
@@ -172,7 +209,7 @@ def phase_ground(osm):
     g, n_park = flatten_parks_fast(g, osm, wmask, (X0, Y0), bmask)
     note("flatten park cells lowered", n_park)
     np.savez_compressed(gp, ground=g, water=wmask, buildings=bmask, x0=X0, y0=Y0, x1=X1, y1=Y1, base=BASE,
-                        note="band S ground: GLO-30, building-masked, OSM road/park flatten; row=y-y0, col=x-x0; not LiDAR")
+                        note=f"band {BAND} ground: GLO-30, building-masked, OSM road/park flatten; row=y-y0, col=x-x0; not LiDAR")
     note("wrote", gp)
     return g, wmask, bmask
 
@@ -205,21 +242,24 @@ def main(chunk_rows=1024, only=None):
     g = np.where(water_mask == 1, np.maximum(g - 1, 1), g)
     del ground_m
 
-    # +x apron from the accepted coverage (x=-2048 column)
-    ga = np.load(ROOT / "data" / "ground_all.npz")
-    gax0, gay0 = int(ga["x0"]), int(ga["y0"])
-    assert gax0 == X1, gax0
-    col = ga["ground"][:, 0].astype(np.float32)
+    # +x apron from the neighbouring band's ground at x=X1 (never from ground_all.npz)
     g_east = np.zeros(RD, np.int32)
-    ys = np.arange(Y0, Y1)
-    ok = (ys - gay0 >= 0) & (ys - gay0 < col.shape[0])
-    g_east[ok] = np.clip(np.round(col[ys[ok] - gay0] - BASE), 1, 250).astype(np.int32)
-    del ga, col
-    note("east apron from ground_all col x=-2048, cells", int(ok.sum()))
-    # seam diagnostics
-    d = g[:, -1] - g_east
-    note("seam x=-2049 vs x=-2048 (m): mean", float(d.mean()), "abs>2", int((np.abs(d) > 2).sum()), "max", int(np.abs(d).max()))
-    np.save(WORK / "seam_x-2049_glevel.npy", g[:, -1].astype(np.uint8))
+    if SEAM_EAST is not None and SEAM_EAST.exists():
+        ga = np.load(SEAM_EAST)
+        gax0, gay0 = int(ga["x0"]), int(ga["y0"])
+        col_i = X1 - gax0
+        assert 0 <= col_i < ga["ground"].shape[1], (SEAM_EAST, gax0, X1, ga["ground"].shape)
+        col = ga["ground"][:, col_i].astype(np.float32)
+        ys = np.arange(Y0, Y1)
+        ok = (ys - gay0 >= 0) & (ys - gay0 < col.shape[0])
+        g_east[ok] = np.clip(np.round(col[ys[ok] - gay0] - BASE), 1, 250).astype(np.int32)
+        del ga, col
+        note("east apron from", SEAM_EAST, "col x=", X1, "cells", int(ok.sum()))
+        d = g[:, -1] - g_east
+        note(f"seam x={X1-1} vs x={X1} (m): mean", float(d.mean()), "abs>2", int((np.abs(d) > 2).sum()), "max", int(np.abs(d).max()))
+        np.save(WORK / f"seam_x{X1-1}_glevel.npy", g[:, -1].astype(np.uint8))
+    else:
+        note("WARNING: no --seam-east; +x apron ground stays 0")
 
     # --- static OSM layers (indexed) -----------------------------------------
     surf_areas = []
@@ -316,10 +356,11 @@ def main(chunk_rows=1024, only=None):
     W8, D8 = RW // 8, RD // 8
     vol8 = np.zeros((H8, D8, W8), np.uint16)
     if only:
-        old8 = np.load(WORK / "vol8_S.npy")
+        old8 = np.load(WORK / f"vol8_{BAND}.npy")
         vol8[:old8.shape[0]] = old8
         del old8
     g8 = np.clip(g[::8, ::8], 0, 255).astype(np.uint8)
+    preview8 = np.zeros((D8, W8), np.uint16)
 
     fol_ids = set(LEAVES) | {C["trunk"]}
     grass_ids = {C["grass"], C["grass2"], C["garden"]}
@@ -332,8 +373,9 @@ def main(chunk_rows=1024, only=None):
 
     def check(tx, ty, s):
         span = N * s
-        if not (X0 // span <= tx and (tx + 1) * span <= X1 and Y0 // span <= ty and (ty + 1) * span <= Y1):
-            raise RuntimeError(f"refusing {s} m tile {tx}_{ty}: outside band S")
+        # never write typ ty < -56 (WX and other west-south bands) or outside this band box
+        if ty < Y0 // span or (ty + 1) * span > Y1 or tx < X0 // span or (tx + 1) * span > X1:
+            raise RuntimeError(f"refusing {s} m tile {tx}_{ty}: outside band {BAND} x={X0}..{X1} y={Y0}..{Y1}")
 
     nruns = bytes1 = bytesf = nskip = nwritten = 0
     for cy0 in range(Y0, Y1, chunk_rows):
@@ -351,6 +393,11 @@ def main(chunk_rows=1024, only=None):
             surf[m == 1] = pid
         wm = water_mask[sy0 - Y0:sy1 - Y0]
         surf[wm == 1] = C["water"]
+        # 8 m colour preview of this chunk (row 0 = y=Y0, same orientation as other band topdowns)
+        for r8 in range((cy0 - Y0) // 8, (cy1 - Y0) // 8):
+            y = Y0 + r8 * 8
+            if sy0 <= y < sy1:
+                preview8[r8] = surf[y - sy0, ::8]
         for i in sorted(int(h) for h in np.atleast_1d(rd_tree.query(env))):
             poly, pid = road_shapes[i]
             m = VW.burn([(poly, 1)], sh, org, dtype=np.uint8, all_touched=True)
@@ -462,14 +509,22 @@ def main(chunk_rows=1024, only=None):
             n8 += len(runs)
             w8n += 1
     note(f"8 m: written {w8n}, runs {n8}, {bytes8/2**20:.2f} MB")
-    np.save(WORK / "vol8_S.npy", vol8)
+    np.save(WORK / f"vol8_{BAND}.npy", vol8)
 
     rgb_lut = np.array([e[:3] for e in pal.entries] + [(0, 0, 0)] * (65536 - len(pal.entries)), np.uint8)
     if only:
         note("patched", nwritten, "tiles", sorted(only))
         return
+    from PIL import Image
+    Image.fromarray(rgb_lut[preview8]).save(WORK / f"topdown_{BAND}.jpg", quality=85)
+    # water preview: +y up (same convention as work/S/water_ground_preview.png)
+    w8 = water_mask[::8, ::8]
+    wp = rgb_lut[preview8].copy()
+    wp[w8 == 1] = (40, 90, 200)
+    Image.fromarray(wp[::-1]).save(WORK / f"water_ground_preview_{BAND}.png")
+    note("wrote", WORK / f"topdown_{BAND}.jpg", "and water preview")
     json.dump({
-        "band": "S", "bbox_grid": [X0, Y0, X1, Y1],
+        "band": BAND, "bbox_grid": [X0, Y0, X1, Y1],
         "tiles_1m": {"tx": [TX0, TX1 - 1], "ty": [TY0, TY1 - 1]},
         "tiles_8m": {"tx": [X0 // 1024, X1 // 1024 - 1], "ty": [Y0 // 1024, Y1 // 1024 - 1]},
         "osm_timestamp": osm.timestamp, "osm_file": str(OSM_PATH.relative_to(ROOT)),
@@ -477,16 +532,28 @@ def main(chunk_rows=1024, only=None):
         "palette_len_used": len(META["palette"]), "palette_grew": len(pal.entries) != len(META["palette"]),
         "snapped_colours": len(pal.snapped), "bytes_1m": bytes1, "bytes_1f": bytesf, "bytes_8m": bytes8,
         "written_1m": nwritten, "skipped_1m": nskip, "elapsed_s": round(time.time() - t0),
-    }, open(WORK / "voxelize_S_summary.json", "w"), indent=2)
-    note("done band S", round(time.time() - t0), "s")
+        "seam_east": str(SEAM_EAST) if SEAM_EAST else None,
+    }, open(WORK / f"voxelize_{BAND}_summary.json", "w"), indent=2)
+    note("done band", BAND, round(time.time() - t0), "s")
 
 
 if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
+    ap.add_argument("--band", default="S", choices=sorted(BANDS))
+    ap.add_argument("--x0", type=int, default=None)
+    ap.add_argument("--x1", type=int, default=None)
+    ap.add_argument("--y0", type=int, default=None)
+    ap.add_argument("--y1", type=int, default=None)
+    ap.add_argument("--osm", default=None)
+    ap.add_argument("--work", default=None)
+    ap.add_argument("--seam-east", default=None, help="neighbour ground_*.npz whose column at x=X1 becomes the +x apron")
+    ap.add_argument("--meta", default=None)
     ap.add_argument("--ground-only", action="store_true")
     ap.add_argument("--only", default="")
     a = ap.parse_args()
+    configure(band=a.band, x0=a.x0, x1=a.x1, y0=a.y0, y1=a.y1, osm=a.osm, work=a.work,
+              seam_east=a.seam_east, meta=a.meta)
     if a.ground_only:
         pal = SnapPalette(META["palette"]); VW.pal = pal
         osm = OSM(str(OSM_PATH))

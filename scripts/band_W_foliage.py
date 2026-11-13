@@ -23,22 +23,23 @@ from osm import OSM  # noqa: E402
 
 X0, X1, Y0, Y1 = -2048, 10240, -11264, -7168
 WORK = ROOT / "work" / "W"
-BANDS = {"W": (-2048, 10240, -11264, -7168), "W2": (-2048, 10240, -15360, -11264)}
+BANDS = {"W": (-2048, 10240, -11264, -7168), "W2": (-2048, 10240, -15360, -11264), "W3": (-2048, 10240, -19456, -15360), "SW": (-6144, -2048, -19456, -11264), "WW": (-6144, -2048, -11264, -7168), "WX": (-10240, -6144, -19456, -7168)}
 OUT = ROOT / "web" / "public" / "data"
 
 
-def main(osm_path, band="W", pad_n=0, pad_s=0, ty_only=None):
+def main(osm_path, band="W", pad_n=0, pad_s=0, pad_e=0, pad_w=0, ty_only=None, tx_only=None):
     global X0, X1, Y0, Y1, WORK
     X0, X1, Y0, Y1 = BANDS[band]
     WORK = ROOT / "work" / band
     meta = json.loads((OUT / "meta.json").read_text())
     leaves, trunks, grasses = F.palette_ids(meta)
-    # trees are collected over the band padded into worker-W's own neighbouring band (pad_n: +y, pad_s: -y)
-    # so crowns spilling across an owned seam land in this band's tiles; stamping stays in-band only.
+    # trees are collected over the band padded into worker-W's own neighbouring band
+    # (pad_n: +y, pad_s: -y, pad_e: +x, pad_w: -x). Stamping stays in-band only.
+    CX0, CX1 = X0 - pad_w, X1 + pad_e
     CY0, CY1 = Y0 - pad_s, Y1 + pad_n
-    RW, RH = X1 - X0, CY1 - CY0
+    RW, RH = CX1 - CX0, CY1 - CY0
     osm = OSM(str(osm_path))
-    tr = Affine.translation(X0, CY0)
+    tr = Affine.translation(CX0, CY0)
     bld, water = [], []
     for oid, typ, t, g in osm.areas:
         if t.get("building") not in (None, "no") or "building:part" in t:
@@ -51,11 +52,11 @@ def main(osm_path, band="W", pad_n=0, pad_s=0, ty_only=None):
     wmask = rasterize([(g, 1) for g in water], out_shape=(RH, RW), transform=tr, fill=0, all_touched=True, dtype=np.uint8) if water else np.zeros((RH, RW), np.uint8)
     print("masks buildings", int(bmask.sum()), "water", int(wmask.sum()), flush=True)
     # collect_trees(osm, x0, y0, W, D, ...) uses W/D as exclusive max coords
-    trees = F.collect_trees(osm, X0, CY0, X1, CY1, bmask, wmask)
+    trees = F.collect_trees(osm, CX0, CY0, CX1, CY1, bmask, wmask)
     del bmask, wmask
     print("trees", len(trees), flush=True)
 
-    cw, ch = RW // 2, (Y1 - Y0) // 2
+    cw, ch = (X1 - X0) // 2, (Y1 - Y0) // 2  # band only; RW/RH may be padded
     cls = np.zeros((ch, cw), np.uint8)
     habit = np.zeros((ch, cw), np.uint8)
     for x, y, h, cr, c in trees:
@@ -70,10 +71,10 @@ def main(osm_path, band="W", pad_n=0, pad_s=0, ty_only=None):
                 if 0 <= uu < cw and 0 <= vv < ch and cls[vv, uu] == 0:
                     cls[vv, uu] = c
                     habit[vv, uu] = 1 + (F._hash(uu, vv, 22) % 255)
-    if ty_only is None:
+    if ty_only is None and tx_only is None:
         (WORK / f"foliage_{band}.bin").write_bytes(gzip.compress(cls.tobytes() + habit.tobytes(), mtime=0, compresslevel=9))
-    (WORK / f"foliage_{band}.json").write_text(json.dumps({"x0": X0, "y0": Y0, "cw": cw, "ch": ch, "cell": 2,
-                                                     "format": "gzip uint8[ch,cw] class + uint8[ch,cw] habit"}))
+        (WORK / f"foliage_{band}.json").write_text(json.dumps({"x0": X0, "y0": Y0, "cw": cw, "ch": ch, "cell": 2,
+                                                         "format": "gzip uint8[ch,cw] class + uint8[ch,cw] habit"}))
     print("wrote foliage map", band, cls.shape, "cls>0", int((cls > 0).sum()), flush=True)
 
     by_tile = {}
@@ -83,7 +84,7 @@ def main(osm_path, band="W", pad_n=0, pad_s=0, ty_only=None):
         x, y, cr = rec[0], rec[1], rec[3]
         for ty in range(int(math.floor((y - cr) / T.N)), int(math.floor((y + cr) / T.N)) + 1):
             for tx in range(int(math.floor((x - cr) / T.N)), int(math.floor((x + cr) / T.N)) + 1):
-                if tx_lo <= tx <= tx_hi and ty_lo <= ty <= ty_hi and (ty_only is None or ty in ty_only):
+                if tx_lo <= tx <= tx_hi and ty_lo <= ty <= ty_hi and (ty_only is None or ty in ty_only) and (tx_only is None or tx in tx_only):
                     by_tile.setdefault((tx, ty), []).append(rec)
                 else:
                     spill += 1
@@ -129,6 +130,9 @@ if __name__ == "__main__":
     ap.add_argument("--band", default="W", choices=sorted(BANDS))
     ap.add_argument("--pad-n", type=int, default=0)
     ap.add_argument("--pad-s", type=int, default=0)
+    ap.add_argument("--pad-e", type=int, default=0)
+    ap.add_argument("--pad-w", type=int, default=0)
     ap.add_argument("--ty", type=int, action="append", default=None, help="restrict restamp to these ty rows")
+    ap.add_argument("--tx", type=int, action="append", default=None, help="restrict restamp to these tx columns")
     a = ap.parse_args()
-    main(a.osm, a.band, a.pad_n, a.pad_s, set(a.ty) if a.ty else None)
+    main(a.osm, a.band, a.pad_n, a.pad_s, a.pad_e, a.pad_w, set(a.ty) if a.ty else None, set(a.tx) if a.tx else None)

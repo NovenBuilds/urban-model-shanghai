@@ -4,7 +4,7 @@
 
 ## 本机运行
 
-仓库里已经包含当前预览窗口的瓦片，clone 下来装好依赖就能跑，不用重新生成数据。需要 Node 18+ 和 [pnpm](https://pnpm.io/)（`corepack enable` 或 `npm i -g pnpm`）。
+本仓库只包含源码、配置和文档。自动生成的地图瓦片、原始 OSM/DEM、地面缓存和过程预览不进 Git，之后会通过 GitHub Releases 分包发布（本次还没有 Release）。需要 Node 18+ 和 [pnpm](https://pnpm.io/)（`corepack enable` 或 `npm i -g pnpm`）。若本地已经有 `web/public/data/tiles/`，装好依赖即可预览。
 
 ```sh
 git clone https://github.com/NovenBuilds/urban-model-shanghai.git
@@ -42,6 +42,4 @@ export COREPACK_HOME=$HOME/.corepack-home PNPM_HOME=$HOME/.pnpm-home
 - **代码**（查看器与流水线）：[MIT](LICENSE)。查看器与瓦片格式来自 Piotr Migdał 的 Warsaw in voxels，见 [NOTICE](NOTICE)。
 - **建筑与道路**：© OpenStreetMap contributors，[ODbL](https://opendatacommons.org/licenses/odbl/)（[osm.fr 的上海提取](https://download.openstreetmap.fr/extracts/asia/china/shanghai.osm.pbf)，时间戳 2026-11-11T00:17:14Z）。
 - **高程**：Copernicus GLO-30，不是 LiDAR，也不是 0.5 m DTM。
-- 生成的场景数据在 `web/public/data/`，派生自上述来源。
-
-原始 OSM / DEM 缓存（约 1.5 GB）没有放进仓库。若要自己重跑生成流水线，依赖见 `pyproject.toml`，入口是 `scripts/build_data.sh`。
+- 生成的场景数据在 `web/public/data/`（派生自上述来源），其中瓦片和栅格会随 Releases 发布，不进入普通 Git 提交。原始 OSM / DEM 缓存和 `work/` 中间结果也没有放进仓库。若要自己重跑生成流水线，依赖见 `pyproject.toml`，入口是 `scripts/build_data.sh`。

@@ -21,17 +21,42 @@ import band_S_foliage_snapshot as F  # noqa: E402
 import tiles as T  # noqa: E402
 from osm import OSM  # noqa: E402
 
+BANDS = {
+    "S":  dict(x0=-6144,  x1=-2048, y0=-7168, y1=8192, osm="data/raw/S/osm_S.json"),
+    "S2": dict(x0=-10240, x1=-6144, y0=-7168, y1=8192, osm="data/raw/S2/osm_S2.json"),
+    "S3": dict(x0=-14336, x1=-10240, y0=-7168, y1=8192, osm="data/raw/S3/osm_S3.json"),
+}
+BAND = "S"
 X0, X1, Y0, Y1 = -6144, -2048, -7168, 8192
 M = 8
 WORK = ROOT / "work" / "S"
 OUT = ROOT / "web" / "public" / "data"
+OSM_PATH = ROOT / "data" / "raw" / "S" / "osm_S.json"
+
+
+def configure(band="S", x0=None, x1=None, y0=None, y1=None, osm=None, work=None):
+    global BAND, X0, X1, Y0, Y1, WORK, OSM_PATH
+    BAND = band
+    spec = dict(BANDS.get(band, {}))
+    X0 = int(x0 if x0 is not None else spec.get("x0", X0))
+    X1 = int(x1 if x1 is not None else spec.get("x1", X1))
+    Y0 = int(y0 if y0 is not None else spec.get("y0", Y0))
+    Y1 = int(y1 if y1 is not None else spec.get("y1", Y1))
+    WORK = Path(work) if work else ROOT / "work" / BAND
+    WORK.mkdir(parents=True, exist_ok=True)
+    OSM_PATH = Path(osm) if osm else ROOT / spec.get("osm", f"data/raw/{BAND}/osm_{BAND}.json")
+    if not OSM_PATH.is_absolute():
+        OSM_PATH = ROOT / OSM_PATH
 
 
 def main():
-    meta = json.loads((WORK / "meta_snapshot.json").read_text())
+    meta_path = WORK / "meta_snapshot.json"
+    if not meta_path.exists():
+        meta_path = ROOT / "work" / "S" / "meta_snapshot.json"
+    meta = json.loads(meta_path.read_text())
     leaves, trunks, grasses = F.palette_ids(meta)
-    print("palette leaves", leaves, "trunks", trunks[:6])
-    osm = OSM(str(ROOT / "data" / "raw" / "S" / "osm_S.json"))
+    print("palette leaves", leaves, "trunks", trunks[:6], "band", BAND)
+    osm = OSM(str(OSM_PATH))
     ex0, ey0, ex1, ey1 = X0 - M, Y0 - M, X1 + M, Y1 + M
     RW, RH = ex1 - ex0, ey1 - ey0
     tr = Affine.translation(ex0, ey0)
@@ -64,10 +89,10 @@ def main():
                 if 0 <= uu < cw and 0 <= vv < ch and cls[vv, uu] == 0:
                     cls[vv, uu] = c
                     habit[vv, uu] = 1 + (F._hash(uu, vv, 22) % 255)
-    (WORK / "foliage_S.bin").write_bytes(gzip.compress(cls.tobytes() + habit.tobytes(), mtime=0, compresslevel=9))
+    (WORK / f"foliage_{BAND}.bin").write_bytes(gzip.compress(cls.tobytes() + habit.tobytes(), mtime=0, compresslevel=9))
     json.dump({"x0": X0, "y0": Y0, "cell_m": 2, "cw": cw, "ch": ch, "layout": "gzip(cls uint8[ch,cw] + habit uint8[ch,cw])",
-               "cls_gt0": int((cls > 0).sum())}, open(WORK / "foliage_S.json", "w"), indent=2)
-    print("wrote foliage_S.bin cls>0", int((cls > 0).sum()))
+               "cls_gt0": int((cls > 0).sum())}, open(WORK / f"foliage_{BAND}.json", "w"), indent=2)
+    print(f"wrote foliage_{BAND}.bin cls>0", int((cls > 0).sum()))
 
     by_tile = {}
     for rec in trees:
@@ -103,10 +128,21 @@ def main():
         if n_tiles % 200 == 0:
             print(f"  1f {n_tiles} tiles, last {tx}_{ty}", flush=True)
     edge = sum(1 for x, y, h, cr, c in trees if x + cr >= X1 and x < X1)
-    print("restamped band-S 1f tiles", n_tiles, "crown cells ~", n_stamp, "crowns crossing x=-2048 into tx=-16:", edge)
+    print(f"restamped band-{BAND} 1f tiles", n_tiles, "crown cells ~", n_stamp, f"crowns crossing x={X1} into tx={X1 // T.N}:", edge)
     json.dump({"restamped_1f": n_tiles, "crown_cells": n_stamp, "trees": len(trees), "crowns_crossing_x-2048": edge},
-              open(WORK / "foliage_S_summary.json", "w"), indent=2)
+              open(WORK / f"foliage_{BAND}_summary.json", "w"), indent=2)
 
 
 if __name__ == "__main__":
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--band", default="S", choices=sorted(BANDS))
+    ap.add_argument("--x0", type=int, default=None)
+    ap.add_argument("--x1", type=int, default=None)
+    ap.add_argument("--y0", type=int, default=None)
+    ap.add_argument("--y1", type=int, default=None)
+    ap.add_argument("--osm", default=None)
+    ap.add_argument("--work", default=None)
+    a = ap.parse_args()
+    configure(band=a.band, x0=a.x0, x1=a.x1, y0=a.y0, y1=a.y1, osm=a.osm, work=a.work)
     main()
