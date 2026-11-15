@@ -2,6 +2,14 @@
 
 把上海市做成可飞可走的 1 米体素模型，完成度对标 [Piotr Migdał 的 Warsaw in voxels](https://github.com/stared/warsaw-vibe-voxel)。查看器改编自华沙项目的 three.js + Vite 引擎（MIT）。**没有使用、也没有拷贝华沙的城市数据。**
 
+**这个项目目前已暂停**（2026-11-15）。已经做完、能看的部分留在 Git 和 Releases 里，以后有条件再继续。旧版本不会被覆盖。
+
+## 项目起因，以及为什么先停在这里
+
+看到 [Warsaw in voxels](https://github.com/stared/warsaw-vibe-voxel) 的 1 米体素、可飞可走的城市模型，觉得喜欢，就想搞一套上海的，目标是整座上海市。推着推着才发现：这座城太大了，token 烧不起。qiong。
+
+所以先停在这里。不是不想做，是现在烧不起。已有的源码、查看器，以及 GitHub Releases 里的数据包都还在，以后再说。
+
 本仓库只包含源码、配置和文档。自动生成的地图瓦片和查看器运行所需的栅格数据不进 Git，通过 [GitHub Releases](https://github.com/NovenBuilds/urban-model-shanghai/releases) 分包发布。当前最新数据包是阶段性**预览版** `v0.1.0-preview.2`，不是全市完成稿。以后扩大范围会发新的 Release，不会覆盖已有版本。
 
 ## 本机运行（从零开始）
